@@ -1,0 +1,29 @@
+.menubar{
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+}
+.Header img{
+  width:100%;
+}
+.NavMenu{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navActive{
+  color:tomato;
+  text-decoration:none;
+}
+.nav{
+  color:black;
+  text-decoration: none;
+}
+
+.DSLLBanner img{
+  width:100%;
+  
+}
+.AdBanner img{
+  width:100%;
+}
