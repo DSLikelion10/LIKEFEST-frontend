@@ -1,16 +1,82 @@
+/* 모바일 환경이 아닐 때 */
+@media (min-width:768px){
+  .frame{
+    width:412px;
+  }
+}
+
 .menubar{
   text-align: center;
   display:flex;
   flex-direction: column;
-}
-.Header img{
   width:100%;
 }
-.NavMenu{
+.Header{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding-top:14px;
+  padding-left:34px;
+  padding-right:34px;
+  padding-bottom:14px;
+  font-size: 24px;
+  line-height: 28.8px;
+  align-items: center;
 }
-
+.Header a{
+  text-decoration: none;
+  color:#111111;
+  font-weight: 700; 
+}
+.MenuBtn{
+  width:24px;
+  height:20px;
+  padding:13px;
+  background-color: aqua ;
+} 
+.NavMenu{
+  display:none;
+}
+.NavMenuActive{
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top:26px;
+  padding-bottom:26px;
+  box-shadow: 0px 4px 4px rgba(219, 219, 219, 0.25);
+}
+.NavItem{
+  padding-top:6px;
+  padding-left:34px;
+  padding-bottom:6px;
+  font-weight: 900;
+  font-size:20px;
+  line-height: 24px;
+}
+.bar{
+  display: block;
+  width:24px;
+  height: 2px;
+  margin:7px auto;
+  -webkit-transition:all 0.3s ease-in-out;
+  transition:all 0.3s ease-in-out;
+  background-color: black;
+}
+.hamburger{
+  display:block;
+  width:50px;
+  padding-top:8px;
+  padding-bottom:8px;
+}
+.hamburger.active .bar:nth-child(2){
+  opacity:0;
+}
+.hamburger.active .bar:nth-child(1){
+  transform:translateY(9px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3){
+  transform: translateY(-9px) rotate(-45deg);
+}
 .navActive{
   color:tomato;
   text-decoration:none;
@@ -20,10 +86,30 @@
   text-decoration: none;
 }
 
-.DSLLBanner img{
-  width:100%;
-  
+.Content{
+  border:1px solid lightgrey;
+  margin-left:34px;
+  margin-right:34px;
+  margin-top:28px;
 }
+.AdBanner{
+  margin:34px;
+}
+.FooterMenu{
+  padding:34px;
+  text-align: left;
+  background-color: #111111;
+  color:#FFFFFF;
+  font-size:14px;
+}
+.FooterContent1, .FooterContent2{
+  display:flex;
+}
+
+.name{
+  color:#848484;
+}
+
 .AdBanner img{
   width:100%;
 }
