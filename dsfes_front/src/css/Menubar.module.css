@@ -101,13 +101,26 @@
   background-color: #111111;
   color:#FFFFFF;
   font-size:14px;
+  line-height:16.8px;
+}
+.F_Head{
+  margin-bottom:22px;
+  font-weight: 700;
 }
 .FooterContent1, .FooterContent2{
   display:flex;
 }
-
+.F_Header{
+  width:53px;
+  margin-bottom:0px;
+  font-weight: 700;
+}
 .name{
   color:#848484;
+  margin-bottom: 5px;
+}
+.FooterContent2{
+  margin-top:11px;
 }
 
 .AdBanner img{
