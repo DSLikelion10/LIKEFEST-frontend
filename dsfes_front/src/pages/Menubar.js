@@ -65,7 +65,7 @@ const Menubar = () => {
         </div>
         <div className={styles.AdBanner}><img src={googleADs} /></div>
         <div className={styles.FooterMenu}>
-          <p>2022 덕성여자대학교 근화제 [새로고침]</p>
+          <p className={styles.F_Head}>2022 덕성여자대학교 근화제 [새로고침]</p>
           <div className={styles.FooterContent1}>
             <p className={styles.F_Header}>개발</p>
             <div className={styles.F_Content}>
