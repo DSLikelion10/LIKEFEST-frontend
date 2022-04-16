@@ -1,160 +1,163 @@
 /* 모바일 환경이 아닐 때 */
-@media (min-width:768px){
-  .frame{
-    width:412px;
+@media (min-width: 768px) {
+  .frame {
+    width: 412px;
   }
-  .HeaderBlack{
-    width:344px;
-    left:auto !important;
-    right:auto !important;
+  .HeaderBlack {
+    width: 344px;
+    left: auto !important;
+    right: auto !important;
   }
 }
 
-.menubar{
+.menubar {
   text-align: center;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  width:100%;
+  width: 100%;
 }
-.Header{
-  padding-top:14px;
-  padding-left:34px;
-  padding-right:34px;
-  padding-bottom:14px;
+.Header {
+  padding-top: 14px;
+  padding-left: 34px;
+  padding-right: 34px;
+  padding-bottom: 14px;
   font-size: 24px;
   line-height: 28.8px;
 }
-.Header a{
+.Header a {
   text-decoration: none;
-  color:#111111;
-  font-weight: 700; 
+  color: #111111;
+  font-weight: 700;
 }
-.HeaderTop{
-  display:flex;
+.HeaderTop {
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.HeaderBlack{
-  padding-top:14px;
-  padding-left:34px;
-  padding-right:34px;
-  padding-bottom:14px;
+.HeaderBlack {
+  padding-top: 14px;
+  padding-left: 34px;
+  padding-right: 34px;
+  padding-bottom: 14px;
   font-size: 24px;
   line-height: 28.8px;
-  position:fixed;
+  position: fixed;
   background-color: #111111;
-  top:0;
-  left:0;
-  right:0;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-.HeaderBlack a{
-  color:white;
+.HeaderBlack a {
+  color: white;
   text-decoration: none;
   font-weight: 700;
+}
+.HeaderBlack .bar {
+  background-color: white;
+}
+.HeaderBlack .NavMenuActive {
+  box-shadow: none;
+}
 
+.MenuBtn {
+  width: 24px;
+  height: 20px;
+  padding: 13px;
+  background-color: aqua;
 }
-.HeaderBlack .bar{
-  background-color:white;
+.NavMenu {
+  display: none;
 }
-.HeaderBlack .NavMenuActive{
-  box-shadow:none;
-}
-
-.MenuBtn{
-  width:24px;
-  height:20px;
-  padding:13px;
-  background-color: aqua ;
-} 
-.NavMenu{
-  display:none;
-}
-.NavMenuActive{
+.NavMenuActive {
   visibility: visible;
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding-top:26px;
-  padding-bottom:26px;
+  padding-top: 26px;
+  padding-bottom: 26px;
   box-shadow: 0px 4px 4px rgba(219, 219, 219, 0.25);
 }
-.NavItem{
-  padding-top:6px;
-  padding-bottom:6px;
+.NavItem {
+  padding-top: 6px;
+  padding-bottom: 6px;
   font-weight: 900;
-  font-size:20px;
+  font-size: 20px;
   line-height: 24px;
 }
-.bar{
+.bar {
   display: block;
-  width:24px;
+  width: 24px;
   height: 2px;
-  margin:7px auto;
-  -webkit-transition:all 0.3s ease-in-out;
-  transition:all 0.3s ease-in-out;
+  margin: 7px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   background-color: black;
 }
-.hamburger{
-  display:block;
-  width:50px;
-  padding-top:8px;
-  padding-bottom:8px;
+.hamburger {
+  display: block;
+  width: 50px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
-.hamburger.active .bar:nth-child(2){
-  opacity:0;
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
 }
-.hamburger.active .bar:nth-child(1){
-  transform:translateY(9px) rotate(45deg);
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
 }
-.hamburger.active .bar:nth-child(3){
+.hamburger.active .bar:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
-.navActive{
-  color:tomato !important;
-  text-decoration:none;
+.navActive {
+  color: tomato !important;
+  text-decoration: none;
 }
-.nav{
-  color:black;
+.nav {
+  color: black;
   text-decoration: none;
 }
 
-.Content{
-  border:1px solid lightgrey;
-  margin-left:34px;
-  margin-right:34px;
-  margin-top:28px;
-}
-.AdBanner{
-  margin:34px;
-}
-.FooterMenu{
-  padding:34px;
-  text-align: left;
-  background-color: #111111;
-  color:#FFFFFF;
-  font-size:14px;
-  line-height:16.8px;
-}
-.F_Head{
-  margin-bottom:22px;
-  font-weight: 700;
-}
-.FooterContent1, .FooterContent2{
-  display:flex;
-}
-.F_Header{
-  width:53px;
-  margin-bottom:0px;
-  font-weight: 700;
-}
-.name{
-  color:#848484;
-  margin-bottom: 5px;
-}
-.FooterContent2{
-  margin-top:11px;
+.Content {
+  /* 태영: 영역 구분위해 수정함 */
+  /* border: 1px solid lightgrey; */
+  padding-left: 34px;
+  padding-right: 34px;
+  padding-top: 28px;
+  background-color: #e5e5e5;
 }
 
-.AdBanner img{
-  width:100%;
+.AdBanner {
+  margin: 34px;
+}
+.FooterMenu {
+  padding: 34px;
+  text-align: left;
+  background-color: #111111;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+.F_Head {
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+.FooterContent1,
+.FooterContent2 {
+  display: flex;
+}
+.F_Header {
+  width: 53px;
+  margin-bottom: 0px;
+  font-weight: 700;
+}
+.name {
+  color: #848484;
+  margin-bottom: 5px;
+}
+.FooterContent2 {
+  margin-top: 11px;
+}
+
+.AdBanner img {
+  width: 100%;
 }

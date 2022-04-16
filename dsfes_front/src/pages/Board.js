@@ -1,8 +1,14 @@
+import React, { useState } from "react";
+import BoardInsert from "../components/BoardInsert";
+import BoardList from "../components/BoardList";
+import styles from "../css/Board.module.css";
+
 const Board = () => {
   return (
     <div>
-      게시판 페이지
+      <BoardInsert />
+      <BoardList />
     </div>
-  )
-}
+  );
+};
 export default Board;
