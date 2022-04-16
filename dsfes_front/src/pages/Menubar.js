@@ -5,6 +5,9 @@ import googleADs from '../img/GoogleADs.png';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 
 const Menubar = () => {
+  // 스크롤 시, 메뉴 상태
+  const [show, setShow] = useState(false);
+  // 메뉴 열림,닫힘 상태
   const [menuActive, setMenuActive] = useState(false);
   const MenuStateHandle = useCallback(e => {
     setMenuActive(!menuActive);
@@ -17,49 +20,66 @@ const Menubar = () => {
       console.log("닫혔습니다.")
     }
   }, [menuActive]);
-
+  //페이지 이동 시, 메뉴 바 닫기
   const menuClose = useCallback(e => {
     setMenuActive(false);
   })
-
+  // 스크롤 시, 메뉴 색 변경
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    });
+    return () => {
+      window.removeEventListener("scroll", () => { });
+    };
+  }, []);
   return (
     <div className={styles.frame}>
       <div className={styles.menubar}>
-        <div className={styles.Header}>
-          <Link to="/">새로고침</Link>
-          <div className={menuActive ? styles.hamburger + ' ' + styles.active : styles.hamburger} onClick={MenuStateHandle}>
-            <span className={styles.bar}></span>
-            <span className={styles.bar}></span>
-            <span className={styles.bar}></span>
+        <div className={show ? styles.HeaderBlack : styles.Header}>
+          <div className={styles.HeaderTop}>
+            <Link to="/">새로고침</Link>
+            <div className={menuActive ? styles.hamburger + ' ' + styles.active : styles.hamburger} onClick={MenuStateHandle}>
+              <span className={styles.bar}></span>
+              <span className={styles.bar}></span>
+              <span className={styles.bar}></span>
+            </div>
+          </div>
+          <div className={styles.HeaderBottom}>
+            <ul className={menuActive ? styles.NavMenuActive : styles.NavMenu}>
+              <NavLink to="/Notice" className={({ isActive }) => isActive ? styles.navActive : styles.nav} onClick={menuClose}>
+                <li className={styles.NavItem}>
+                  공지사항
+                </li>
+              </NavLink>
+              <NavLink to="/TimeTable" className={({ isActive }) => isActive ? styles.navActive : styles.nav} onClick={menuClose}>
+                <li className={styles.NavItem}>
+                  타임테이블
+                </li>
+              </NavLink>
+              <NavLink to="/Event" className={({ isActive }) => isActive ? styles.navActive : styles.nav} onClick={menuClose}>
+                <li className={styles.NavItem}>
+                  이벤트
+                </li>
+              </NavLink>
+              <NavLink to="/Map" className={({ isActive }) => isActive ? styles.navActive : styles.nav} onClick={menuClose}>
+                <li className={styles.NavItem}>
+                  지도
+                </li>
+              </NavLink>
+              <NavLink to="/Board" className={({ isActive }) => isActive ? styles.navActive : styles.nav} onClick={menuClose}>
+                <li className={styles.NavItem}>
+                  게시판
+                </li>
+              </NavLink>
+            </ul>
           </div>
         </div>
-        <ul className={menuActive ? styles.NavMenuActive : styles.NavMenu}>
-          <NavLink to="/Notice" className={({ isActive }) => isActive ? styles.navActive : styles.nav} onClick={menuClose}>
-            <li className={styles.NavItem}>
-              공지사항
-            </li>
-          </NavLink>
-          <NavLink to="/TimeTable" className={({ isActive }) => isActive ? styles.navActive : styles.nav} onClick={menuClose}>
-            <li className={styles.NavItem}>
-              타임테이블
-            </li>
-          </NavLink>
-          <NavLink to="/Event" className={({ isActive }) => isActive ? styles.navActive : styles.nav} onClick={menuClose}>
-            <li className={styles.NavItem}>
-              이벤트
-            </li>
-          </NavLink>
-          <NavLink to="/Map" className={({ isActive }) => isActive ? styles.navActive : styles.nav} onClick={menuClose}>
-            <li className={styles.NavItem}>
-              지도
-            </li>
-          </NavLink>
-          <NavLink to="/Board" className={({ isActive }) => isActive ? styles.navActive : styles.nav} onClick={menuClose}>
-            <li className={styles.NavItem}>
-              게시판
-            </li>
-          </NavLink>
-        </ul>
+
         <div className={styles.Content}>
           <Outlet />
         </div>
