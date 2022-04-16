@@ -12,21 +12,49 @@
   width:100%;
 }
 .Header{
-  display: flex;
-  justify-content: space-between;
   padding-top:14px;
   padding-left:34px;
   padding-right:34px;
   padding-bottom:14px;
   font-size: 24px;
   line-height: 28.8px;
-  align-items: center;
 }
 .Header a{
   text-decoration: none;
   color:#111111;
   font-weight: 700; 
 }
+.HeaderTop{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.HeaderBlack{
+  padding-top:14px;
+  padding-left:34px;
+  padding-right:34px;
+  padding-bottom:14px;
+  font-size: 24px;
+  line-height: 28.8px;
+  position:fixed;
+  background-color: #111111;
+  top:0;
+  left:0;
+  right:0;
+}
+.HeaderBlack a{
+  color:white;
+  text-decoration: none;
+  font-weight: 700;
+
+}
+.HeaderBlack .bar{
+  background-color:white;
+}
+.HeaderBlack .NavMenuActive{
+  box-shadow:none;
+}
+
 .MenuBtn{
   width:24px;
   height:20px;
@@ -47,7 +75,6 @@
 }
 .NavItem{
   padding-top:6px;
-  padding-left:34px;
   padding-bottom:6px;
   font-weight: 900;
   font-size:20px;
@@ -78,7 +105,7 @@
   transform: translateY(-9px) rotate(-45deg);
 }
 .navActive{
-  color:tomato;
+  color:tomato !important;
   text-decoration:none;
 }
 .nav{
