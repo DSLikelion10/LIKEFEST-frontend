@@ -1,8 +1,9 @@
 const Event = () => {
   return (
     <div>
-      이벤트 페이지
+      <input type="text" />
+      <button type="submit">완료</button>
     </div>
-  )
-}
+  );
+};
 export default Event;

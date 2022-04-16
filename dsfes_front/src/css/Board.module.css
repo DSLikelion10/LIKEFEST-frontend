@@ -1,0 +1,43 @@
+@media (min-width: 768px) {
+  .insertBody {
+    width: 344px;
+  }
+}
+
+.insertBody {
+  height: 205px;
+  background-color: white;
+  margin-bottom: 16px;
+}
+
+.insertBody form {
+  display: flex;
+  flex-direction: column;
+}
+
+.insert {
+  margin: 19px 23px 0px 23px;
+  height: 105px;
+  font-family: "Pretendard-Regular";
+  border: none;
+  resize: none;
+}
+
+.insert::placeholder {
+  color: #848484;
+}
+
+.insertbt {
+  margin: 0px 23px 21px 23px;
+  height: 56px;
+  background: #111111;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+}
+
+.boarditem {
+}

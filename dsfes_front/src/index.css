@@ -1,18 +1,58 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-#root{
+#root {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@font-face {
+  font-family: "Pretendard-Bold";
+  font-display: fallback;
+
+  /* 
+  src: 사용할 폰트의 위치 및 형식 
+     Safari, Android, iOS => ttf
+     Modern Browsers => woff
+     IE6-IE8 => eot
+*/
+
+  src: url("./font/Pretendard-Bold.otf") format("opentype"),
+    url("./font/Pretendard-Bold.woff") format("woff"),
+    url("./font/Pretendard-Bold.eot?iefix") format("embedded-opentype");
+
+  /*사용할 폰트 기본 스타일 */
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-display: fallback;
+
+  /* 
+  src: 사용할 폰트의 위치 및 형식 
+     Safari, Android, iOS => ttf
+     Modern Browsers => woff
+     IE6-IE8 => eot
+*/
+
+  src: url("./font/Pretendard-Regular.otf") format("opentype"),
+    url("./font/Pretendard-Regular.woff") format("woff"),
+    url("./font/Pretendard-Regular.eot?iefix") format("embedded-opentype");
+
+  /*사용할 폰트 기본 스타일 */
+  font-weight: 400;
+  font-style: normal;
 }
