@@ -1,7 +1,9 @@
+import HeaderTitle from "../components/HeaderTitle";
+
 const TimeTable = () => {
   return (
     <div>
-      타임테이블 페이지
+      <HeaderTitle title="TIME TABLE" />
     </div>
   )
 }

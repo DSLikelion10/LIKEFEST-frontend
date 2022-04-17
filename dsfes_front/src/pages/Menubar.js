@@ -40,6 +40,7 @@ const Menubar = () => {
   return (
     <div className={styles.frame}>
       <div className={styles.menubar}>
+        <div className={styles.menuSpaceBox} />
         <div className={show ? styles.HeaderBlack : styles.Header}>
           <div className={styles.HeaderTop}>
             <Link to="/">새로고침</Link>

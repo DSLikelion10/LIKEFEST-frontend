@@ -1,7 +1,9 @@
+import HeaderTitle from "../components/HeaderTitle";
+
 const Notice = () => {
   return (
     <div>
-      공지사항 페이지
+      <HeaderTitle title={["총학생회에서", <br />, "알려드립니다 📢"]} />
     </div>
   );
 };

@@ -1,6 +1,8 @@
+import HeaderTitle from "../components/HeaderTitle";
+
 const Map = () => {
   return (
-    <div>지도 페이지</div>
+    <HeaderTitle title="MAP" />
   )
 };
 export default Map;
