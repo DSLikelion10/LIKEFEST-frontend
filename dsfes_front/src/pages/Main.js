@@ -1,7 +1,11 @@
+import HeaderTitle from "../components/HeaderTitle";
+
 const Main = () => {
   return (
     <div>
-      메인 페이지
+      {/* 메인페이지에는 HeaderTitle이 필요없어서 삭제해도 되는데 일단 페이지 구분을 위해 남겨두긴 했습니다.
+      추후 디자인이 나오고, 개발 시작할때는 아래 내용 다 지우셔도 괜찮습니다:D */}
+      <HeaderTitle title="메인페이지" />
       <div>
         {/* 메뉴바 스크롤 test용 -> 삭제하셔도 됩니다:D */}
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
