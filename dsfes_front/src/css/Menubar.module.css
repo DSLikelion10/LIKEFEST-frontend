@@ -4,9 +4,15 @@
     width: 412px;
   }
   .HeaderBlack {
-    width: 344px;
+    width: 412px;
     left: auto !important;
     right: auto !important;
+  }
+
+  .Header{
+    width:412px;
+    left:auto !important;
+    right:auto !important;
   }
 }
 
@@ -16,13 +22,19 @@
   flex-direction: column;
   width: 100%;
 }
+.menuSpaceBox{
+  height:78px;
+}
 .Header {
   padding-top: 14px;
-  padding-left: 34px;
-  padding-right: 34px;
+
   padding-bottom: 14px;
   font-size: 24px;
   line-height: 28.8px;
+
+  position:fixed;
+  left:0;
+  right:0;
 }
 .Header a {
   text-decoration: none;
@@ -33,11 +45,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 34px;
+  padding-right: 34px;
+  background-color: #ffffff;
+}
+.HeaderBottom{
+  background-color: #ffffff;
+
 }
 .HeaderBlack {
   padding-top: 14px;
-  padding-left: 34px;
-  padding-right: 34px;
   padding-bottom: 14px;
   font-size: 24px;
   line-height: 28.8px;
@@ -55,8 +72,12 @@
 .HeaderBlack .bar {
   background-color: white;
 }
+.HeaderBlack .HeaderTop{
+  background-color: #111111;
+}
 .HeaderBlack .NavMenuActive {
   box-shadow: none;
+  background-color: #111111;  
 }
 
 .MenuBtn {
@@ -75,7 +96,9 @@
   text-align: left;
   padding-top: 26px;
   padding-bottom: 26px;
+  padding-left:34px;  
   box-shadow: 0px 4px 4px rgba(219, 219, 219, 0.25);
+  background-color: #ffffff;
 }
 .NavItem {
   padding-top: 6px;
@@ -120,10 +143,12 @@
 .Content {
   /* 태영: 영역 구분위해 수정함 */
   /* border: 1px solid lightgrey; */
+  background-color: #e5e5e5;
+
   padding-left: 34px;
   padding-right: 34px;
   padding-top: 28px;
-  background-color: #e5e5e5;
+  
 }
 
 .AdBanner {
