@@ -1,9 +1,10 @@
 .header{
   text-align: left;
-  margin-bottom: 14px;
+  margin-bottom: 27px;
+  margin-left: 34px;
 }
 .headerTitle{
-  font-weight: 700;
+  font-family: 'Pretendard-ExtraBold';
   font-size:36px;
   line-height: 43px;
 }
