@@ -41,6 +41,9 @@
   color: #111111;
   font-weight: 700;
 }
+.HeaderTop img{
+  width:82.27px;
+}
 .HeaderTop {
   display: flex;
   justify-content: space-between;
@@ -97,7 +100,7 @@
   padding-top: 26px;
   padding-bottom: 26px;
   padding-left:34px;  
-  box-shadow: 0px 4px 4px rgba(219, 219, 219, 0.25);
+  box-shadow: 0px 4px 2px -2px rgba(219, 219, 219, 0.25);
   background-color: #ffffff;
 }
 .NavItem {
@@ -114,7 +117,7 @@
   margin: 7px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: black;
+  background-color: #4C966E;
 }
 .hamburger {
   display: block;
@@ -132,7 +135,7 @@
   transform: translateY(-9px) rotate(-45deg);
 }
 .navActive {
-  color: tomato !important;
+  color: #4C966E !important;
   text-decoration: none;
 }
 .nav {
@@ -157,7 +160,7 @@
 .FooterMenu {
   padding: 34px;
   text-align: left;
-  background-color: #111111;
+  background-color: #275B46;
   color: #ffffff;
   font-size: 14px;
   line-height: 16.8px;
@@ -176,7 +179,7 @@
   font-weight: 700;
 }
 .name {
-  color: #848484;
+  color: #ACC7B8;
   margin-bottom: 5px;
 }
 .FooterContent2 {
