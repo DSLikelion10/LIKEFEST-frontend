@@ -3,7 +3,7 @@ import '../css/reset.css';
 import styles from '../css/Menubar.module.css';
 import googleADs from '../img/GoogleADs.png';
 import { Link, NavLink, Outlet } from 'react-router-dom';
-
+import FesLogo from '../img/FesLogo.svg';
 const Menubar = () => {
   // 스크롤 시, 메뉴 상태
   const [show, setShow] = useState(false);
@@ -43,7 +43,7 @@ const Menubar = () => {
         <div className={styles.menuSpaceBox} />
         <div className={show ? styles.HeaderBlack : styles.Header}>
           <div className={styles.HeaderTop}>
-            <Link to="/">새로고침</Link>
+            <Link to="/"><img src={FesLogo} /></Link>
             <div className={menuActive ? styles.hamburger + ' ' + styles.active : styles.hamburger} onClick={MenuStateHandle}>
               <span className={styles.bar}></span>
               <span className={styles.bar}></span>
