@@ -7,7 +7,6 @@ import HeaderTitle from "../components/HeaderTitle";
 const Board = () => {
   return (
     <div>
-      <HeaderTitle title="덕우들의 새로고침" />
       <BoardInsert />
       <BoardList />
     </div>
