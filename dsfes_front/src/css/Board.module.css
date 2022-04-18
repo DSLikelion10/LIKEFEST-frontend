@@ -5,9 +5,9 @@
 }
 
 .insertBody {
-  height: 205px;
+  height: 175px;
   background-color: white;
-  margin-bottom: 16px;
+  margin-bottom: 19px;
 }
 
 .insertBody form {
@@ -16,8 +16,8 @@
 }
 
 .insert {
-  margin: 19px 23px 0px 23px;
-  height: 105px;
+  margin: 17px 23px 0px 23px;
+  height: 81px;
   font-family: "Pretendard-Regular";
   border: none;
   resize: none;
@@ -30,7 +30,7 @@
 .insertbt {
   margin: 0px 23px 21px 23px;
   height: 56px;
-  background: #111111;
+  background: #4C966E;
   border-radius: 5px;
   color: white;
   border: none;
@@ -40,4 +40,9 @@
 }
 
 .boarditem {
+  color: white;
+  padding: 17px 23px;
+  font-family: 'Pretendard-Medium';
+  border-radius: 5px;
+  margin-bottom: 19px;
 }
