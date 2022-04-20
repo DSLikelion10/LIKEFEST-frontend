@@ -10,6 +10,17 @@
   margin-bottom: 19px;
 }
 
+.insertBody2 {
+  height: 327px;
+  background-color: white;
+  margin-bottom: 19px;
+}
+
+.insertBody2 form{
+  display: flex;
+  flex-direction: column;
+}
+
 .insertBody form {
   display: flex;
   flex-direction: column;
@@ -18,6 +29,14 @@
 .insert {
   margin: 17px 23px 0px 23px;
   height: 81px;
+  font-family: "Pretendard-Regular";
+  border: none;
+  resize: none;
+}
+
+.insert2{
+  margin: 17px 23px 0px 23px;
+  height: 233px;
   font-family: "Pretendard-Regular";
   border: none;
   resize: none;
