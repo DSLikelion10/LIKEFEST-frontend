@@ -1,0 +1,39 @@
+.ntcItem {
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr;
+    background-color: white;
+    padding: 34px 23px;
+    border-radius: 5px;
+    margin-bottom: 19px;
+}
+
+.hasgtag {
+    grid-column: 1/3;
+}
+
+.ntcTitle {
+    grid-column: 1/3;
+    text-align: left;
+    line-height: 19px;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Pretendard-bold';
+    color: black;
+}
+
+.ntcContent {
+    grid-column: 1/4;
+    grid-row:3/4;
+    text-align: left;
+    line-height: 19px;
+    font-size: 14px;
+    font-family: 'Pretendard-regular';
+}
+
+.moreBtn {
+    background-color: white;
+    border-style: none;
+
+}
