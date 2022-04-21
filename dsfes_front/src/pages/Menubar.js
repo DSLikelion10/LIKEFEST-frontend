@@ -39,7 +39,7 @@ const Menubar = () => {
       }
     });
     return () => {
-      window.removeEventListener("scroll", () => {});
+      window.removeEventListener("scroll", () => { });
     };
   }, []);
 
@@ -96,7 +96,7 @@ const Menubar = () => {
                 }
                 onClick={menuClose}
               >
-                <li className={styles.NavItem}>공지사항</li>
+                <li className={styles.NavItem}>NOTICE</li>
               </NavLink>
               <NavLink
                 to="/TimeTable"
@@ -105,7 +105,7 @@ const Menubar = () => {
                 }
                 onClick={menuClose}
               >
-                <li className={styles.NavItem}>타임테이블</li>
+                <li className={styles.NavItem}>TIME TABLE</li>
               </NavLink>
               <NavLink
                 to="/Event"
@@ -114,16 +114,7 @@ const Menubar = () => {
                 }
                 onClick={menuClose}
               >
-                <li className={styles.NavItem}>이벤트</li>
-              </NavLink>
-              <NavLink
-                to="/Map"
-                className={({ isActive }) =>
-                  isActive ? styles.navActive : styles.nav
-                }
-                onClick={menuClose}
-              >
-                <li className={styles.NavItem}>지도</li>
+                <li className={styles.NavItem}>EVENT</li>
               </NavLink>
               <NavLink
                 to="/Board"
@@ -132,7 +123,16 @@ const Menubar = () => {
                 }
                 onClick={menuClose}
               >
-                <li className={styles.NavItem}>게시판</li>
+                <li className={styles.NavItem}>GUEST BOOK</li>
+              </NavLink>
+              <NavLink
+                to="/Map"
+                className={({ isActive }) =>
+                  isActive ? styles.navActive : styles.nav
+                }
+                onClick={menuClose}
+              >
+                <li className={styles.NavItem}>MAP</li>
               </NavLink>
             </ul>
           </div>
