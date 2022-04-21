@@ -1,0 +1,23 @@
+.navBar{
+  display: flex;
+  justify-content: center;
+}
+.navBar :nth-child(2){
+  margin-left:14px;
+  margin-right: 14px;
+}
+.navItem{
+  /* background-color: #FFFFFF; */
+  background-color: lightpink;
+  color:#ACC7B8;
+  width:102px;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.navItemActive{
+  border-bottom:4px solid #4C966E; 
+  color:#4C966E;
+}
