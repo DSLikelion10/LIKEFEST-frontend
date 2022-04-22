@@ -10,6 +10,7 @@ const BoardList = () => {
     axios
       .get("http://localhost:3001/board")
       .then((res) => {
+        console.log(res.data);
         setTexts(res.data);
       })
       .catch((error) => console.log("Network Error : ", error));
@@ -17,7 +18,7 @@ const BoardList = () => {
 
   return (
     <div>
-      {texts.map((text) => (
+      {texts.reverse().map((text) => (
         <BoardItem text={text} key={text.id} />
       ))}
     </div>

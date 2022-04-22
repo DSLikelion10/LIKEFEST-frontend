@@ -6,30 +6,41 @@ const BoardInsert = () => {
   const [insertBody, setInsertBody] = useState(styles.insertBody);
   const [insert, setInsert] = useState(styles.insert);
   const [text, setText] = useState("");
+  const [isfocus, setFocus] = useState(false);
 
   //포커스 되었을 때
   const handleFocus = () => {
     setInsertBody(styles.insertBody2);
     setInsert(styles.insert2);
+    setFocus(true);
   };
 
   //포커스에서 벗어났을 때
   const handleBlur = () => {
     setInsertBody(styles.insertBody);
     setInsert(styles.insert);
+    setFocus(false);
+  };
+
+  //버튼 클릭 이벤트가 onBlur이벤트보다 먼저 작동되게 하기
+  const handleMouseDown = (e) => {
+    if (isfocus) {
+      e.preventDefault();
+    }
   };
 
   //post
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const changeText = text.replace(/\n/gim, "<br>");
     axios
       .post("http://localhost:3001/board", {
-        boText: changeText,
+        boText: text,
       })
       .then((res) => {
-        console.log(res.data);
+        console.log("Success");
+        setText("");
+        setInsertBody(styles.insertBody);
+        setInsert(styles.insert);
       })
       .catch((error) => {
         console.log("Network Error : ", error);
@@ -60,7 +71,11 @@ const BoardInsert = () => {
           value={text}
           onChange={handleChange}
         ></textarea>
-        <button className={styles.insertbt} type="submit">
+        <button
+          className={styles.insertbt}
+          onMouseDown={handleMouseDown}
+          type="submit"
+        >
           글 남기기
         </button>
       </form>
