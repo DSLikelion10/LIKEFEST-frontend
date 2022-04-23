@@ -37,3 +37,13 @@
     border-style: none;
 
 }
+
+.ntcimg {
+    margin-top: 5px;
+    padding-right: 20%;
+    padding-left: 20%;
+    background-color: lightgray;
+    height: 150px;
+    width: 250px;
+    grid-row: 4/5;
+}
