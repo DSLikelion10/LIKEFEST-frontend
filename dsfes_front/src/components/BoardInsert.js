@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useCallback, useState } from "react";
 import styles from "../css/Board.module.css";
+import { useNavigate } from "react-router-dom";
 
-const BoardInsert = () => {
+const BoardInsert = ({ onInsert }) => {
   const [insertBody, setInsertBody] = useState(styles.insertBody);
   const [insert, setInsert] = useState(styles.insert);
   const [text, setText] = useState("");
@@ -30,22 +31,26 @@ const BoardInsert = () => {
   };
 
   //post
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios
-      .post("http://localhost:3001/board", {
-        boText: text,
-      })
-      .then((res) => {
-        console.log("Success");
-        setText("");
-        setInsertBody(styles.insertBody);
-        setInsert(styles.insert);
-      })
-      .catch((error) => {
-        console.log("Network Error : ", error);
-      });
-  };
+  const handleSubmit = useCallback(
+    (e) => {
+      onInsert(text);
+      e.preventDefault();
+      axios
+        .post("http://localhost:3001/board", {
+          boText: text,
+        })
+        .then((res) => {
+          console.log("Success");
+          setText(""); //text 초기화
+          setInsertBody(styles.insertBody);
+          setInsert(styles.insert);
+        })
+        .catch((error) => {
+          console.log("Network Error : ", error);
+        });
+    },
+    [onInsert, text]
+  );
 
   //상태관리
   const handleChange = useCallback((e) => {
