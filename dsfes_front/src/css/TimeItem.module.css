@@ -1,0 +1,40 @@
+.body{
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  display: flex;
+  width:140px;
+}
+.LeftIndex{
+  background: #E7D0B6;
+  border-radius: 5px 0px 0px 5px;
+  width:11px;
+  
+}
+.rightContent{
+  font-family: 'Pretendard-Medium';
+  font-size:12px;
+  line-height: 14.4px;
+  padding-left:19px;
+  padding-top:24px;
+  padding-bottom:23px;
+  text-align: left;
+}
+.title{
+  font-family: 'Pretendard-Bold';
+  font-size: 14px;
+  line-height: 17px; 
+  margin-bottom:7px;
+}
+.locationDiv{
+  display: flex;
+  align-items: center;
+}
+.iconPlace{
+  width:8px;
+  height: 10px;
+  padding-right:8px;
+}
+
+.secondContent{
+  margin-top:16px;
+}
