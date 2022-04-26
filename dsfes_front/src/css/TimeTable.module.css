@@ -7,8 +7,7 @@
   margin-right: 14px;
 }
 .navItem{
-  /* background-color: #FFFFFF; */
-  background-color: lightpink;
+  background-color: #FFFFFF;
   color:#ACC7B8;
   width:102px;
   height: 61px;
@@ -16,8 +15,15 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-family: 'Pretendard-Bold';
+  font-size:16px;
+  font-weight: 700;
 }
 .navItemActive{
   border-bottom:4px solid #4C966E; 
   color:#4C966E;
+  font-family:'Pretendard-Black';
+}
+.TimeDay{
+  /* background-color: lightblue; */
 }

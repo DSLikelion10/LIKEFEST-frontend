@@ -32,7 +32,7 @@ const TimeTable = () => {
         >20<br />(FRI)</div>
       </div>
       <div>
-        <div>{UI[NavActive]}</div>
+        <div className={style.TimeDay}>{UI[NavActive]}</div>
       </div>
 
     </div>
