@@ -52,7 +52,6 @@ const Menubar = () => {
     "/Notice": ["총학생회에서", <br />, "알려드립니다 📢"],
     "/TimeTable": "TIME TABLE",
     "/Event": "EVENT",
-    "/Map": ["MAP", <br />, "한눈에 보는 근화제"],
     "/Board": ["덕우들의 새로고침", <br />, "어떠셨나요?"],
   };
 
@@ -124,15 +123,6 @@ const Menubar = () => {
                 onClick={menuClose}
               >
                 <li className={styles.NavItem}>GUEST BOOK</li>
-              </NavLink>
-              <NavLink
-                to="/Map"
-                className={({ isActive }) =>
-                  isActive ? styles.navActive : styles.nav
-                }
-                onClick={menuClose}
-              >
-                <li className={styles.NavItem}>MAP</li>
               </NavLink>
             </ul>
           </div>
