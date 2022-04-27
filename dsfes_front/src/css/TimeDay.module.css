@@ -1,3 +1,127 @@
-.body{
-  display: flex;
+.body18{
+  display: grid;
+  grid-template-columns: 78px 167px 167px;
+  grid-template-rows: repeat(10,100px);
+  grid-auto-flow: column;
+  justify-items: center;
+  justify-content: center;
+  margin-top:40px;
+}
+.body19, .body20{
+  display: grid;
+  grid-template-columns: 78px 167px 167px;
+  grid-template-rows: repeat(12,100px);
+  grid-auto-flow: column;
+  justify-items: center;
+  justify-content: center;
+  margin-top:40px;
+}
+.timeTitle{
+  font-family: 'Pretendard-Medium';
+  color:#4C966E;
+  width:100%;
+}
+/* TimeItem */
+/* 18일 */
+.item1{
+  grid-column:2;
+  grid-row:1/span 4;
+}
+.item2{
+  grid-column:3;
+  grid-row:4/span 3;
+}
+.item3{
+  grid-column-start:3;
+  grid-row-start:7;
+}
+.item4{
+  grid-column:3;
+  grid-row:7/8;
+  margin-top:92px;
+}
+.item5{
+  grid-column: 3;
+  grid-row: 8/9;
+  margin-top:117px;
+}
+/* 19일 */
+.item6{
+  grid-column:2;
+  grid-row:1/span 4;
+}
+.item7{
+  grid-column:2;
+  grid-row:7/span 5;
+}
+.item8{
+  grid-column:3;
+  grid-row:8/span 2;
+}
+.item9{
+  grid-column:3;
+  grid-row:10;
+}
+/* 20일 */
+.item10{
+  grid-column:3;
+  grid-row:8/span 2;
+  margin-top:50px;
+}
+.item11{
+  grid-column:3;
+  grid-row:10/span 2;
+}
+/* 시간선 */
+.cell{
+  width:100%;
+  border-top:1px solid #ACC7B8;
+}
+.cell1{
+  grid-column:2/4;
+  grid-row: 1;
+}
+.cell2{
+  grid-column:2/4;
+  grid-row: 2;
+}
+.cell3{
+  grid-column:2/4;
+  grid-row: 3;
+}
+.cell4{
+  grid-column:2/4;
+  grid-row: 4;
+}
+.cell5{
+  grid-column:2/4;
+  grid-row: 5;
+}
+.cell6{
+  grid-column:2/4;
+  grid-row: 6;
+}
+.cell7{
+  grid-column:2/4;
+  grid-row: 7;
+}
+.cell8{
+  grid-column:2/4;
+  grid-row: 8;
+}
+.cell9{
+  grid-column:2/4;
+  grid-row: 9;
+}
+.cell10{
+  grid-column:2/4;
+  grid-row: 10;
+}
+.cell11{
+  grid-column:2/4;
+  grid-row:11;
+}
+.cell12{
+  grid-column:2/4;
+  grid-row:12;
 }
