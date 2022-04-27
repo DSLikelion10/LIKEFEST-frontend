@@ -24,6 +24,7 @@
 }
 .menuSpaceBox{
   height:78px;
+  /* background-color: #4E7565; */
 }
 .Header {
   padding-top: 14px;
@@ -51,10 +52,10 @@
   align-items: center;
   padding-left: 34px;
   padding-right: 34px;
-  background-color: #ffffff;
+  /* background-color: aqua; */
 }
 .HeaderBottom{
-  background-color: #ffffff;
+  /* background-color: lightcoral; */
 
 }
 .HeaderBlack {
@@ -89,7 +90,7 @@
   width: 24px;
   height: 20px;
   padding: 13px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 .NavMenu {
   display: none;
