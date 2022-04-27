@@ -70,8 +70,9 @@ const Menubar = () => {
         <div className={styles.menuSpaceBox} />
         <div className={show ? styles.HeaderBlack : styles.Header}>
           <div className={styles.HeaderTop}>
-            <Link to="/">
-              <img src={FesLogo} />
+            <Link to="/">{
+              home ? null : <img src={FesLogo} />
+            }
             </Link>
             <div
               className={
