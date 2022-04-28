@@ -4,6 +4,10 @@
   }
 }
 
+.boardbody {
+  margin-left: 34px;
+  margin-right: 34px;
+}
 .insertBody {
   height: 175px;
   background-color: white;
@@ -16,7 +20,7 @@
   margin-bottom: 19px;
 }
 
-.insertBody2 form{
+.insertBody2 form {
   display: flex;
   flex-direction: column;
 }
@@ -34,7 +38,7 @@
   resize: none;
 }
 
-.insert2{
+.insert2 {
   margin: 17px 23px 0px 23px;
   height: 233px;
   font-family: "Pretendard-Regular";
@@ -46,23 +50,39 @@
   color: #848484;
 }
 
-.insert:focus{
-  outline:none;
-}
-
-.insert2:focus{
+.insert:focus {
   outline: none;
 }
 
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { /* WebKit browsers */ color:transparent; } 
-input:focus:-moz-placeholder, textarea:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color:transparent; } 
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { /* Mozilla Firefox 19+ */ color:transparent; } 
-input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color:transparent; }
+.insert2:focus {
+  outline: none;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: transparent;
+}
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: transparent;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: transparent;
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: transparent;
+}
 
 .insertbt {
   margin: 0px 23px 21px 23px;
   height: 56px;
-  background: #4C966E;
+  background: #4c966e;
   border-radius: 5px;
   color: white;
   border: none;
@@ -74,11 +94,9 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { /* Int
 .boarditem {
   color: white;
   padding: 17px 23px;
-  font-family: 'Pretendard-Medium';
+  font-family: "Pretendard-Medium";
   border-radius: 5px;
   margin-bottom: 19px;
   white-space: pre-wrap;
   text-align: left;
 }
-
-
