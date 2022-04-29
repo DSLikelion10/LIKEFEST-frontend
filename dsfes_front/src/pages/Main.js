@@ -1,4 +1,5 @@
 import HeaderTitle from "../components/HeaderTitle";
+import style from '../css/Main.module.css';
 
 const Main = () => {
   return (
