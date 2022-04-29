@@ -33,7 +33,7 @@ const Board = () => {
     [nextId, texts]
   );
   return (
-    <div>
+    <div className={styles.boardbody}>
       <BoardInsert onInsert={onInsert} />
       <BoardList texts={texts} />
     </div>
