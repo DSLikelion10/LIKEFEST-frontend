@@ -19,8 +19,10 @@ const Menubar = () => {
     (e) => {
       if (menuActive) {
         console.log("열렸습니다.");
+        // setShow(true);
       } else {
         console.log("닫혔습니다.");
+        // setShow(false);
       }
     },
     [menuActive]
@@ -39,7 +41,7 @@ const Menubar = () => {
       }
     });
     return () => {
-      window.removeEventListener("scroll", () => {});
+      window.removeEventListener("scroll", () => { });
     };
   }, []);
 
@@ -67,10 +69,11 @@ const Menubar = () => {
   return (
     <div className={styles.frame}>
       <div className={styles.menubar}>
-        <div className={styles.menuSpaceBox} />
-        <div className={show ? styles.HeaderBlack : styles.Header}>
+        {home ? null : <div className={styles.menuSpaceBox} />}
+
+        <div className={home ? show ? styles.HeaderScroll : styles.HeaderOpacity : styles.Header}>
           <div className={styles.HeaderTop}>
-            <Link to="/">{home ? null : <img src={FesLogo} />}</Link>
+            <Link to="/" onClick={menuClose}>{home ? null : <img src={FesLogo} />}</Link>
             <div
               className={
                 menuActive
@@ -131,9 +134,7 @@ const Menubar = () => {
         <div className={styles.Content}>
           <Outlet />
         </div>
-        <div className={styles.AdBanner}>
-          <img src={googleADs} />
-        </div>
+
         <div className={styles.FooterMenu}>
           <p className={styles.F_Head}>2022 덕성여자대학교 근화제 [새로고침]</p>
           <div className={styles.FooterContent1}>
@@ -153,6 +154,9 @@ const Menubar = () => {
               <p className={styles.name}>정지영</p>
             </div>
           </div>
+        </div>
+        <div className={styles.AdBanner}>
+          <img src={googleADs} />
         </div>
       </div>
     </div>
