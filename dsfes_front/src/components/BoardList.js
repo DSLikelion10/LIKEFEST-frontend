@@ -3,11 +3,15 @@ import BoardItem from "./BoardItem";
 import styles from "../css/Board.module.css";
 
 const BoardList = ({ texts }) => {
+  console.log(texts);
   return (
     <div>
-      {texts.reverse().map((text) => (
-        <BoardItem text={text} key={text.id} />
-      ))}
+      {texts
+        .slice()
+        .reverse()
+        .map((text) => (
+          <BoardItem text={text} key={text.id} />
+        ))}
     </div>
   );
 };
