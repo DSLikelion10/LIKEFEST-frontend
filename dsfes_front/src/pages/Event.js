@@ -6,9 +6,18 @@ import step2 from "../img/find_duksae/image_step2.png";
 import step3 from "../img/find_duksae/image_step3.png";
 import step4 from "../img/find_duksae/image_step4.png";
 import step5 from "../img/find_duksae/image_step5.png";
+import FailModal from "../components/FailModal";
+import { useTransition } from "react-spring";
 
 const Event = () => {
   const [openModal, setOpenModal] = useState(false);
+
+  const transitions = useTransition(openModal, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  });
+
   return (
 // event 페이지의 body 역할인 큰 틀의 div
     <div>
@@ -95,10 +104,15 @@ const Event = () => {
         )
       }  */}
 
-      {openModal && <SuccessModal closeModal={setOpenModal} />} 
-
       eventinput
       {/* 삼항 연산자로 만든 다음, false에서 정답과 비교해서 유동적으로 만든 후 맞으면 success 모달이 뜨게끔, 틀리면 false 모달이 뜨게끔 */}
+
+      {transitions(
+        (style, item) =>
+          item && (
+            <FailModal style={style} closeModal={() => setOpenModal(false)} />
+          )
+      )}
     </div>
   );
 };
