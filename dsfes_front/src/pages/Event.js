@@ -1,12 +1,21 @@
-import HeaderTitle from "../components/HeaderTitle";
+import React, { useState } from "react";
+import SuccessModal from "../components/SuccessModal";
 
 const Event = () => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div>
-      {/* 실제 ui가 아직 안 나와서 HeaderTitle 들어갈지 안 들어갈지 모르겠는데
-      일단 혹시 몰라서 넣어두었습니다. 필요 없어지면 지우셔도 좋습니다:D  */}
-      <input type="text" />
-      <button type="submit">완료</button>
+      <input type="text" placeholder="정답을 입력해주세요" />
+      <button
+        className="openModal"
+        type="submit"
+        onClick={() => {
+          setOpenModal(true);
+        }}
+      >
+        확인하기
+      </button>
+      {openModal && <SuccessModal closeModal={setOpenModal} />}
     </div>
   );
 };

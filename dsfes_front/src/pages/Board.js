@@ -6,7 +6,11 @@ import HeaderTitle from "../components/HeaderTitle";
 import axios from "axios";
 
 const Board = () => {
-  const [texts, setTexts] = useState([{ id: 0, boText: "" }]);
+  const [texts, setTexts] = useState([]);
+
+  const changeTexts = (text) => {
+    setTexts(texts.concat(text));
+  };
 
   useEffect(() => {
     axios
@@ -17,24 +21,9 @@ const Board = () => {
       .catch((error) => console.log("Network Error : ", error));
   }, []);
 
-  console.log(texts[texts.length - 1].id);
-  const nextId = useRef(texts[texts.length - 1].id);
-
-  //임시 저장소
-  const onInsert = useCallback(
-    (boText) => {
-      const newText = {
-        id: nextId.current,
-        boText,
-      };
-      setTexts(texts.concat(newText));
-      nextId.current += 1;
-    },
-    [nextId, texts]
-  );
   return (
-    <div>
-      <BoardInsert onInsert={onInsert} />
+    <div className={styles.boardbody}>
+      <BoardInsert texts={texts} changeTexts={changeTexts} />
       <BoardList texts={texts} />
     </div>
   );
