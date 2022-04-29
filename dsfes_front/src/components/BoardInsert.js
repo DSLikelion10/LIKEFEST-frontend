@@ -3,7 +3,7 @@ import React, { useCallback, useState } from "react";
 import styles from "../css/Board.module.css";
 import { useNavigate } from "react-router-dom";
 
-const BoardInsert = ({ onInsert }) => {
+const BoardInsert = ({ texts, changeTexts }) => {
   const [insertBody, setInsertBody] = useState(styles.insertBody);
   const [insert, setInsert] = useState(styles.insert);
   const [text, setText] = useState("");
@@ -33,7 +33,6 @@ const BoardInsert = ({ onInsert }) => {
   //post
   const handleSubmit = useCallback(
     (e) => {
-      onInsert(text);
       e.preventDefault();
       axios
         .post("http://localhost:3001/board", {
@@ -44,12 +43,20 @@ const BoardInsert = ({ onInsert }) => {
           setText(""); //text 초기화
           setInsertBody(styles.insertBody);
           setInsert(styles.insert);
+
+          //front 추가 처리
+          const NewText = {
+            id: texts[texts.length - 1].id + 1,
+            boText: text,
+          };
+
+          changeTexts(NewText);
         })
         .catch((error) => {
           console.log("Network Error : ", error);
         });
     },
-    [onInsert, text]
+    [changeTexts, text, texts]
   );
 
   //상태관리
