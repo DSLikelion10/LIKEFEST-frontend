@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NoticeItem from "./NoticeItem";
+// import NoticeWrite from "./NoticeWrite";
 
 const NoticeList = () => {
   const [contents, setContents] = useState([
@@ -47,6 +48,8 @@ const NoticeList = () => {
   return (
     <div>
       {contents.map((content) => (
+        <div>
+        {/* <button onClick={NoticeWrite}>write🖍</button> */}
         <NoticeItem
           title={content.title}
           content={content}
@@ -54,6 +57,7 @@ const NoticeList = () => {
           img={content.img}
           ht={content.ht}
         />
+        </div>
       ))}
     </div>
   );

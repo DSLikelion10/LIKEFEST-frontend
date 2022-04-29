@@ -83,3 +83,4 @@
     transition: transform 200ms ease-out 0s;
     transform: rotate(180deg);
 }
+input:focus {color: black;}
