@@ -3,7 +3,7 @@
   .frame {
     width: 412px;
   }
-  .HeaderBlack {
+  .HeaderScroll, .HeaderOpacity {
     width: 412px;
     left: auto !important;
     right: auto !important;
@@ -28,7 +28,7 @@
 }
 .Header {
   padding-top: 14px;
-
+  background-color: #ffffff;
   padding-bottom: 14px;
   font-size: 24px;
   line-height: 28.8px;
@@ -54,36 +54,29 @@
   padding-right: 34px;
   /* background-color: aqua; */
 }
-.HeaderBottom{
-  /* background-color: lightcoral; */
 
-}
-.HeaderBlack {
+.HeaderScroll {
   padding-top: 14px;
-  padding-bottom: 14px;
   font-size: 24px;
   line-height: 28.8px;
   position: fixed;
-  background-color: #111111;
+  background-color: #ffffff;
   top: 0;
   left: 0;
   right: 0;
   z-index: 2;
 }
-.HeaderBlack a {
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-}
-.HeaderBlack .bar {
-  background-color: white;
-}
-.HeaderBlack .HeaderTop{
-  background-color: #111111;
-}
-.HeaderBlack .NavMenuActive {
-  box-shadow: none;
-  background-color: #111111;  
+.HeaderOpacity{
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: 24px;
+  line-height: 28.8px;
+  position: fixed;
+  background-color: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 
 .MenuBtn {
@@ -104,7 +97,20 @@
   padding-bottom: 26px;
   box-shadow: 0px 4px 2px -2px rgba(219, 219, 219, 0.25);
   background-color: #ffffff;
+  animation:fadeInDown 0.5s;
 }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .NavItem {
   padding-top: 6px;
   padding-bottom: 6px;
@@ -158,9 +164,6 @@
   
 }
 
-.AdBanner {
-  margin: 34px;
-}
 .FooterMenu {
   padding: 34px;
   text-align: left;
