@@ -41,7 +41,7 @@ const Menubar = () => {
       }
     });
     return () => {
-      window.removeEventListener("scroll", () => { });
+      window.removeEventListener("scroll", () => {});
     };
   }, []);
 
@@ -71,9 +71,19 @@ const Menubar = () => {
       <div className={styles.menubar}>
         {home ? null : <div className={styles.menuSpaceBox} />}
 
-        <div className={home ? show ? styles.HeaderScroll : styles.HeaderOpacity : styles.Header}>
+        <div
+          className={
+            home
+              ? show
+                ? styles.HeaderScroll
+                : styles.HeaderOpacity
+              : styles.Header
+          }
+        >
           <div className={styles.HeaderTop}>
-            <Link to="/" onClick={menuClose}>{home ? null : <img src={FesLogo} />}</Link>
+            <Link to="/" onClick={menuClose}>
+              {home ? null : <img src={FesLogo} />}
+            </Link>
             <div
               className={
                 menuActive
