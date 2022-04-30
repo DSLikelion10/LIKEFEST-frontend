@@ -1,4 +1,4 @@
-import { React, useState, useEffect, useCallback } from "react";
+import { React, useState } from "react";
 import styles from "../css/Notice.module.css";
 import icon_open from "../img/icon_open.png";
 import icon_close from "../img/icon_close.png";
@@ -18,12 +18,15 @@ function HashTagColor({ content }) {
     PROGRAME1: "#E7D0B6",
     EVENT1: "#D0C7DE",
   };
+  const HTColors = "#4C966E";
+  // console.log(nameOfTag.PROGRAME1);
   // 해시태그마다 색 다르게
   return (
     <div className={styles.hashtagContainer}>
       <div
         className={styles.hashtag}
-        style={{ background: `${content.ht}` + "1" }}
+        style={{ backgroundColor: `${content.ht} + 1` }}
+        // style={{ backgroundColor: "red" }}
       >
         {content.ht}
       </div>
@@ -34,6 +37,8 @@ function HashTagColor({ content }) {
 const NoticeItem = ({ content }) => {
   const [showMore, setShowMore] = useState(false);
   const [nameOfTag, setnameOfTag] = useState(false);
+
+  // 미리 보기 글자 자르기
 
   const truncate = (str, n) => {
     return str?.length > n ? str.substr(0, n - 1) + " ..." : str;
@@ -49,15 +54,6 @@ const NoticeItem = ({ content }) => {
           <img className={styles.openArrow} src={icon_open} alt="여는 버튼" />
         )}
       </button>
-      {/* <div className={styles.hashtagContainer}>
-        <div
-          className={({ nameOfTag }) =>
-            nameOfTag ? styles.HtNotice : styles.HtProgram
-          }
-        >
-          {content.ht}
-        </div>
-      </div> */}
       <HashTagColor content={content} />
       <div className={styles.ntcTitle}>{truncate(content.title, 20)}</div>
       <div className={styles.ntcContent}>
