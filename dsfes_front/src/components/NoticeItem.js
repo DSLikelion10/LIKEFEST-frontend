@@ -7,25 +7,25 @@ function RealContent({ content }) {
   return (
     <div>
       <div>{content.content}</div>
-      <img className={styles.ntcimg} src={content.img} alt="가짜이미지" />
+      <div className={styles.imgContainer}>
+        <img className={styles.ntcimg} src={content.img} alt="가짜이미지" />
+      </div>
     </div>
   );
 }
 
 function HashTagColor({ content }) {
+  const several = `${content.ht}`;
   const nameOfTag = {
-    NOTICE1: "#4C966E",
-    PROGRAME1: "#E7D0B6",
-    EVENT1: "#D0C7DE",
+    NOTICE: "#4C966E",
+    PROGRAME: "#E7D0B6",
+    EVENT: "#D0C7DE",
   };
-  const HTColors = "#4C966E";
-  // console.log(nameOfTag.PROGRAME1);
-  // 해시태그마다 색 다르게
   return (
     <div className={styles.hashtagContainer}>
       <div
         className={styles.hashtag}
-        style={{ backgroundColor: `${content.ht} + 1` }}
+        style={{ backgroundColor: nameOfTag }}
         // style={{ backgroundColor: "red" }}
       >
         {content.ht}
@@ -45,17 +45,25 @@ const NoticeItem = ({ content }) => {
   };
 
   return (
+    // 글 흰 박스 아무 곳이나 누르면 열린 거 닫히기
     <div className={styles.ntcItem} onClick={() => setShowMore(!showMore)}>
+      {/* 여닫는 버튼 */}
       <button className={styles.moreBtn}>
-        {/* <img className={styles.openArrow} src={icon_open} alt="토긑버튼" /> */}
         {showMore ? (
           <img className={styles.openArrow} src={icon_close} alt="닫는 버튼" />
         ) : (
           <img className={styles.openArrow} src={icon_open} alt="여는 버튼" />
         )}
       </button>
+      {/* 해시태그 보여주기 */}
       <HashTagColor content={content} />
-      <div className={styles.ntcTitle}>{truncate(content.title, 20)}</div>
+      {/* 타이틀 : 20글자 넘어가면 자르기 */}
+      {showMore ? (
+        <div className={styles.ntcTitle}>{content.title}</div>
+      ) : (
+        <div className={styles.ntcTitleCut}>{truncate(content.title, 16)}</div>
+      )}
+      {/* 글 내용 -> 클릭 시 글 전부 보여주기 */}
       <div className={styles.ntcContent}>
         {showMore ? (
           <RealContent content={content} />
