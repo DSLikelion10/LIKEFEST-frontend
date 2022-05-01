@@ -1,10 +1,9 @@
-
 import NoticeList from "../components/NoticeList";
+import styles from "../css/Notice.module.css";
 
 const NoticeManage = () => {
   return (
     <div>
-      공지사항 - 운영진용 페이지
       <NoticeList />
     </div>
   );
