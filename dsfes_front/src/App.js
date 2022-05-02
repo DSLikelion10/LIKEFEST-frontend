@@ -1,12 +1,12 @@
-import Menubar from './pages/Menubar';
-import Main from './pages/Main';
-import Notice from './pages/Notice';
-import TimeTable from './pages/TimeTable';
-import Event from './pages/Event';
-import Board from './pages/Board';
+import Menubar from "./pages/Menubar";
+import Main from "./pages/Main";
+import Notice from "./pages/Notice";
+import TimeTable from "./pages/TimeTable";
+import Event from "./pages/Event";
+import Board from "./pages/Board";
 // import NoticeManage from './pages/NoticeManage';
-import NoticeWrite from './pages/NoticeWrite';
-import { Routes, Route } from 'react-router-dom';
+import NoticeWrite from "./components/NoticeWrite";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
