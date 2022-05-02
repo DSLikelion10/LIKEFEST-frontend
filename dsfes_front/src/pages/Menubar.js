@@ -6,6 +6,7 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 import FesLogo from "../img/FesLogo.svg";
 import HeaderTitle from "../components/HeaderTitle";
 import { useLocation } from "react-router-dom";
+import Main from "./Main";
 
 const Menubar = () => {
   // 스크롤 시, 메뉴 상태
@@ -41,7 +42,7 @@ const Menubar = () => {
       }
     });
     return () => {
-      window.removeEventListener("scroll", () => { });
+      window.removeEventListener("scroll", () => {});
     };
   }, []);
 
@@ -53,7 +54,7 @@ const Menubar = () => {
   const links = {
     "/Notice": ["총학생회에서", <br />, "알려드립니다 📢"],
     "/TimeTable": "TIME TABLE",
-    "/Event": "EVENT",
+    "/Event": ["새로워진", <br />, "덕새를 찾아라"],
     "/Board": ["덕우들의 새로고침", <br />, "어떠셨나요?"],
   };
 
@@ -71,9 +72,19 @@ const Menubar = () => {
       <div className={styles.menubar}>
         {home ? null : <div className={styles.menuSpaceBox} />}
 
-        <div className={home ? show ? styles.HeaderScroll : styles.HeaderOpacity : styles.Header}>
+        <div
+          className={
+            home
+              ? show
+                ? styles.HeaderScroll
+                : styles.HeaderOpacity
+              : styles.Header
+          }
+        >
           <div className={styles.HeaderTop}>
-            <Link to="/" onClick={menuClose}>{home ? null : <img src={FesLogo} />}</Link>
+            <Link to="/" onClick={menuClose}>
+              {home ? null : <img src={FesLogo} />}
+            </Link>
             <div
               className={
                 menuActive
@@ -131,6 +142,8 @@ const Menubar = () => {
 
         {home === true ? "" : <HeaderTitle title={title} />}
 
+        {home === true ? <Main />  : ""}
+      
         <div className={styles.Content}>
           <Outlet />
         </div>

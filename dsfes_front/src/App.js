@@ -4,9 +4,9 @@ import Notice from './pages/Notice';
 import TimeTable from './pages/TimeTable';
 import Event from './pages/Event';
 import Board from './pages/Board';
-import NoticeWrite from './components/NoticeWrite';
+// import NoticeManage from './pages/NoticeManage';
+import NoticeWrite from './pages/NoticeWrite';
 import { Routes, Route } from 'react-router-dom';
-
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         <Route path="/noticeWrite" element={<NoticeWrite />}></Route>
         <Route path="/event" element={<Event />}></Route>
         <Route path="/board" element={<Board />}></Route>
+        {/* <Route path="/manager" element={<NoticeManage />}></Route> */}
       </Route>
     </Routes>
   );
