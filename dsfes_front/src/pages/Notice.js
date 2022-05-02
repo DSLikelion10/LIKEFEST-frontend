@@ -1,6 +1,6 @@
 import React from "react";
 import NoticeList from "../components/NoticeList";
-//import NoticeWrite from "../components/NoticeWrite";
+// import NoticeWrite from "../components/NoticeWrite";
 
 const Notice = () => {
   return (

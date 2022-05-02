@@ -5,7 +5,7 @@ import TimeTable from './pages/TimeTable';
 import Event from './pages/Event';
 import Board from './pages/Board';
 // import NoticeManage from './pages/NoticeManage';
-import NoticeWrite from './pages/NoticeWrite';
+import NoticeWrite from "../components/NoticeWrite"
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
