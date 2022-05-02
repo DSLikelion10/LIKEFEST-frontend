@@ -8,7 +8,7 @@ function RealContent({ content }) {
     <div>
       <div>{content.content}</div>
       <div className={styles.imgContainer}>
-        <img className={styles.ntcimg} src={content.img} alt="가짜이미지" />
+        <img className={styles.ntcimg} src={content.img} alt="imgs" />
       </div>
     </div>
   );
@@ -61,7 +61,7 @@ const NoticeItem = ({ content }) => {
       {showMore ? (
         <div className={styles.ntcTitle}>{content.title}</div>
       ) : (
-        <div className={styles.ntcTitleCut}>{truncate(content.title, 16)}</div>
+        <div className={styles.ntcTitleCut}>{truncate(content.title, 19)}</div>
       )}
       {/* 글 내용 -> 클릭 시 글 전부 보여주기 */}
       <div className={styles.ntcContent}>

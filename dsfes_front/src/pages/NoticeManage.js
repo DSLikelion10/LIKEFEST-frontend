@@ -1,10 +1,11 @@
 import NoticeList from "../components/NoticeList";
-import styles from "../css/Notice.module.css";
+import NoticeWrite from "../components/NoticeWrite";
 
 const NoticeManage = () => {
   return (
     <div>
-      <NoticeList />
+      <NoticeWrite />
+      {/* <NoticeList /> */}
     </div>
   );
 };
