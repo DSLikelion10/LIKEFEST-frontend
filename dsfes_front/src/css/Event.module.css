@@ -1,0 +1,160 @@
+/* input 박스  */
+/* .wrap{
+  background-color: #F6F5F1;
+} */
+.eventinput{
+  width: 344px;
+  height: 56px;
+  left: 34px;
+  top: 236px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+}
+
+.insert::placeholder {
+  color: #848484;
+}
+
+.insert:focus {
+  outline: none;
+}
+
+.insert2:focus {
+  outline: none;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: transparent;
+}
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: transparent;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: transparent;
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: transparent;
+}
+
+/* input 박스의 placeholder */
+.eventinput::placeholder {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-weight: 500;
+  color: #848484;
+  padding-left: 10px;
+  line-height: 24px;
+}
+/* 확인하기 버튼 */
+.button{
+  width: 344px;
+  height: 56px;
+  left: 34px;
+  top: 314px;
+  margin-top: 22px;
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 19.2px;
+  text-align: center;
+  background-color: #4C966E;
+  border-radius: 5px;
+  border: none;
+}
+/* 참여 방법 div*/
+/* .join{
+  width: 74px;
+  height: 24px;
+  top: 412px;
+  left: 35px;
+  right: 303px;
+} */
+
+/* 참여 방법 text*/
+.jointext{
+  display: inline-block;
+  margin: 36px 290px 10px 35px;
+  font-family: "Pretendard-Regular";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #4C966E;
+  font-style: normal;
+}
+
+/* 참여 방법의 제일 큰 흰색 박스  */
+.container{
+  /* display: inline-block; */
+  background-color: #FFFFFF;
+  width: 344px;
+  height: 259px;
+  margin: 17px 34px 26px 34px;
+  padding: 1.8px 2.8px;
+  border-radius: 5px;
+  /* position:static; */
+  text-align: center;
+}
+
+/* 참여 방법의 step 01,02 box */
+.stepbox{
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  line-height: 24px;
+  color: #4C966E;
+  width: 62px;
+  height: 24px;
+  margin: 18px 218px 18px 28px; 
+  padding: 3px 19px;
+  background-color: #FFFFFF;
+  border: #4C966E;
+  border-style:solid; 
+  border-radius: 5px;
+}
+/* 참여 방법의 step 03,04,05 제일 큰 흰색 박스  = >text가 2줄 box */
+.containerbig{
+  /* display: inline-block; */
+  background-color: #FFFFFF;
+  width: 344px;
+  height: 292px;
+  margin: 17px 34px 26px 34px;
+  padding: 1.8px 2.8px;
+  border-radius: 5px;
+  /* position:static; */
+  text-align: center;
+}
+/* 박스 안 이미지 */
+.stepimg{
+  text-align: center;
+  display: block;
+  /* padding: 61px 33px 55px 28px; */
+  width: 283px;
+  height: 143px;
+  margin: 0px auto;
+}
+
+/* 박스 안 글 */
+.steptext{
+  width: 289px;
+  height: 48px;
+  padding: 11px; 
+  margin: 0 auto;
+  font-family: "Pretendard-Regular";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0E1013;
+  vertical-align: top;
+  text-align: left;
+}
+
+

@@ -42,7 +42,7 @@ const Menubar = () => {
       }
     });
     return () => {
-      window.removeEventListener("scroll", () => { });
+      window.removeEventListener("scroll", () => {});
     };
   }, []);
 
@@ -54,7 +54,7 @@ const Menubar = () => {
   const links = {
     "/Notice": ["총학생회에서", <br />, "알려드립니다 📢"],
     "/TimeTable": "TIME TABLE",
-    "/Event": "EVENT",
+    "/Event": ["새로워진", <br />, "덕새를 찾아라"],
     "/Board": ["덕우들의 새로고침", <br />, "어떠셨나요?"],
   };
 
@@ -72,9 +72,19 @@ const Menubar = () => {
       <div className={styles.menubar}>
         {home ? null : <div className={styles.menuSpaceBox} />}
 
-        <div className={home ? show ? styles.HeaderScroll : styles.HeaderOpacity : styles.Header}>
+        <div
+          className={
+            home
+              ? show
+                ? styles.HeaderScroll
+                : styles.HeaderOpacity
+              : styles.Header
+          }
+        >
           <div className={styles.HeaderTop}>
-            <Link to="/" onClick={menuClose}>{home ? null : <img src={FesLogo} />}</Link>
+            <Link to="/" onClick={menuClose}>
+              {home ? null : <img src={FesLogo} />}
+            </Link>
             <div
               className={
                 menuActive
