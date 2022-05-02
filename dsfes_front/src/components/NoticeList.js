@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import NoticeItem from "./NoticeItem";
 // import NoticeWrite from "./NoticeWrite";
 
-const NoticeList = () => {
+
+const NoticeList = ({ texts }) => {
   const [contents, setContents] = useState([
     {
       id: 1,

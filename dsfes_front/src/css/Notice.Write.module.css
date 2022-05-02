@@ -30,7 +30,8 @@
 
 /* 해시태그 CSS 모듈화 수정 필요 */
 
-.hashtag {
+.hashtag1 {
+    cursor:pointer;
     font-weight: 700;
     width: 58px;
     height: 30px;
@@ -41,14 +42,51 @@
     align-items:center;
     font-family: 'Pretendard-bold';
     color: #FFF;
-    font-size: 17px;
+    font-size: 12px;
     line-height: 14px;
-    background-color: red;
+    background-color: #4C966E;
     border-radius: 5px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    border: #FFF;
+}
+
+.hashtag2 {
+    cursor:pointer;
+    font-weight: 700;
+    width: 58px;
+    height: 30px;
+    margin-top: 3%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Pretendard-bold';
+    color: #FFF;
+    font-size: 12px;
+    line-height: 14px;
+    background-color: #D0C7DE;
+    border-radius: 5px;
+    border: #FFF;
+}
+
+.hashtag3 {
+    cursor:pointer;
+    font-weight: 700;
+    width: 58px;
+    height: 30px;
+    margin-top: 3%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Pretendard-bold';
+    color: #FFF;
+    font-size: 12px;
+    line-height: 14px;
+    /* background-color: #4C966E; */
+    border-radius: 5px;
+    border: #FFF;
+    background-color:#E7D0B6;
+    width:74px;
 }
 
 .ntcTitle {
@@ -87,12 +125,8 @@
     border-style: none;
 }
 
-.moreBtn:active {
-    /* transition: transform 200ms ease-out 0s;
-    transform: rotate(180deg); */
-}
-
 .submitbtn{
+    cursor:pointer;
     width: 100%;
     background-color: #4C966E;
     height: 56px;
@@ -108,20 +142,70 @@ input:focus {outline:none;}
 textarea:focus {outline:none;}
 
 .tagstyle{
+    font-family: "Pretendard-Regular";
     font-size: 16px;
     text-align: left;
-    font-weight:nomal;
+    font-weight:400;
     margin-top:19px;
+    line-height: 19.2px;
+    color: #0E1013;
+
   }
 
-.imgstyle {
+/* .imgstyle {
     display:block;
     width:137px;
-    /* height: '137px'; */
+    height: '137px';
     margin-bottom:27px;
     
-  }
+  }  */
+
 .all{
     margin-left: 34px;
     margin-right: 34px;
 }
+
+/* .imgstyle{
+    background-image: url(../img/plus.png);
+    background-size: 137px;
+    width: 137px;
+    height: 137px;
+  } */
+
+  /* .input-file-button{
+    padding: 6px 25px;
+    background-color:#FF6600;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  } */
+
+  .plusdiv{
+    cursor:pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: #C4C4C4;
+    width: 137px;
+    height: 137px;
+    margin-bottom: 27px;
+  }
+
+.plusimg{
+    margin: auto;
+    width: 37.25px;
+    height: 37.25px;
+}
+
+.hashtag1:Not(:focus){
+    background-color:#C4C4C4;
+}
+
+.hashtag2:Not(:focus){
+    background-color:#C4C4C4;
+}
+
+.hashtag3:Not(:focus){
+    background-color:#C4C4C4;
+}
+
