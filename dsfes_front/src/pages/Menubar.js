@@ -6,6 +6,7 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 import FesLogo from "../img/FesLogo.svg";
 import HeaderTitle from "../components/HeaderTitle";
 import { useLocation } from "react-router-dom";
+import Main from "./Main";
 
 const Menubar = () => {
   // 스크롤 시, 메뉴 상태
@@ -141,6 +142,8 @@ const Menubar = () => {
 
         {home === true ? "" : <HeaderTitle title={title} />}
 
+        {home === true ? <Main />  : ""}
+      
         <div className={styles.Content}>
           <Outlet />
         </div>

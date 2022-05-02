@@ -3,7 +3,8 @@ import { useLocation } from "react-router-dom";
 import NoticeItem from "./NoticeItem";
 import styles from "../css/Notice.module.css";
 
-const NoticeList = () => {
+
+const NoticeList = ({ texts }) => {
   const [contents, setContents] = useState([
     {
       id: 1,
@@ -58,6 +59,8 @@ const NoticeList = () => {
       </div>
 
       {contents.map((content) => (
+        <div>
+        {/* <button onClick={NoticeWrite}>write🖍</button> */}
         <NoticeItem
           title={content.title}
           content={content}
@@ -65,6 +68,7 @@ const NoticeList = () => {
           img={content.img}
           ht={content.ht}
         />
+        </div>
       ))}
     </div>
   );
