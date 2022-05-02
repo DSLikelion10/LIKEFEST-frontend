@@ -1,10 +1,10 @@
-import NoticeList from "../components/NoticeList";
-import NoticeWrite from "../components/NoticeWrite";
+// import NoticeList from "../components/NoticeList";
+// import NoticeWrite from "../components/NoticeWrite";
 
 const NoticeManage = () => {
   return (
     <div>
-      <NoticeWrite />
+      {/* <NoticeWrite /> */}
       {/* <NoticeList /> */}
     </div>
   );
