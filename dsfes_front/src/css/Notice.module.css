@@ -4,12 +4,12 @@
   grid-template-rows: 30px auto 1fr;
   background-color: white;
   padding: 34px 23px;
-  border-radius: 5px;
+  padding-bottom: 19px;
   padding-top: 14px;
+  border-radius: 5px;
   margin-bottom: 19px;
   margin-right: 34px;
   margin-left: 34px;
-  padding-bottom: 19px;
 }
 
 .hashtagContainer {
@@ -78,11 +78,6 @@
   padding: 0px;
 }
 
-.moreBtn:active {
-  transition: transform 200ms ease-out 0s;
-  transform: rotate(180deg);
-}
-
 .imgContainer {
   width: auto;
   margin-top: 14px;
@@ -117,4 +112,124 @@
   border-radius: 5px;
   margin-bottom: 19px;
   padding-top: 14px;
+}
+
+/* NoiteWrite 페이지 */
+.formContainer {
+  text-align: center;
+}
+.formContainer:nth-child(2) {
+  height: 100%;
+  background-color: #d0c7de;
+}
+.hrr {
+  margin: 0px;
+  color: #c4c4c4;
+}
+
+.writeContainer {
+  /* background-color: #4c966e; */
+  /* margin-bottom: 19px; */
+  /* margin-right: 34px; */
+  /* margin-left: 34px; */
+  display: flex;
+  flex-direction: column;
+}
+.inputContainer {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-top: 14px;
+  padding-bottom: 19px;
+  margin: 26px 34px;
+  height: 350px;
+}
+
+.writeTitle {
+  width: 100%;
+  margin-top: 19px;
+  margin-bottom: 12px;
+  text-align: left;
+  font-family: "Pretendard-bold";
+  font-size: 18px;
+  border: none;
+}
+
+.writeContent {
+  width: 100%;
+  height: 250px;
+  font-family: "Pretendard-Medium";
+  margin-top: 15px;
+  font-size: 16px;
+  border: none;
+  resize: none;
+}
+
+.subTitle {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  text-align: left;
+  margin-left: 4vh;
+}
+
+.tagContainer {
+  display: flex;
+  padding: 7px 36px;
+  gap: 13px;
+}
+
+.tagbtn {
+  background-color: #c4c4c4;
+  color: #fff;
+  font-size: 12px;
+  font-family: "Pretendard-Bold";
+  padding: 7px 8px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}
+
+.tagbtn:nth-child(1):hover {
+  background-color: #4c966e;
+}
+
+.tagbtn:nth-child(2):hover {
+  background-color: #d0c7de;
+}
+
+.tagbtn:nth-child(3):hover {
+  background-color: #e7d0b6;
+}
+.filebox .fileinput {
+  display: inline-block;
+  height: 40px;
+  padding: 4px 10px;
+  vertical-align: middle;
+  border: 1px solid #dddddd;
+  width: 78%;
+  color: #999999;
+}
+.filebox input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+.saveBtn {
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+  color: #fff;
+  background-color: #4c966e;
+  border: none;
+  margin: 27px;
+  padding: 18px;
+  border-radius: 5px;
 }
