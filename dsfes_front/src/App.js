@@ -20,7 +20,7 @@ function App() {
         <Route path="/event" element={<Event />}></Route>
         <Route path="/board" element={<Board />}></Route>
         <Route path="/manager" element={<NoticeManage />}></Route>
-        <Route path="adminntc" element={<AdminNotice />}></Route>
+        <Route path="/adminntc" element={<AdminNotice />}></Route>
       </Route>
     </Routes>
   );

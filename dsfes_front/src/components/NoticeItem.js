@@ -1,22 +1,43 @@
-import { React, useState } from "react";
+import React, { useState, useEffect, axios } from "react";
 import { useLocation } from "react-router-dom";
 import styles from "../css/Notice.module.css";
 import icon_open from "../img/icon_open.png";
 import icon_close from "../img/icon_close.png";
+import NoticeModal from "./NoticeModal";
 import button_edit from "../img/button_edit.png";
+import icon_delete from "../img/icon_delete.png";
+import icon_modify from "../img/icon_modify.png";
 
-function Editbtn() {
+// 수정,삭제 버튼
+function EditBtnF() {
   return (
-    <button className={styles.editbtn}>
-      <img className={styles.button_edit} src={button_edit} alt="여는 버튼" />
-    </button>
+    <div className={styles.btnContainer}>
+      <button className={styles.editdelete}>
+        수정하기{" "}
+        <img
+          className={styles.editdeleteicon}
+          src={icon_modify}
+          alt="editImg"
+        />
+      </button>
+      <hr id={styles.edithr} />
+      <button className={styles.editdelete}>
+        삭제하기
+        <img
+          className={styles.editdeleteicon}
+          src={icon_delete}
+          alt="deleteImg"
+        />
+      </button>
+    </div>
   );
 }
 
+// 더보기했을때 보여질 전체 텍스트 (최적화 추후에 하기)
 function RealContent({ content }) {
   return (
     <div>
-      <div>{content.content}</div>
+      <div>{content.noText}</div>
       <div className={styles.imgContainer}>
         <img className={styles.ntcimg} src={content.img} alt="imgs" />
       </div>
@@ -24,20 +45,27 @@ function RealContent({ content }) {
   );
 }
 
+// 해시태그 색
 function HashTagColor({ content }) {
   return (
     <div className={styles.hashtagContainer}>
       <div className={styles.hashtag} style={{ backgroundColor: "" }}>
-        {content.ht}
+        {content.noTag}
       </div>
     </div>
   );
 }
 
-const NoticeItem = ({ content }) => {
+const NoticeItem = ({ contents, content, setContents }) => {
+  console.log("item", content);
+
   const location = useLocation();
   const [showMore, setShowMore] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
+
+  const clickShowEdit = () => {
+    setShowEdit((showEdit) => !showEdit);
+  };
 
   // 미리 보기 글자 자르기
 
@@ -46,7 +74,6 @@ const NoticeItem = ({ content }) => {
   };
 
   return (
-    // 글 흰 박스 아무 곳이나 누르면 열린 거 닫히기
     <div
       className={styles.ntcItem}
       // onClick={() => setShowMore(!showMore)}
@@ -62,19 +89,31 @@ const NoticeItem = ({ content }) => {
       {/* 해시태그 보여주기 */}
       <HashTagColor content={content} />
       {/* adminntc 수정, 삭제 버튼 보이게 */}
-      {`${location.pathname}` === "/adminntc" ? <Editbtn /> : null}
+      {`${location.pathname}` === "/adminntc" ? (
+        <button className={styles.editbtn}>
+          <img
+            className={styles.button_edit}
+            src={button_edit}
+            onClick={clickShowEdit}
+            alt="여는 버튼"
+          ></img>
+          {showEdit ? <EditBtnF /> : null}
+        </button>
+      ) : null}
       {/* 타이틀 : 20글자 넘어가면 자르기 */}
       {showMore ? (
-        <div className={styles.ntcTitle}>{content.title}</div>
+        <div className={styles.ntcTitle}>{content.noTitle}</div>
       ) : (
-        <div className={styles.ntcTitleCut}>{truncate(content.title, 24)}</div>
+        <div className={styles.ntcTitleCut}>
+          {truncate(content.noTitle, 24)}
+        </div>
       )}
       {/* 글 내용 -> 클릭 시 글 전부 보여주기 */}
       <div className={styles.ntcContent}>
         {showMore ? (
           <RealContent content={content} />
         ) : (
-          `${truncate(content.content, 50)}`
+          `${truncate(content.noText, 50)}`
         )}
       </div>
     </div>

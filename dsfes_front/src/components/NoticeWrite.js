@@ -47,7 +47,7 @@ const NoticeWrite = () => {
 
     axios
       .post(
-        "http://localhost:3000/Notice",
+        "http://localhost:3001/Notice",
         // noTitle:formData.get('title'),
         // noText:formData.get('content'),
         // noTag:formData.get('tag')

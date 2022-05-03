@@ -121,10 +121,42 @@ input:focus {
   background-color: #fff;
   border: none;
   grid-column: 3/4;
+  text-align: right;
   /* grid-row: 1/2; */
 }
 
 .button_edit {
   width: 4px;
   height: 18px;
+}
+
+.btnContainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  border: #4c966e;
+  box-shadow: 0px 0px 4px 0px #11111140;
+  width: 130px;
+  height: 89px;
+  background-color: white;
+  z-index: 50;
+  border-radius: 5px;
+}
+
+.editdelete {
+  font-family: "Pretendard-Medium";
+  background-color: #fff;
+  border: none;
+  font-size: 16px;
+}
+
+.editdeleteicon {
+  margin-left: 24px;
+  width: 16px;
+  height: 16px;
+}
+
+#edithr {
+  width: 104px;
 }
