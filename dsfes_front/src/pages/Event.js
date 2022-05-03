@@ -1,3 +1,8 @@
+/* 작성자: 유다영
+한일: event 페이지 UI
+정답, 오답시 뜨는 모달창은 태영님께 많이 도움받았습니다.
+*/
+
 import React, { useState, useCallback, useEffect, useMemo } from "react";
 import SuccessModal from "../components/SuccessModal";
 import styles from "../css/Event.module.css";
@@ -9,6 +14,7 @@ import step5 from "../img/find_duksae/image_step5.png";
 import FailModal from "../components/FailModal";
 import { useTransition } from "react-spring";
 
+// 정답, 오답시 모달창 띄우기
 const Event = () => {
   const [openModal, setOpenModal] = useState(false);
 
@@ -49,7 +55,7 @@ const Event = () => {
   return (
 // event 페이지의 body 역할인 큰 틀의 div
     <div className={styles.wrap}>
-{/* 정답 입력 input과 button을 묶은 div */}
+  {/* 정답 입력 input과 button을 묶은 div */}
       <div>
         <input name="userinput" onChange={handleChange} className={styles.eventinput} type="text" placeholder=" 정답을 입력해주세요" />
         <button
@@ -63,7 +69,7 @@ const Event = () => {
       </div>
 
       {/* 참여 방법 */}
-          <p className={styles.jointext}>참여 방법</p>
+      <p className={styles.jointext}>참여 방법</p>
 
       {/* 참여 방법 step 1 */}
       <div className={styles.container}>

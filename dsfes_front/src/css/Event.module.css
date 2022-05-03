@@ -1,7 +1,11 @@
+/* 작성자: 유다영
+한일: event 페이지 UI  */
+
 /* input 박스  */
 /* .wrap{
   background-color: #F6F5F1;
 } */
+
 .eventinput{
   width: 344px;
   height: 56px;
@@ -10,6 +14,9 @@
   background-color: #FFFFFF;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
+  /* 개행 처리 */
+  white-space: pre-wrap; 
 }
 
 .insert::placeholder {
@@ -120,6 +127,7 @@ textarea:focus:-ms-input-placeholder {
   border-style:solid; 
   border-radius: 5px;
 }
+
 /* 참여 방법의 step 03,04,05 제일 큰 흰색 박스  = >text가 2줄 box */
 .containerbig{
   /* display: inline-block; */
@@ -132,6 +140,7 @@ textarea:focus:-ms-input-placeholder {
   /* position:static; */
   text-align: center;
 }
+
 /* 박스 안 이미지 */
 .stepimg{
   text-align: center;
