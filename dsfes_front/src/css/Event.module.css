@@ -3,7 +3,7 @@
 
 /* input 박스  */
 /* .wrap{
-  background-color: #F6F5F1;
+  background-color: #E5E5E5;
 } */
 
 .eventinput {
@@ -17,18 +17,6 @@
   cursor: pointer;
   /* 개행 처리 */
   white-space: pre-wrap; 
-}
-
-.insert::placeholder {
-  color: #848484;
-}
-
-.insert:focus {
-  outline: none;
-}
-
-.insert2:focus {
-  outline: none;
 }
 
 input:focus::-webkit-input-placeholder,
@@ -54,9 +42,8 @@ textarea:focus:-ms-input-placeholder {
 
 /* input 박스의 placeholder */
 .eventinput::placeholder {
-  font-family: "Pretendard-Regular";
+  font-family: "Pretendard-Medium";
   font-size: 16px;
-  font-weight: 500;
   color: #848484;
   padding-left: 10px;
   line-height: 24px;
@@ -68,9 +55,8 @@ textarea:focus:-ms-input-placeholder {
   left: 34px;
   top: 314px;
   margin-top: 22px;
-  font-family: "Pretendard-Regular";
+  font-family: "Pretendard-Bold";
   font-size: 16px;
-  font-weight: 700;
   color: #ffffff;
   line-height: 19.2px;
   text-align: center;
@@ -91,8 +77,7 @@ textarea:focus:-ms-input-placeholder {
 .jointext {
   display: inline-block;
   margin: 36px 290px 10px 35px;
-  font-family: "Pretendard-Regular";
-  font-weight: 700;
+  font-family: "Pretendard-Bold";
   font-size: 20px;
   line-height: 24px;
   color: #4c966e;
@@ -114,21 +99,21 @@ textarea:focus:-ms-input-placeholder {
 
 /* 참여 방법의 step 01,02 box */
 .stepbox {
-  font-family: "Pretendard-Regular";
+  font-family: "Pretendard-Medium";
   font-size: 16px;
   line-height: 24px;
   color: #4c966e;
   width: 62px;
   height: 24px;
   margin: 18px 218px 18px 28px;
-  padding: 3px 19px;
+  padding: 3px 17px;
   background-color: #ffffff;
   border: #4c966e;
   border-style: solid;
   border-radius: 5px;
 }
 
-/* 참여 방법의 step 03,04,05 제일 큰 흰색 박스  = >text가 2줄 box */
+/* 참여 방법의 step 03,04,05를 감싸는 제일 큰 흰색 박스  => text가 2줄임 */
 .containerbig {
   /* display: inline-block; */
   background-color: #ffffff;
@@ -151,14 +136,26 @@ textarea:focus:-ms-input-placeholder {
   margin: 0px auto;
 }
 
-/* 박스 안 글 */
-.steptext {
+/* step 1 박스 안 글 */
+.steptext_1 {
   width: 289px;
   height: 48px;
   padding: 11px;
   margin: 0 auto;
-  font-family: "Pretendard-Regular";
-  font-weight: 500;
+  font-family: "Pretendard-Medium";
+  font-size: 16px;
+  line-height: 24px;
+  color: #0e1013;
+  vertical-align: top;
+  text-align: left;
+}
+/* step 2,3,4,5 박스 안 글 */
+.steptext {
+  width: 283px;
+  height: 48px;
+  padding: 11px;
+  margin: 0 auto;
+  font-family: "Pretendard-Medium";
   font-size: 16px;
   line-height: 24px;
   color: #0e1013;

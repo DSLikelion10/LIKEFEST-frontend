@@ -3,7 +3,7 @@
 정답, 오답시 뜨는 모달창은 태영님께 많이 도움받았습니다.
 */
 
-import React, { useState, useCallback, useEffect, useMemo } from "react";
+import React, { useState, useCallback } from "react";
 import SuccessModal from "../components/SuccessModal";
 import styles from "../css/Event.module.css";
 import step1 from "../img/find_duksae/image_step1.png";
@@ -69,16 +69,16 @@ const Event = () => {
       </div>
 
       {/* 참여 방법 */}
-      <p className={styles.jointext}>참여 방법</p>
+      <p className={styles.jointext}>참여&nbsp;방법</p>
 
       {/* 참여 방법 step 1 */}
       <div className={styles.container}>
         {/* step 01 박스 */}
-        <p className={styles.stepbox}>STEP 01</p>
+        <p className={styles.stepbox}>STEP&nbsp;01</p>
         {/* 이미지 */}
         <img className={styles.stepimg} src={step1} alt="사진1"/>
         {/* 설명글 */}
-        <p className={styles.steptext}>
+        <p className={styles.steptext_1}>
           학교 곳곳에 있는 새로워진 덕새를 찾아주세요.
         </p>
       </div>
@@ -86,7 +86,7 @@ const Event = () => {
       {/* 참여 방법 step 2 */}
       <div className={styles.container}>
         {/* step 02 박스 */}
-        <p className={styles.stepbox}>STEP 02</p>
+        <p className={styles.stepbox}>STEP&nbsp;02</p>
         {/* 이미지 */}
         <img className={styles.stepimg} src={step2} alt="사진2"/>
         {/* 설명글 */}
@@ -98,7 +98,7 @@ const Event = () => {
       {/* 참여 방법 step 3 */}
       <div className={styles.containerbig}>
         {/* step 03 박스 */}
-        <p className={styles.stepbox}>STEP 03</p>
+        <p className={styles.stepbox}>STEP&nbsp;03</p>
         {/* 이미지 */}
         <img className={styles.stepimg} src={step3} alt="사진3"/>
         {/* 설명글 */}
@@ -110,7 +110,7 @@ const Event = () => {
       {/* 참여 방법 step 4 */}
       <div className={styles.containerbig}>
         {/* step 04 박스 */}
-        <p className={styles.stepbox}>STEP 04</p>
+        <p className={styles.stepbox}>STEP&nbsp;04</p>
         {/* 이미지 */}
         <img className={styles.stepimg} src={step4} alt="사진4"/>
         {/* 설명글 */}
@@ -122,12 +122,12 @@ const Event = () => {
       {/* 참여 방법 step 5 */}
       <div className={styles.containerbig}>
         {/* step 05 박스 */}
-        <p className={styles.stepbox}>STEP 05</p>
+        <p className={styles.stepbox}>STEP&nbsp;05</p>
         {/* 이미지 */}
         <img className={styles.stepimg} src={step5} alt="사진5"/>
         {/* 설명글 */}
         <p className={styles.steptext}>
-          정답인 경우, 팝업창을 캡처해 중앙본부로 방문해 주세요!
+          정답인 경우, 팝업창을 캡처하여 중앙본부로 방문해 주세요!
         </p>
       </div>
 
