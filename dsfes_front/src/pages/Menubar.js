@@ -6,6 +6,7 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 import FesLogo from "../img/FesLogo.svg";
 import HeaderTitle from "../components/HeaderTitle";
 import { useLocation } from "react-router-dom";
+import Gate from "../components/Gate";
 
 const Menubar = () => {
   // 스크롤 시, 메뉴 상태
@@ -41,7 +42,7 @@ const Menubar = () => {
       }
     });
     return () => {
-      window.removeEventListener("scroll", () => { });
+      window.removeEventListener("scroll", () => {});
     };
   }, []);
 
@@ -71,9 +72,19 @@ const Menubar = () => {
       <div className={styles.menubar}>
         {home ? null : <div className={styles.menuSpaceBox} />}
 
-        <div className={home ? show ? styles.HeaderScroll : styles.HeaderOpacity : styles.Header}>
+        <div
+          className={
+            home
+              ? show
+                ? styles.HeaderScroll
+                : styles.HeaderOpacity
+              : styles.Header
+          }
+        >
           <div className={styles.HeaderTop}>
-            <Link to="/" onClick={menuClose}>{home ? null : <img src={FesLogo} />}</Link>
+            <Link to="/" onClick={menuClose}>
+              {home ? null : <img src={FesLogo} />}
+            </Link>
             <div
               className={
                 menuActive
@@ -130,6 +141,8 @@ const Menubar = () => {
         </div>
 
         {home === true ? "" : <HeaderTitle title={title} />}
+
+        {home === true ? <Gate /> : ""}
 
         <div className={styles.Content}>
           <Outlet />
