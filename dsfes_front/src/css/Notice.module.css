@@ -41,7 +41,7 @@
   font-family: "Pretendard-bold";
   line-height: 24px;
   grid-row: 2/3;
-  grid-column: 1/3;
+  grid-column: 1/4;
   text-align: left;
   font-size: 16px;
   padding-top: 5px;
@@ -54,7 +54,7 @@
   font-family: "Pretendard-bold";
   line-height: 24px;
   grid-row: 2/3;
-  grid-column: 1/3;
+  grid-column: 1/4;
   text-align: left;
   font-size: 16px;
   padding-top: 5px;
@@ -64,7 +64,7 @@
 }
 
 .ntcContent {
-  grid-column: 1/3;
+  grid-column: 1/4;
   text-align: left;
   line-height: 24px;
   font-size: 14px;
@@ -97,9 +97,34 @@
   text-align: left;
 }
 
-.openArrow:active {   
-    transition: transform 200ms ease-out 0s;
-    transform: rotate(180deg);
+.openArrow:active {
+  transition: transform 200ms ease-out 0s;
+  transform: rotate(180deg);
 }
 
-input:focus {color: black;}
+input:focus {
+  color: black;
+}
+
+.toWrite {
+  background-color: #4c966e;
+  font-family: "Pretendard-bold";
+  color: #fff;
+  border-style: none;
+  padding: 18px 38%;
+  border-radius: 5px;
+  margin-bottom: 19px;
+  padding-top: 14px;
+}
+
+.editbtn {
+  background-color: #fff;
+  border: none;
+  grid-column: 3/4;
+  /* grid-row: 1/2; */
+}
+
+.button_edit {
+  width: 4px;
+  height: 18px;
+}

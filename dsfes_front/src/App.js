@@ -7,6 +7,7 @@ import Board from "./pages/Board";
 import NoticeManage from "./pages/NoticeManage";
 // import NoticeWrite from "./components/NoticeWrite";
 import { Routes, Route } from "react-router-dom";
+import AdminNotice from "./pages/AdminNotice";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/event" element={<Event />}></Route>
         <Route path="/board" element={<Board />}></Route>
         <Route path="/manager" element={<NoticeManage />}></Route>
+        <Route path="adminntc" element={<AdminNotice />}></Route>
       </Route>
     </Routes>
   );

@@ -142,8 +142,8 @@ const Menubar = () => {
 
         {home === true ? "" : <HeaderTitle title={title} />}
 
-        {home === true ? <Main />  : ""}
-      
+        {home === true ? <Main /> : ""}
+
         <div className={styles.Content}>
           <Outlet />
         </div>
