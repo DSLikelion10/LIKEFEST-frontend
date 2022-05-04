@@ -3,37 +3,3 @@
   
 
 }
-/*밑에 있는 아이들이 우선순위가 높으므로 !important*/
-
-.festword1{
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    color: #4C966E;
-    margin: 48px 0px auto;
-}
-.festword2{
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    text-align: center;
-    color: #4C966E;
-    margin: 0px auto;
-}
-
-.findD{
-    border-radius: 5px;
-    width: 344px;
-    height: 323px;
-    background: #FFFFFF;
-    margin: 28px auto;
-    
-}
-
-.redo{
-
-}
