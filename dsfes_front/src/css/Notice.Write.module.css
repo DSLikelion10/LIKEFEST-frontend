@@ -44,7 +44,8 @@
   color: #fff;
   font-size: 12px;
   line-height: 14px;
-  background-color: #4c966e;
+  background-color: #c4c4c4;;
+  /* background-color: #4c966e; */
   border-radius: 5px;
   border: #fff;
 }
@@ -63,7 +64,8 @@
   color: #fff;
   font-size: 12px;
   line-height: 14px;
-  background-color: #d0c7de;
+  background-color: #c4c4c4;;
+  /* background-color: #d0c7de; */
   border-radius: 5px;
   border: #fff;
 }
@@ -82,10 +84,10 @@
   color: #fff;
   font-size: 12px;
   line-height: 14px;
-  /* background-color: #4C966E; */
+  background-color:#c4c4c4;
   border-radius: 5px;
   border: #fff;
-  background-color: #e7d0b6;
+  /* background-color: #e7d0b6; */
   width: 74px;
 }
 
@@ -108,6 +110,7 @@
 }
 
 .ntcContent {
+  white-space: pre-wrap;
   resize: none;
   margin-right: 23px;
   margin-left: 23px;
@@ -155,33 +158,12 @@ textarea:focus {
   color: #0e1013;
 }
 
-/* .imgstyle {
-    display:block;
-    width:137px;
-    height: '137px';
-    margin-bottom:27px;
-    
-  }  */
 
 .all {
   margin-left: 34px;
   margin-right: 34px;
 }
 
-/* .imgstyle{
-    background-image: url(../img/plus.png);
-    background-size: 137px;
-    width: 137px;
-    height: 137px;
-  } */
-
-/* .input-file-button{
-    padding: 6px 25px;
-    background-color:#FF6600;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
-  } */
 
 .plusdiv {
   cursor: pointer;
@@ -192,6 +174,7 @@ textarea:focus {
   width: 137px;
   height: 137px;
   margin-bottom: 27px;
+  text-align: center;
 }
 
 .plusimg {
@@ -200,14 +183,19 @@ textarea:focus {
   height: 37.25px;
 }
 
-.hashtag1:not(:focus) {
-  background-color: #c4c4c4;
+.hashtag1:focus,.hashtag2:not(:focus).hashtag3:not(:focus) {
+  background-color: #4c966e;
 }
 
-.hashtag2:not(:focus) {
-  background-color: #c4c4c4;
+.hashtag2:focus,.hashtag1:not(:focus).hashtag3:not(:focus) {
+  background-color:  #d0c7de;
 }
 
-.hashtag3:not(:focus) {
-  background-color: #c4c4c4;
+.hashtag3:focus,.hashtag2:not(:focus).hashtag1:not(:focus) {
+  background-color: #e7d0b6;
 }
+
+.submitbtn:active{background-color: #d0c7de;}
+
+
+
