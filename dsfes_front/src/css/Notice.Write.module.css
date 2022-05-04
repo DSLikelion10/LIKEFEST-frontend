@@ -183,15 +183,15 @@ textarea:focus {
   height: 37.25px;
 }
 
-.hashtag1:focus,.hashtag2:not(:focus).hashtag3:not(:focus) {
+.hashtag1:focus{
   background-color: #4c966e;
 }
 
-.hashtag2:focus,.hashtag1:not(:focus).hashtag3:not(:focus) {
+.hashtag2:focus{
   background-color:  #d0c7de;
 }
 
-.hashtag3:focus,.hashtag2:not(:focus).hashtag1:not(:focus) {
+.hashtag3:focus {
   background-color: #e7d0b6;
 }
 

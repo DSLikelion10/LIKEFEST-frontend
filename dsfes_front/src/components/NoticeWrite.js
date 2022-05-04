@@ -4,7 +4,6 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import plus from '../img/plus.png'
 
-
 const NoticeWrite = () => {
   const [Title, setTitle] = useState(null)
   const [Content, setContent] = useState(null)
@@ -28,15 +27,9 @@ const NoticeWrite = () => {
     }else{
       setImg(e.target.files[0]);
     }
-
     console.log(Title, Content, Tag, noImg);
+    
   };
-
-  // const handleTag = (e) => {
-  //   console.log(e.target.value);
-  //   setTag(e.target.value);
-  // }
-
 
   const handleChange1 = (e) => {
     const {
@@ -102,7 +95,7 @@ const handleSubmit =
 
   };
 
-
+  
   
   return (
   <div className={styles.all} >
@@ -139,6 +132,7 @@ const handleSubmit =
           </button>
           <button
           type='button'
+
             //style={{backgroundColor:'#D0C7DE'}}
             className={styles.hashtag2}
             name="tag"
@@ -193,5 +187,7 @@ const handleSubmit =
   </div>        
   );
 };
+
+
 
 export default NoticeWrite
