@@ -44,6 +44,10 @@ const NoticeWrite = () => {
     formData.append("noText", Content);
     formData.append("noTag", Tag);
     formData.append("noImg", noImg);
+    // formData.append("noTitle", noTitle);
+    // formData.append("noText", noText);
+    // formData.append("noTag", noTag);
+    // formData.append("noImg", noImg);
 
     axios
       .post(
