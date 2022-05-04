@@ -122,6 +122,7 @@ input:focus {
   border: none;
   grid-column: 3/4;
   text-align: right;
+  height: 18px;
   /* grid-row: 1/2; */
 }
 

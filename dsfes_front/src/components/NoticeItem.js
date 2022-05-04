@@ -1,9 +1,8 @@
-import React, { useState, useEffect, axios } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import styles from "../css/Notice.module.css";
 import icon_open from "../img/icon_open.png";
 import icon_close from "../img/icon_close.png";
-import NoticeModal from "./NoticeModal";
 import button_edit from "../img/button_edit.png";
 import icon_delete from "../img/icon_delete.png";
 import icon_modify from "../img/icon_modify.png";
@@ -33,32 +32,51 @@ function EditBtnF() {
   );
 }
 
-// 더보기했을때 보여질 전체 텍스트 (최적화 추후에 하기)
-function RealContent({ content }) {
-  return (
-    <div>
-      <div>{content.noText}</div>
-      <div className={styles.imgContainer}>
-        <img className={styles.ntcimg} src={content.img} alt="imgs" />
+const NoticeItem = ({ content }) => {
+  const [imgurl, setImgurl] = useState("");
+
+  // 이미지 추가 태영언니는 신입니다.
+  useEffect(() => {
+    console.log(content);
+    const hope = content.noImg.data;
+    const img_url = [];
+    for (let i = 8; i < hope.length; i++) {
+      // console.log(String.fromCharCode(hope[i]));
+      img_url.push(String.fromCharCode(hope[i]));
+      setImgurl("http://localhost:3001/" + img_url.join(""));
+    }
+  }, []);
+
+  // 해시태그 추가
+  const [myTag, setMyTag] = useState([
+    {
+      noTag: 1,
+      bgColor: "#4C966E",
+      NameOfTag: "NOTICE",
+    },
+    {
+      noTag: 2,
+      bgColor: "#D0C7DE",
+      NameOfTag: "EVENT",
+    },
+    {
+      noTag: 3,
+      bgColor: "#E7D0B6",
+      NameOfTag: "PROGRAM",
+    },
+  ]);
+
+  // 더보기했을때 보여질 전체 텍스트 (최적화 추후에 하기)
+  function RealContent({ content }) {
+    return (
+      <div>
+        <div>{content.noText}</div>
+        <div className={styles.imgContainer}>
+          <img className={styles.ntcimg} src={imgurl} alt="imgs" />
+        </div>
       </div>
-    </div>
-  );
-}
-
-// 해시태그 색
-function HashTagColor({ content }) {
-  return (
-    <div className={styles.hashtagContainer}>
-      <div className={styles.hashtag} style={{ backgroundColor: "" }}>
-        {content.noTag}
-      </div>
-    </div>
-  );
-}
-
-const NoticeItem = ({ contents, content, setContents }) => {
-  console.log("item", content);
-
+    );
+  }
   const location = useLocation();
   const [showMore, setShowMore] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
@@ -72,7 +90,7 @@ const NoticeItem = ({ contents, content, setContents }) => {
   const truncate = (str, n) => {
     return str?.length > n ? str.substr(0, n - 1) + " ..." : str;
   };
-
+  const TagId = content.noTag - 1;
   return (
     <div
       className={styles.ntcItem}
@@ -87,7 +105,14 @@ const NoticeItem = ({ contents, content, setContents }) => {
         )}
       </button>
       {/* 해시태그 보여주기 */}
-      <HashTagColor content={content} />
+      <div className={styles.hashtagContainer}>
+        <div
+          className={styles.hashtag}
+          style={{ backgroundColor: myTag[TagId].bgColor }}
+        >
+          {myTag[TagId].NameOfTag}
+        </div>
+      </div>
       {/* adminntc 수정, 삭제 버튼 보이게 */}
       {`${location.pathname}` === "/adminntc" ? (
         <button className={styles.editbtn}>
@@ -102,7 +127,7 @@ const NoticeItem = ({ contents, content, setContents }) => {
       ) : null}
       {/* 타이틀 : 20글자 넘어가면 자르기 */}
       {showMore ? (
-        <div className={styles.ntcTitle}>{content.noTitle}</div>
+        <div className={styles.ntcTitle}>{myTag.noTitle}</div>
       ) : (
         <div className={styles.ntcTitleCut}>
           {truncate(content.noTitle, 24)}
