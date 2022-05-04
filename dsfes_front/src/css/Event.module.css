@@ -16,10 +16,11 @@
   width: 344px;
   height: 134px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .eventinput {
-  width: 341px;
+  width: 312px;
   height: 56px;
   background-color: #ffffff;
   border-radius: 5px;
@@ -29,8 +30,8 @@
   white-space: pre-wrap;
   position: absolute;
   margin: 0 auto;
+  padding: 0 15px;
 }
-
 /* input 박스의 placeholder */
 .eventinput::placeholder {
   font-family: "Pretendard-Medium";
@@ -39,7 +40,6 @@
   padding-left: 10px;
   line-height: 24px;
 }
-
 /* 확인하기 버튼 */
 .button {
   width: 344px;
@@ -76,7 +76,7 @@
   width: 344px;
   height: 259px;
   /* margin: 26px 34px; */
-  margin: 26px auto;
+  margin: 17px auto;
   padding: 1.8px 2.8px;
   border-radius: 5px;
   /* position:static; */
