@@ -1,43 +1,34 @@
 /* 작성자: 유다영
 한일: event 페이지 UI  */
 
-/* input 박스  */
-/* .wrap{
-  background-color: #E5E5E5;
-} */
+@media (min-width: 768px) {
+  .wrap {
+    width: 412px;
+    margin: 0 auto;
+
+    /*background-color: #f6f5f1;*/
+  }
+}
+
+/* 정답 입력 input과 확인하기 button을 묶은 div */
+.topbox {
+  position: relative;
+  width: 344px;
+  height: 134px;
+  margin: 0 auto;
+}
 
 .eventinput {
-  width: 344px;
+  width: 341px;
   height: 56px;
-  left: 34px;
-  top: 236px;
   background-color: #ffffff;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   /* 개행 처리 */
-  white-space: pre-wrap; 
-}
-
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
-  /* WebKit browsers */
-  color: transparent;
-}
-input:focus:-moz-placeholder,
-textarea:focus:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: transparent;
-}
-input:focus::-moz-placeholder,
-textarea:focus::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: transparent;
-}
-input:focus:-ms-input-placeholder,
-textarea:focus:-ms-input-placeholder {
-  /* Internet Explorer 10+ */
-  color: transparent;
+  white-space: pre-wrap;
+  position: absolute;
+  margin: 0 auto;
 }
 
 /* input 박스의 placeholder */
@@ -48,13 +39,14 @@ textarea:focus:-ms-input-placeholder {
   padding-left: 10px;
   line-height: 24px;
 }
+
 /* 확인하기 버튼 */
 .button {
   width: 344px;
   height: 56px;
   left: 34px;
   top: 314px;
-  margin-top: 22px;
+  margin-top: 78px;
   font-family: "Pretendard-Bold";
   font-size: 16px;
   color: #ffffff;
@@ -64,14 +56,6 @@ textarea:focus:-ms-input-placeholder {
   border-radius: 5px;
   border: none;
 }
-/* 참여 방법 div*/
-/* .join{
-  width: 74px;
-  height: 24px;
-  top: 412px;
-  left: 35px;
-  right: 303px;
-} */
 
 /* 참여 방법 text*/
 .jointext {
@@ -84,13 +68,15 @@ textarea:focus:-ms-input-placeholder {
   font-style: normal;
 }
 
-/* 참여 방법의 제일 큰 흰색 박스  */
+/* 참여 방법을 감싸는 container 흰색 박스  */
+
 .container {
   /* display: inline-block; */
   background-color: #ffffff;
   width: 344px;
   height: 259px;
-  margin: 17px 34px 26px 34px;
+  /* margin: 26px 34px; */
+  margin: 26px auto;
   padding: 1.8px 2.8px;
   border-radius: 5px;
   /* position:static; */
@@ -106,6 +92,7 @@ textarea:focus:-ms-input-placeholder {
   width: 62px;
   height: 24px;
   margin: 18px 218px 18px 28px;
+
   padding: 3px 17px;
   background-color: #ffffff;
   border: #4c966e;
@@ -119,7 +106,7 @@ textarea:focus:-ms-input-placeholder {
   background-color: #ffffff;
   width: 344px;
   height: 292px;
-  margin: 17px 34px 26px 34px;
+  margin: 26px auto;
   padding: 1.8px 2.8px;
   border-radius: 5px;
   /* position:static; */
