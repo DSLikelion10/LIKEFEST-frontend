@@ -35,7 +35,7 @@ function EditBtnF() {
 const NoticeItem = ({ content }) => {
   const [imgurl, setImgurl] = useState("");
 
-  // 이미지 추가
+  // 이미지 추가 태영언니는 신입니다.
   useEffect(() => {
     console.log(content);
     const hope = content.noImg.data;
