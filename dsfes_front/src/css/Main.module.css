@@ -1,83 +1,95 @@
 @media (min-width: 768px){
 
-    .poster{
-        width: 427px;
-        /* overflow-x: hidden; */
-    }
-
-    .date {
-        font-size: 20px;
-    }
-
-    .section1{
-        position: absolute;
-        width: 418px;
-        height: 697px;
-        margin: 0;
-        background: linear-gradient(180deg, #EAEADC 56.17%, rgba(234, 234, 220, 0) 102.13%);
-    }
+  
 
 }
-/*밑에 있는 아이들이 우선순위가 높으므로 !important*/
-.poster{
-    width: 100%;
-    margin-top: 80px;
-    background : linear-gradient(180deg, #EAEADC 56.17%, rgba(234, 234, 220, 0) 102.13%);
+
+
+.MidSection{
+  background-color:#F6F5F1;
+  padding-bottom: 1px;
+  padding-top:1px;
+  display:flex;
+  flex-direction: column;
+  align-items:center
+}
+.howToEnjoy{
+  font-family:'Pretendard-Medium';
+  color:#4C966E;
+  font-size: 24px;
+
+  margin-top:66px;
+  margin-bottom:38.14px;
+}
+.howToEnjoy span{
+  font-family:'Pretendard-Bold';
+}
+.link{
+  text-decoration: none;
+}
+.LinkComponent{
+  width:344px;
+  height:323px;
+  margin-left:34px;
+  margin-right:34px;
+  margin-bottom:66px;
+  background-color: #FFFFFF;
+  border-radius:5px;
+}
+.representativeImg{
+  width:100%;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+}
+.representativeTitle{
+  text-align:right;
+  font-family:'Pretendard-Medium';
+  font-size:16px;
+  color:#848484;
+  display:flex;
+  flex-direction: column;
+  margin-top:14.86px;
+  margin-right:22px;
+}
+.representativeTitle :nth-child(2){
+  font-family:'Pretendard-Bold';
+  font-size:20px;
+  color:#0E1013;
+  margin-top:1px;
 }
 
-.date {
-    width: 350px;
-    height: 24px;
-    font-family: 'Pretendard';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    color: #689B80;
-    margin: 20px auto;
-    display: inline-block;
-}
+.BottomSection{
+  height:276px;
+  background-color: #FFFFFF;
+  display: flex;
+  /* align-items:flex-end;
+  justify-content: space-around; */
 
-.line{
-    width: 136px;
-    height: 0px;
-    margin: 85px auto;
-    border: 0.5px solid #689B80;
-    background-color: #689B80;
-    transform: rotate(90deg);
 }
-.keyword1{
-    width: 157px;
-    float: left;
+.BottomSection div{
+  text-align: left;
+  font-family: 'Pretendard-Medium';
+  color:#689B80;
+  font-size:14px;
+  line-height: 17px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top:151px;
+  margin-left:34px;
+  margin-bottom:43px;
 }
-.keyword2{
-    width: 157px;
-    float: left;
-    margin-top: 30px;
+.Council_Logo{
+  margin-bottom: 8px;
+  width:58px;
+  height:40px;
 }
-.keyword3{
-    width: 157px;
-    float: left;
+.LikeLion_Logo{
+  margin-bottom:8px;
+  width:45px;
+  height:46px;
 }
-.keyword4{
-    width: 157px;
-    float: left;
-    margin-top: 60px;
+.instagram{
+  color:#C4C4C4;
+  
 }
-.keyword5{
-    width: 157px;
-    float: left;
-}
-
-.new{
-    width: 176px;
-    clear: both;
-    margin: 50px auto;
-    
-}
-/* .section1{
-    position: absolute;
-    width: 100%;
-    height: 697px;
-    margin: 0;
-    background: linear-gradient(180deg, #EAEADC 56.17%, rgba(234, 234, 220, 0) 102.13%);
-} */

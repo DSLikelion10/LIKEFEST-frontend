@@ -11,6 +11,8 @@ const SuccessModal = ({ style, closeModal }) => {
     if (modalRef.current === e.target) {
       closeModal(false);
     }
+        //! 모달창 띄웠을 때 스크롤 방지
+        document.body.style.overflow = "hidden";
   };
 
   return (
