@@ -3,3 +3,93 @@
   
 
 }
+
+
+.MidSection{
+  background-color:#F6F5F1;
+  padding-bottom: 1px;
+  padding-top:1px;
+  display:flex;
+  flex-direction: column;
+  align-items:center
+}
+.howToEnjoy{
+  font-family:'Pretendard-Medium';
+  color:#4C966E;
+  font-size: 24px;
+
+  margin-top:66px;
+  margin-bottom:38.14px;
+}
+.howToEnjoy span{
+  font-family:'Pretendard-Bold';
+}
+.link{
+  text-decoration: none;
+}
+.LinkComponent{
+  width:344px;
+  height:323px;
+  margin-left:34px;
+  margin-right:34px;
+  margin-bottom:66px;
+  background-color: #FFFFFF;
+  border-radius:5px;
+}
+.representativeImg{
+  width:100%;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+}
+.representativeTitle{
+  text-align:right;
+  font-family:'Pretendard-Medium';
+  font-size:16px;
+  color:#848484;
+  display:flex;
+  flex-direction: column;
+  margin-top:14.86px;
+  margin-right:22px;
+}
+.representativeTitle :nth-child(2){
+  font-family:'Pretendard-Bold';
+  font-size:20px;
+  color:#0E1013;
+  margin-top:1px;
+}
+
+.BottomSection{
+  height:276px;
+  background-color: #FFFFFF;
+  display: flex;
+  /* align-items:flex-end;
+  justify-content: space-around; */
+
+}
+.BottomSection div{
+  text-align: left;
+  font-family: 'Pretendard-Medium';
+  color:#689B80;
+  font-size:14px;
+  line-height: 17px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top:151px;
+  margin-left:34px;
+  margin-bottom:43px;
+}
+.Council_Logo{
+  margin-bottom: 8px;
+  width:58px;
+  height:40px;
+}
+.LikeLion_Logo{
+  margin-bottom:8px;
+  width:45px;
+  height:46px;
+}
+.instagram{
+  color:#C4C4C4;
+  
+}
