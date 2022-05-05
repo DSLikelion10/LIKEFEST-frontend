@@ -54,7 +54,7 @@ const Menubar = () => {
 
   const links = {
     "/Notice": ["총학생회에서", <br />, "알려드립니다 📢"],
-    "/TimeTable": "TIME TABLE",
+    "/TimeTable": ["TIME TABLE"],
     "/Event": ["새로워진", <br />, "덕새를 찾아라"],
     "/Board": ["덕우들의 새로고침", <br />, "어떠셨나요?"],
     // 은빈 :  adminntc 추가

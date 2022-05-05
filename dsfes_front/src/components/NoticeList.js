@@ -16,6 +16,7 @@ const NoticeList = () => {
       })
       .catch((error) => console.log("Network Error : ", error));
   }, []);
+
   return (
     <div>
       <NavLink to="/manager">

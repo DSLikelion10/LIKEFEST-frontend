@@ -8,7 +8,7 @@ import icon_delete from "../img/icon_delete.png";
 import icon_modify from "../img/icon_modify.png";
 import axios from "axios";
 
-const NoticeItem = ({ content }) => {
+const NoticeItem = ({ content, doDelete }) => {
   // 이미지 추가 태영언니는 신입니다.
   const [imgurl, setImgurl] = useState("");
   useEffect(() => {
@@ -77,20 +77,24 @@ const NoticeItem = ({ content }) => {
     // axios.put("http://localhost:3001/Notice");
     // const oriTitle = contents.noTitle;
   }, []);
+
   // 삭제하기 버튼 눌렀을 때
   const clickDelete = () => {
+    console.log(content.noTitle);
+    // 데이터 삭제
+    axios
+      .delete("http://localhost:3001/Notice")
+      .then((res) => {
+        console.log("res.data", res.data);
+        console.log("content", content);
+        console.log("삭제 완료");
+      })
+      .catch((error) =>
+        // console.log(res);
+        console.log("Network Error : ", error)
+      );
     setShowEdit(false);
   };
-  // 데이터 삭제
-  // useEffect(() => {
-  //   axios
-  //     .delete("http://localhost:3001/Notice")
-  //     .then((res) => {
-  //       console.log("삭제 완료");
-  //     })
-  //     .catch((error) => console.log("Network Error : ", error));
-  // }, []);
-  // };
   // 수정,삭제 버튼
   const EditBtnF = () => {
     return (
