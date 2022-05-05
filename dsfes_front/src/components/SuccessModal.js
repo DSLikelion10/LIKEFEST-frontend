@@ -32,7 +32,7 @@ const SuccessModal = ({ style, closeModal }) => {
             본 화면을 캡쳐하여
             <br />
             <br />
-            <span>5월 20일 총학생회 부스</span>로 방문해주세요.
+            <span>중앙본부 운영시간 내에 </span>방문해 주세요.
           </div>
           <hr />
           <button
