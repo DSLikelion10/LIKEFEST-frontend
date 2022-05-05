@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import styles from "../css/Modal.module.css";
-import wrong from "../img/wrong.png";
 import correct from "../img/correct.png";
 import { animated } from "react-spring";
 
@@ -11,8 +10,8 @@ const SuccessModal = ({ style, closeModal }) => {
     if (modalRef.current === e.target) {
       closeModal(false);
     }
-        //! 모달창 띄웠을 때 스크롤 방지
-        document.body.style.overflow = "hidden";
+    //! 모달창 띄웠을 때 스크롤 방지
+    document.body.style.overflow = "hidden";
   };
 
   return (
