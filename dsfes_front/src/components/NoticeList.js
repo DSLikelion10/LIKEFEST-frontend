@@ -7,6 +7,7 @@ import styles from "../css/Notice.module.css";
 const NoticeList = () => {
   const location = useLocation(null);
   const [contents, setContents] = useState([]);
+  // 데이터 불러오기
   useEffect(() => {
     axios
       .get("http://localhost:3001/Notice")

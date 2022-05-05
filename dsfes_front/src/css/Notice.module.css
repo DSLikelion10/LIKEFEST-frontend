@@ -79,16 +79,23 @@
 }
 
 .imgContainer {
-  width: auto;
-  margin-top: 14px;
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  object-fit: scale-down;
-  background-color: lightgray;
+  object-fit: contain;
+  /* background-color: lightgray; */
 }
 
 .ntcimg {
-  height: 150px;
-  width: auto;
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 14px auto;
+  object-fit: cover;
+  text-align: center;
 }
 
 .openArrow,
@@ -102,9 +109,9 @@
   transform: rotate(180deg);
 }
 
-input:focus {
+/* input:focus {
   color: black;
-}
+} */
 
 .toWrite {
   background-color: #4c966e;
@@ -123,6 +130,7 @@ input:focus {
   grid-column: 3/4;
   text-align: right;
   height: 18px;
+  width: 137px;
   /* grid-row: 1/2; */
 }
 
@@ -143,6 +151,7 @@ input:focus {
   background-color: white;
   z-index: 50;
   border-radius: 5px;
+  text-align: left;
 }
 
 .editdelete {

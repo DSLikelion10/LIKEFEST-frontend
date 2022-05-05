@@ -7,6 +7,7 @@ import FesLogo from "../img/FesLogo.svg";
 import HeaderTitle from "../components/HeaderTitle";
 import { useLocation } from "react-router-dom";
 import Gate from "../components/Gate";
+import megaphone from "../img/emoji_megaphone.png";
 
 const Menubar = () => {
   // 스크롤 시, 메뉴 상태
@@ -56,6 +57,8 @@ const Menubar = () => {
     "/TimeTable": "TIME TABLE",
     "/Event": ["새로워진", <br />, "덕새를 찾아라"],
     "/Board": ["덕우들의 새로고침", <br />, "어떠셨나요?"],
+    // 은빈 :  adminntc 추가
+    "/adminntc": ["총학생회용", <br />, "페이지 입니다. 📢"],
   };
 
   useEffect(() => {

@@ -6,38 +6,13 @@ import icon_close from "../img/icon_close.png";
 import button_edit from "../img/button_edit.png";
 import icon_delete from "../img/icon_delete.png";
 import icon_modify from "../img/icon_modify.png";
-
-// 수정,삭제 버튼
-function EditBtnF() {
-  return (
-    <div className={styles.btnContainer}>
-      <button className={styles.editdelete}>
-        수정하기{" "}
-        <img
-          className={styles.editdeleteicon}
-          src={icon_modify}
-          alt="editImg"
-        />
-      </button>
-      <hr id={styles.edithr} />
-      <button className={styles.editdelete}>
-        삭제하기
-        <img
-          className={styles.editdeleteicon}
-          src={icon_delete}
-          alt="deleteImg"
-        />
-      </button>
-    </div>
-  );
-}
+import axios from "axios";
 
 const NoticeItem = ({ content }) => {
-  const [imgurl, setImgurl] = useState("");
-
   // 이미지 추가 태영언니는 신입니다.
+  const [imgurl, setImgurl] = useState("");
   useEffect(() => {
-    console.log(content);
+    // console.log("콘텐트 보여줘 // ", typeof content.noTitle);
     const hope = content.noImg.data;
     const img_url = [];
     for (let i = 8; i < hope.length; i++) {
@@ -67,22 +42,79 @@ const NoticeItem = ({ content }) => {
   ]);
 
   // 더보기했을때 보여질 전체 텍스트 (최적화 추후에 하기)
-  function RealContent({ content }) {
+  function FullContent({ content }) {
     return (
       <div>
-        <div>{content.noText}</div>
+        <div className={styles.ntcContent}>{content.noText}</div>
         <div className={styles.imgContainer}>
           <img className={styles.ntcimg} src={imgurl} alt="imgs" />
         </div>
       </div>
     );
   }
+  // 운영진 주소일때 보여질 컴포넌트들
   const location = useLocation();
+
+  // 더보기, 수정하기 삭제하기
   const [showMore, setShowMore] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
 
+  // 점 세개 눌렀을 때
   const clickShowEdit = () => {
     setShowEdit((showEdit) => !showEdit);
+  };
+
+  // 수정하기 버튼 눌렀을 때
+  const clickEdit = () => {
+    setShowEdit(false);
+    console.log("버튼 클릭시 :", content.id);
+  };
+
+  // 데이터 수정
+  const [oriTitle, setOriTitle] = useState("");
+  useEffect(() => {
+    // console.log("콘텐트 보여줘? // ", content.id);
+    // axios.put("http://localhost:3001/Notice");
+    // const oriTitle = contents.noTitle;
+  }, []);
+  // 삭제하기 버튼 눌렀을 때
+  const clickDelete = () => {
+    setShowEdit(false);
+  };
+  // 데이터 삭제
+  // useEffect(() => {
+  //   axios
+  //     .delete("http://localhost:3001/Notice")
+  //     .then((res) => {
+  //       console.log("삭제 완료");
+  //     })
+  //     .catch((error) => console.log("Network Error : ", error));
+  // }, []);
+  // };
+  // 수정,삭제 버튼
+  const EditBtnF = () => {
+    return (
+      <div className={styles.btnContainer}>
+        <button className={styles.editdelete} onClick={clickEdit}>
+          수정하기
+          <img
+            className={styles.editdeleteicon}
+            src={icon_modify}
+            alt="editImg"
+          />
+        </button>
+        <hr id={styles.edithr} />
+        <button className={styles.editdelete}>
+          삭제하기
+          <img
+            className={styles.editdeleteicon}
+            onClick={clickDelete}
+            src={icon_delete}
+            alt="deleteImg"
+          />
+        </button>
+      </div>
+    );
   };
 
   // 미리 보기 글자 자르기
@@ -121,13 +153,13 @@ const NoticeItem = ({ content }) => {
             src={button_edit}
             onClick={clickShowEdit}
             alt="여는 버튼"
-          ></img>
+          />
           {showEdit ? <EditBtnF /> : null}
         </button>
       ) : null}
       {/* 타이틀 : 20글자 넘어가면 자르기 */}
       {showMore ? (
-        <div className={styles.ntcTitle}>{myTag.noTitle}</div>
+        <div className={styles.ntcTitle}>{content.noTitle}</div>
       ) : (
         <div className={styles.ntcTitleCut}>
           {truncate(content.noTitle, 24)}
@@ -136,7 +168,7 @@ const NoticeItem = ({ content }) => {
       {/* 글 내용 -> 클릭 시 글 전부 보여주기 */}
       <div className={styles.ntcContent}>
         {showMore ? (
-          <RealContent content={content} />
+          <FullContent content={content} />
         ) : (
           `${truncate(content.noText, 50)}`
         )}
