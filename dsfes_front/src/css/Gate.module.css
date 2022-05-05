@@ -28,8 +28,7 @@
 
 .date {
     width: 350px;
-    height: 24px;
-    font-family: 'Pretendard - Bold';
+    font-family: 'Pretendard-Bold';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -41,7 +40,7 @@
 .line{
     width: 156px; /*136*/
     height: 0px;
-    margin: 115px auto;
+    margin: 112px auto;
     border: 0.5px solid #689B80;
     background-color: #689B80;
     transform: rotate(90deg);
@@ -56,38 +55,37 @@
 }
 .keywordDiv img{
     position: absolute;
-    width: 174px;
+    width: 190px;
 }
 .keyword1{
-    top: 35px;
-    left: 37px;
+    top: 40px;
+    left: 13.5px;
 
 }
 .keyword2{
-    top: 73.62px;
+    top: 88.62px;
     /* top: 38.62px; */
-    right: 21.59px;
+    right: 10.59px;
 }
 .keyword3{
-    top: 132px;
+    top: 153px;
     /* top: 97px; */
-    left: 75px;
+    left: 60px;
 }
 .keyword4{
-    top: 195px;
+    top: 220px;
     /* top: 160px; */
-    right: 49px;
+    right: 36px;
 }
 .keyword5{
-    top: 224px;
+    top: 255px;
     /* top: 191px; */
-    left: 31.82px;
+    left: 13px;
 }
 
 .new{
-    width: 176px;
-    clear: both;
-    margin: 110px auto;
+    width: 200px;
+    margin: 120px auto;
     
 }
 /* .section1{
