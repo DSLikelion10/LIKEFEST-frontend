@@ -1,6 +1,8 @@
+
 .navBar{
   display: flex;
   justify-content: center;
+  background-color: #FFFFFF;
 }
 .navBar :nth-child(2){
   margin-left:14px;
@@ -23,4 +25,9 @@
   border-bottom:4px solid #4C966E; 
   color:#4C966E;
   font-family:'Pretendard-Black';
+}
+.blankDiv{
+  height:72px;
+  width:100%;
+  background-color: #FFFFFF;
 }
