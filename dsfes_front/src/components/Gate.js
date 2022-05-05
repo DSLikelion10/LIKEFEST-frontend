@@ -15,11 +15,13 @@ const Gate = () => {
       <img className={style.poster} src={mainposter} alt="포스터" />
       <div className={style.date}>2022. 05.18 - 05.20</div>
       <div className={style.line}></div> 
-      {/* <img className={style.keyword1} src={follow} alt="follow" />
+        <div className={style.keywordDiv}>
+          <img className={style.keyword1} src={follow} alt="follow" />
           <img className={style.keyword2} src={female} alt="female" />
           <img className={style.keyword3} src={focus} alt="focus" />
           <img className={style.keyword4} src={future} alt="future" />
-          <img className={style.keyword5} src={forever} alt="forever" /> */}
+          <img className={style.keyword5} src={forever} alt="forever" />
+        </div>
       <img className={style.new} src={newduksung} alt="forever" />
     </div>
   );
