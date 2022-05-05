@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import BoardItem from "./BoardItem";
-import styles from "../css/Board.module.css";
 
 const BoardList = ({ texts }) => {
   console.log(texts);

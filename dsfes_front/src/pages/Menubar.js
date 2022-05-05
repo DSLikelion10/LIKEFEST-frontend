@@ -155,9 +155,9 @@ const Menubar = () => {
             <div className={styles.F_Content}>
               <p className={styles.name}>멋쟁이 사자처럼 덕성여자대학교</p>
               <p>Front-end</p>
-              <p className={styles.name}>강태영 권은빈 김수정 허은</p>
+              <p className={styles.name}>강태영 권은빈 김수정 남서현 허은</p>
               <p>Back-end</p>
-              <p className={styles.name}>남서현 유다영 홍인혜</p>
+              <p className={styles.name}>유다영 홍인혜</p>
             </div>
           </div>
           <div className={styles.FooterContent2}>
