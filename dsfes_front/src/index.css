@@ -111,3 +111,9 @@ code {
   font-weight: 500;
   font-style: normal;
 }
+
+@font-face{
+  font-family: "GmarketSansMedium";
+  font-display:fallback;
+  src:url("./font/GmarketSansMedium.otf") format("opentype");
+}
