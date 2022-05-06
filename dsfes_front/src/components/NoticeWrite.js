@@ -7,12 +7,35 @@ import plus from '../img/plus.png'
 const NoticeWrite = () => {
   const [Title, setTitle] = useState(null)
   const [Content, setContent] = useState(null)
-  const [Tag, setTag] = useState(null);
+  const [Tag, setTag] = useState(false); //하나용
   const [noImg, setImg] = useState(null);
   const [noimg, setimg] = useState(null);
+  let [tag1, setTag1]= useState(true);
+  let [tag2, setTag2]= useState(true);
+  let [tag3, setTag3]= useState(true);
+  const [textColor1, setTextColor1] = useState('#c4c4c4'); 
+  const [textColor2, setTextColor2] = useState('#c4c4c4');
+  const [textColor3, setTextColor3] = useState('#c4c4c4');
 
   const formData = new FormData();
   const navigate = useNavigate();
+
+  // const handleChange = (e) => {
+  //   const {
+  //     target: { name, value },
+  //   } = e;
+  //   if (name === 'title') {
+  //     setTitle(value);
+  //   }else if (name === 'content'){
+  //     setContent(value);
+  //   }else if(name === 'tag'){
+  //     setTag(value);
+  //   }else{
+  //     setImg(e.target.files[0]);
+  //   }
+  //   console.log(Title, Content, Tag, noImg);
+    
+  // };
 
   const handleChange = (e) => {
     const {
@@ -24,24 +47,7 @@ const NoticeWrite = () => {
       setContent(value);
     }else if(name === 'tag'){
       setTag(value);
-    }else{
-      setImg(e.target.files[0]);
-    }
-    console.log(Title, Content, Tag, noImg);
-    
-  };
-
-  const handleChange1 = (e) => {
-    const {
-      target: { name, value },
-    } = e;
-    if (name === 'title') {
-      setTitle(value);
-    }else if (name === 'content'){
-      setContent(value);
-    }else if(name === 'tag'){
-      setTag(value);
-    }else if(name === 'noImg' || name === 'noimg'){
+    }else if(name === 'noImg'){
       setImg(URL.createObjectURL(e.target.files[0]));  
       setimg(e.target.files[0]);  
     
@@ -49,6 +55,49 @@ const NoticeWrite = () => {
 console.log(Title, Content, Tag, noImg);
 }
 
+
+  const tagChange = (e) => {
+    const {
+      target: { name, value },
+    } = e;
+    if(name === 'tag1'){
+      //setTag1(!tag1);
+      tag1 = true;
+      tag2 = false;
+      tag3 = false;
+      console.log(tag1,tag2,tag3)
+      setTextColor1(tag1 === true ? "#4C966E":'#c4c4c4');
+      setTextColor2(tag2 === true ? " #d0c7de":'#c4c4c4');
+      setTextColor3(tag3 === true ? " #e7d0b6":'#c4c4c4');
+    }
+    else if(name === 'tag2'){
+      //setTag2(!tag2);
+      tag1 = false;
+      tag2 = true;
+      tag3 = false;
+      console.log(tag1,tag2,tag3)
+      setTextColor1(tag1 === true ? "#4C966E":'#c4c4c4');
+      setTextColor2(tag2 === true ? " #d0c7de":'#c4c4c4');
+      setTextColor3(tag3 === true ? " #e7d0b6":'#c4c4c4');
+    }
+    else if(name === 'tag3'){
+      //setTag3(!tag3);
+      tag1 = false;
+      tag2 = false;
+      tag3 = true;
+      console.log(tag1,tag2,tag3)
+      setTextColor1(tag1 === true ? "#4C966E":'#c4c4c4');
+      setTextColor2(tag2 === true ? " #d0c7de":'#c4c4c4');
+      setTextColor3(tag3 === true ? " #e7d0b6":'#c4c4c4');
+      
+    }
+    // setTag([
+    //   ...Tag,value
+    // ]); 
+    setTag(value);
+    console.log(Tag);
+    
+  };
 
 
 const handleSubmit = 
@@ -124,10 +173,11 @@ const handleSubmit =
           <button
           type='button'
             className={styles.hashtag1} 
-            //style={{backgroundColor:"#4C966E"}}
-            name="tag"
+            //className={tag1?styles.hashtag1.backgroundColor}
+            style={{backgroundColor:textColor1}}
+            name="tag1"
             value='1'
-            onClick={handleChange}>
+            onClick={tagChange}>
               NOTICE
           </button>
           <button
@@ -135,18 +185,20 @@ const handleSubmit =
 
             //style={{backgroundColor:'#D0C7DE'}}
             className={styles.hashtag2}
-            name="tag"
+            style={{backgroundColor:textColor2}}
+            name="tag2"
             value='2'
-            onClick={handleChange}> 
+            onClick={tagChange}> 
               EVENT
           </button>
           <button
           type='button'
             //style={{backgroundColor:"#E7D0B6", width:"74px"}}
             className={styles.hashtag3}
-            name="tag"
+            style={{backgroundColor:textColor3}}
+            name="tag3"
             value='3'
-            onClick={handleChange}>
+            onClick={tagChange}>
               PROGRAM
           </button>
         </div>  
@@ -164,7 +216,7 @@ const handleSubmit =
             accept="image/*"
             style={{display:"none"}}
             name="noImg"
-            onChange={handleChange1}></input>
+            onChange={handleChange}></input>
         <label for="input-file">
           <div className={styles.plusdiv}>
           {noImg ? 
