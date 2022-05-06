@@ -61,33 +61,33 @@ console.log(Title, Content, Tag, noImg);
       target: { name, value },
     } = e;
     if(name === 'tag1'){
-      //setTag1(!tag1);
-      tag1 = true;
-      tag2 = false;
-      tag3 = false;
+      setTag1(!tag1);
+      //tag1 = true;
+      //tag2 = false;
+      //tag3 = false;
       console.log(tag1,tag2,tag3)
       setTextColor1(tag1 === true ? "#4C966E":'#c4c4c4');
-      setTextColor2(tag2 === true ? " #d0c7de":'#c4c4c4');
-      setTextColor3(tag3 === true ? " #e7d0b6":'#c4c4c4');
+      //setTextColor2(tag2 === true ? " #d0c7de":'#c4c4c4');
+      //setTextColor3(tag3 === true ? " #e7d0b6":'#c4c4c4');
     }
     else if(name === 'tag2'){
-      //setTag2(!tag2);
-      tag1 = false;
-      tag2 = true;
-      tag3 = false;
+      setTag2(!tag2);
+      //tag1 = false;
+      //tag2 = true;
+      //tag3 = false;
       console.log(tag1,tag2,tag3)
-      setTextColor1(tag1 === true ? "#4C966E":'#c4c4c4');
+      //setTextColor1(tag1 === true ? "#4C966E":'#c4c4c4');
       setTextColor2(tag2 === true ? " #d0c7de":'#c4c4c4');
-      setTextColor3(tag3 === true ? " #e7d0b6":'#c4c4c4');
+      //setTextColor3(tag3 === true ? " #e7d0b6":'#c4c4c4');
     }
     else if(name === 'tag3'){
-      //setTag3(!tag3);
-      tag1 = false;
-      tag2 = false;
-      tag3 = true;
+      setTag3(!tag3);
+      //tag1 = false;
+      //tag2 = false;
+      //tag3 = true;
       console.log(tag1,tag2,tag3)
-      setTextColor1(tag1 === true ? "#4C966E":'#c4c4c4');
-      setTextColor2(tag2 === true ? " #d0c7de":'#c4c4c4');
+      //setTextColor1(tag1 === true ? "#4C966E":'#c4c4c4');
+      //setTextColor2(tag2 === true ? " #d0c7de":'#c4c4c4');
       setTextColor3(tag3 === true ? " #e7d0b6":'#c4c4c4');
       
     }

@@ -1,18 +1,19 @@
 import React, { useRef } from "react";
 import styles from "../css/Modal.module.css";
-import wrong from "../img/wrong.png";
 import correct from "../img/correct.png";
 import { animated } from "react-spring";
 
 const SuccessModal = ({ style, closeModal }) => {
   const modalRef = useRef();
+    //! 모달창 띄웠을 때 스크롤 방지
+    // document.body.style.overflow = "hidden";
 
   const outsideClose = (e) => {
     if (modalRef.current === e.target) {
       closeModal(false);
     }
-        //! 모달창 띄웠을 때 스크롤 방지
-        document.body.style.overflow = "hidden";
+    // 모달 닫을 때 쓰는 handle 함수에 추가해 주면 스크롤 방지 해제
+    // document.body.style.overflow = "unset";
   };
 
   return (
@@ -34,7 +35,7 @@ const SuccessModal = ({ style, closeModal }) => {
             본 화면을 캡쳐하여
             <br />
             <br />
-            <span>5월 20일 총학생회 부스</span>로 방문해주세요.
+            <span>중앙본부 운영시간 내에 </span>방문해 주세요.
           </div>
           <hr />
           <button

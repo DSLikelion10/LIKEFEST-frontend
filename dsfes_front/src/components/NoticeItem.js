@@ -6,9 +6,19 @@ import icon_close from "../img/icon_close.png";
 import button_edit from "../img/button_edit.png";
 import icon_delete from "../img/icon_delete.png";
 import icon_modify from "../img/icon_modify.png";
+import { useTransition } from "react-spring";
+import DeleteModal from "./DeleteModal";
 
 // 수정,삭제 버튼
 function EditBtnF() {
+  const [openModal, setOpenModal] = useState(false);
+
+  const transitions = useTransition(openModal, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  });
+
   return (
     <div className={styles.btnContainer}>
       <button className={styles.editdelete}>
@@ -20,7 +30,12 @@ function EditBtnF() {
         />
       </button>
       <hr id={styles.edithr} />
-      <button className={styles.editdelete}>
+      <button
+        className={styles.editdelete}
+        onClick={() => {
+          setOpenModal(true);
+        }}
+      >
         삭제하기
         <img
           className={styles.editdeleteicon}
@@ -28,6 +43,13 @@ function EditBtnF() {
           alt="deleteImg"
         />
       </button>
+
+      {transitions(
+        (style, item) =>
+          item && (
+            <DeleteModal style={style} closeModal={() => setOpenModal(false)} />
+          )
+      )}
     </div>
   );
 }

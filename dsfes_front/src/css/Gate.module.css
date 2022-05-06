@@ -17,7 +17,7 @@
 }
 /*밑에 있는 아이들이 우선순위가 높으므로 !important*/
 .gradient{
-    background : linear-gradient(180deg, #EAEADC , rgba(234, 234, 220, 0) 95%);
+    background : linear-gradient(180deg, #EAEADC , rgba(234, 234, 220, 0) 63%);
 }
 
 .poster{
@@ -28,8 +28,7 @@
 
 .date {
     width: 350px;
-    height: 24px;
-    font-family: 'Pretendard Bold';
+    font-family: 'Pretendard-Bold';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -41,38 +40,52 @@
 .line{
     width: 156px; /*136*/
     height: 0px;
-    margin: 115px auto;
+    margin: 112px auto;
     border: 0.5px solid #689B80;
     background-color: #689B80;
     transform: rotate(90deg);
 }
+
+.keywordDiv{
+    position: relative;
+    width: 412px;
+    height: 268px;
+    margin: 0px auto;
+    margin-bottom: 29px;
+}
+.keywordDiv img{
+    position: absolute;
+    width: 190px;
+}
 .keyword1{
-    width: 157px;
-    float: left;
+    top: 40px;
+    left: 13.5px;
+
 }
 .keyword2{
-    width: 157px;
-    float: left;
-    margin-top: 30px;
+    top: 88.62px;
+    /* top: 38.62px; */
+    right: 10.59px;
 }
 .keyword3{
-    width: 157px;
-    float: left;
+    top: 153px;
+    /* top: 97px; */
+    left: 60px;
 }
 .keyword4{
-    width: 157px;
-    float: left;
-    margin-top: 60px;
+    top: 220px;
+    /* top: 160px; */
+    right: 36px;
 }
 .keyword5{
-    width: 157px;
-    float: left;
+    top: 255px;
+    /* top: 191px; */
+    left: 13px;
 }
 
 .new{
-    width: 176px;
-    clear: both;
-    margin: 50px auto;
+    width: 200px;
+    margin: 120px auto;
     
 }
 /* .section1{
