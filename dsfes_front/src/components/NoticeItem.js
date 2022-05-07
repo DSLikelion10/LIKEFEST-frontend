@@ -10,51 +10,6 @@ import button_edit from "../img/button_edit.png";
 import icon_delete from "../img/icon_delete.png";
 import icon_modify from "../img/icon_modify.png";
 
-// 수정,삭제 버튼 TY
-function EditBtnF() {
-  const [openModal, setOpenModal] = useState(false);
-
-  const transitions = useTransition(openModal, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-  });
-
-  return (
-    <div className={styles.btnContainer}>
-      <button className={styles.editdelete}>
-        수정하기{" "}
-        <img
-          className={styles.editdeleteicon}
-          src={icon_modify}
-          alt="editImg"
-        />
-      </button>
-      <hr id={styles.edithr} />
-      <button
-        className={styles.editdelete}
-        onClick={() => {
-          setOpenModal(true);
-        }}
-      >
-        삭제하기
-        <img
-          className={styles.editdeleteicon}
-          src={icon_delete}
-          alt="deleteImg"
-        />
-      </button>
-
-      {transitions(
-        (style, item) =>
-          item && (
-            <DeleteModal style={style} closeModal={() => setOpenModal(false)} />
-          )
-      )}
-    </div>
-  );
-}
-
 const NoticeItem = ({ content }) => {
   // 이미지 추가 태영언니는 신입니다.
   const [imgurl, setImgurl] = useState("");
@@ -130,61 +85,54 @@ const NoticeItem = ({ content }) => {
     }
   };
 
-  // 삭제하기 버튼 눌렀을 때
-  const clickDelete = () => {
-    const id = content.id;
-    // 데이터 삭제
-    const check = window.confirm("삭제 확인");
-    if (check) {
-      axios
-        .delete(`http://localhost:3001/notice/${id}`)
-        .then((res) => {
-          window.location.reload();
-          console.log(res);
-          console.log("삭제 완료");
-        })
-        .catch((error) =>
-          // console.log(res);
-          console.log("Network Error : ", error)
-        );
-    } else {
-      alert("게시물 삭제 취소");
-    }
-    setShowEdit(false);
-  };
-  // 수정,삭제 버튼 eb
-  const EditBtnF = () => {
+  // 수정,삭제 버튼 TY
+  function EditBtnF() {
+    const [openModal, setOpenModal] = useState(false);
+
+    const transitions = useTransition(openModal, {
+      from: { opacity: 0 },
+      enter: { opacity: 1 },
+      leave: { opacity: 0 },
+    });
+
     return (
       <div className={styles.btnContainer}>
-        <div className="btnCon" onClick={clickEdit}>
-          <button
-            className={styles.editdelete}
-            onClick={() => {
-              setToEdit(true);
-            }}
-          >
-            수정하기
-            <img
-              className={styles.editdeleteicon}
-              src={icon_modify}
-              alt="editImg"
-            />
-          </button>
-        </div>
+        <button className={styles.editdelete}>
+          수정하기{" "}
+          <img
+            className={styles.editdeleteicon}
+            src={icon_modify}
+            alt="editImg"
+          />
+        </button>
         <hr id={styles.edithr} />
-        <div className="btnCon" onClick={clickDelete}>
-          <button className={styles.editdelete}>
-            삭제하기
-            <img
-              className={styles.editdeleteicon}
-              src={icon_delete}
-              alt="deleteImg"
-            />
-          </button>
-        </div>
+        <button
+          className={styles.editdelete}
+          onClick={() => {
+            setOpenModal(true);
+          }}
+        >
+          삭제하기
+          <img
+            className={styles.editdeleteicon}
+            src={icon_delete}
+            alt="deleteImg"
+          />
+        </button>
+
+        {transitions(
+          (style, item) =>
+            item && (
+              <DeleteModal
+                content={content}
+                style={style}
+                closeModal={() => setOpenModal(false)}
+              />
+            )
+        )}
       </div>
     );
-  };
+  }
 
   // 미리 보기 글자 자르기
 
