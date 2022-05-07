@@ -8,7 +8,7 @@ import icon_delete from "../img/icon_delete.png";
 import icon_modify from "../img/icon_modify.png";
 import axios from "axios";
 
-const NoticeItem = ({ content, doDelete }) => {
+const NoticeItem = ({ content, contents }) => {
   // 이미지 추가 태영언니는 신입니다.
   const [imgurl, setImgurl] = useState("");
   useEffect(() => {
@@ -23,7 +23,7 @@ const NoticeItem = ({ content, doDelete }) => {
   }, []);
 
   // 해시태그 추가
-  const [myTag, setMyTag] = useState([
+  const myTag = [
     {
       noTag: 1,
       bgColor: "#4C966E",
@@ -39,7 +39,7 @@ const NoticeItem = ({ content, doDelete }) => {
       bgColor: "#E7D0B6",
       NameOfTag: "PROGRAM",
     },
-  ]);
+  ];
 
   // 더보기했을때 보여질 전체 텍스트 (최적화 추후에 하기)
   function FullContent({ content }) {
@@ -67,11 +67,11 @@ const NoticeItem = ({ content, doDelete }) => {
   // 수정하기 버튼 눌렀을 때
   const clickEdit = () => {
     setShowEdit(false);
-    console.log("버튼 클릭시 :", content.id);
+    console.log("버튼 클릭시 :", content);
+    console.log("이 컨텐트 뭔지 알아? :", content);
   };
 
   // 데이터 수정
-  const [oriTitle, setOriTitle] = useState("");
   useEffect(() => {
     // console.log("콘텐트 보여줘? // ", content.id);
     // axios.put("http://localhost:3001/Notice");
@@ -80,19 +80,37 @@ const NoticeItem = ({ content, doDelete }) => {
 
   // 삭제하기 버튼 눌렀을 때
   const clickDelete = () => {
-    console.log(content.noTitle);
+    const id = content.id;
+    console.log(contents);
+    // console.log("delete id", `${id}`);
     // 데이터 삭제
-    axios
-      .delete("http://localhost:3001/Notice")
-      .then((res) => {
-        console.log("res.data", res.data);
-        console.log("content", content);
-        console.log("삭제 완료");
-      })
-      .catch((error) =>
-        // console.log(res);
-        console.log("Network Error : ", error)
-      );
+    const check = window.confirm("삭제 확인");
+
+    if (check) {
+      axios
+        .delete("http://localhost:3001/notice/${id}", {
+          data: {
+            id: content.id,
+            //   noTitle: content.noTitle,
+            //   noText: content.noText,
+            //   noImg: content.noImg,
+            //   noTag: content.noTag,
+          },
+        })
+        .then((res) => {
+          console.log("----------------------");
+          console.log(res);
+          console.log(contents);
+          console.log("삭제 완료");
+          // console.log("res.data", res.data);
+        })
+        .catch((error) =>
+          // console.log(res);
+          console.log("Network Error : ", error)
+        );
+    } else {
+      alert("게시물 삭제 취소");
+    }
     setShowEdit(false);
   };
   // 수정,삭제 버튼
@@ -151,7 +169,7 @@ const NoticeItem = ({ content, doDelete }) => {
       </div>
       {/* adminntc 수정, 삭제 버튼 보이게 */}
       {`${location.pathname}` === "/adminntc" ? (
-        <button className={styles.editbtn}>
+        <div className={styles.editbtn}>
           <img
             className={styles.button_edit}
             src={button_edit}
@@ -159,7 +177,7 @@ const NoticeItem = ({ content, doDelete }) => {
             alt="여는 버튼"
           />
           {showEdit ? <EditBtnF /> : null}
-        </button>
+        </div>
       ) : null}
       {/* 타이틀 : 20글자 넘어가면 자르기 */}
       {showMore ? (
