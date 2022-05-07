@@ -15,25 +15,10 @@ const NoticeList = () => {
       .catch((error) => console.log("Network Error : ", error));
   }, []);
 
-  // useEffect(() => {
-  //   axios
-  //     .delete("http://localhost:3001/notice/${id}")
-  //     .then((res) => {
-  //       console.log("----------------------");
-  //       console.log(res);
-  //       console.log("res.data", res.data);
-  //       // console.log("삭제 완료");
-  //     })
-  //     .catch((error) =>
-  //       // console.log(res);
-  //       console.log("Network Error : ", error)
-  //     );
-  // });
-
   return (
     <div>
       {contents.reverse().map((content) => (
-        <NoticeItem contents={contents} content={content} key={content.id} />
+        <NoticeItem content={content} key={content.id} />
       ))}
     </div>
   );

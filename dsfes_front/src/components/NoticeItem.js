@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 import styles from "../css/Notice.module.css";
 import icon_open from "../img/icon_open.png";
 import icon_close from "../img/icon_close.png";
 import button_edit from "../img/button_edit.png";
 import icon_delete from "../img/icon_delete.png";
 import icon_modify from "../img/icon_modify.png";
-<<<<<<< HEAD
-import axios from "axios";
-
-const NoticeItem = ({ content, contents }) => {
-=======
 import { useTransition } from "react-spring";
 import DeleteModal from "./DeleteModal";
+import axios from "axios";
 
-// 수정,삭제 버튼
+// 수정,삭제 버튼 TY
 function EditBtnF() {
   const [openModal, setOpenModal] = useState(false);
 
@@ -60,9 +58,7 @@ function EditBtnF() {
 }
 
 const NoticeItem = ({ content }) => {
-  const [imgurl, setImgurl] = useState("");
-
->>>>>>> 7e87f54ce12fc8d807cc7625be3895340eaa3f45
+  const navigate = useNavigate();
   // 이미지 추가 태영언니는 신입니다.
   const [imgurl, setImgurl] = useState("");
   useEffect(() => {
@@ -125,38 +121,18 @@ const NoticeItem = ({ content }) => {
     console.log("이 컨텐트 뭔지 알아? :", content);
   };
 
-  // 데이터 수정
-  useEffect(() => {
-    // console.log("콘텐트 보여줘? // ", content.id);
-    // axios.put("http://localhost:3001/Notice");
-    // const oriTitle = contents.noTitle;
-  }, []);
-
   // 삭제하기 버튼 눌렀을 때
   const clickDelete = () => {
     const id = content.id;
-    console.log(contents);
-    // console.log("delete id", `${id}`);
     // 데이터 삭제
     const check = window.confirm("삭제 확인");
-
     if (check) {
       axios
-        .delete("http://localhost:3001/notice/${id}", {
-          data: {
-            id: content.id,
-            //   noTitle: content.noTitle,
-            //   noText: content.noText,
-            //   noImg: content.noImg,
-            //   noTag: content.noTag,
-          },
-        })
+        .delete(`http://localhost:3001/notice/${id}`)
         .then((res) => {
-          console.log("----------------------");
           console.log(res);
-          console.log(contents);
           console.log("삭제 완료");
-          // console.log("res.data", res.data);
+          navigate("/adminntc");
         })
         .catch((error) =>
           // console.log(res);
@@ -167,7 +143,7 @@ const NoticeItem = ({ content }) => {
     }
     setShowEdit(false);
   };
-  // 수정,삭제 버튼
+  // 수정,삭제 버튼 eb
   const EditBtnF = () => {
     return (
       <div className={styles.btnContainer}>

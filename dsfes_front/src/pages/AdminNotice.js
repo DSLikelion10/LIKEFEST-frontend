@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 function AdminNotice() {
   return (
-    <div>
+    <div className={styles.fCon}>
       <NavLink to="/manager">
         <button className={styles.toWrite}>글쓰기</button>
       </NavLink>

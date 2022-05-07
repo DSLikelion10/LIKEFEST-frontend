@@ -1,8 +1,9 @@
 import NoticeList from "../components/NoticeList";
+import styles from "../css/Notice.module.css";
 
 const Notice = () => {
   return (
-    <div>
+    <div className={styles.fCon}>
       <NoticeList />
     </div>
   );

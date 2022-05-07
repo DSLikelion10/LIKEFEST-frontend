@@ -1,3 +1,7 @@
+.fCon {
+  margin-top: 25px;
+}
+
 .ntcItem {
   display: grid;
   grid-template-columns: 30px 1fr;
@@ -128,7 +132,7 @@
   background-color: #fff;
   border: none;
   grid-column: 3/4;
-  /* text-align: right; */
+  text-align: right;
   height: 18px;
   width: 137px;
   /* grid-row: 1/2; */
