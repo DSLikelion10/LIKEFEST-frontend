@@ -128,7 +128,7 @@
   background-color: #fff;
   border: none;
   grid-column: 3/4;
-  text-align: right;
+  /* text-align: right; */
   height: 18px;
   width: 137px;
   /* grid-row: 1/2; */

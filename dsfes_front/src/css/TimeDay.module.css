@@ -17,9 +17,11 @@
   margin-top:40px;
 }
 .timeTitle{
-  font-family: 'Pretendard-Medium';
+  font-family: 'GmarketSansMedium';
+  font-size:14px;
   color:#4C966E;
   width:100%;
+  
 }
 
 /* TimeItem */
@@ -27,56 +29,71 @@
 .item1{
   grid-column:2;
   grid-row:1/span 4;
+  margin-top:8px;
 }
 .item2{
   grid-column:3;
   grid-row:4/span 3;
+  margin-top:8px;
+
 }
 .item3{
   grid-column-start:3;
   grid-row-start:7;
+  margin-top:8px;
+
 }
 .item4{
   grid-column:3;
   grid-row:7/8;
-  margin-top:92px;
+  margin-top:99px;
 }
 .item5{
   grid-column: 3;
   grid-row: 8/9;
-  margin-top:117px;
+  margin-top:124px;
 }
 /* 19일 */
 .item6{
   grid-column:2;
   grid-row:1/span 4;
+  margin-top:8px;
+
 }
 .item7{
   grid-column:2;
   grid-row:7/span 5;
+  margin-top:8px;
+
 }
 .item8{
   grid-column:3;
   grid-row:8/span 2;
+  margin-top:8px;
+
 }
 .item9{
   grid-column:3;
   grid-row:10;
+  margin-top:8px;
+
 }
 /* 20일 */
 .item10{
   grid-column:3;
   grid-row:8/span 2;
-  margin-top:50px;
+  margin-top:58px;
 }
 .item11{
   grid-column:3;
   grid-row:10/span 2;
+  margin-top:8px;
 }
 /* 시간선 */
 .cell{
   width:100%;
   border-top:1px solid #ACC7B8;
+  margin-top:7px;
 }
 .cell1{
   grid-column:2/4;
