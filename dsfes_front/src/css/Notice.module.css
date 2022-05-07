@@ -1,3 +1,7 @@
+.fCon {
+  margin-top: 25px;
+}
+
 .ntcItem {
   display: grid;
   grid-template-columns: 30px 1fr;
@@ -79,16 +83,31 @@
 }
 
 .imgContainer {
-  width: auto;
-  margin-top: 14px;
+  position: relative;
+  width: 340px;
+  height: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
   text-align: center;
-  object-fit: scale-down;
-  background-color: lightgray;
+  /* 확대 자르기 */
+  /* object-fit: contain;  */
+  /* 줄이고 다 보이기 */
+  object-fit: cover;
+
+  /* background-color: lightgray; */
 }
 
 .ntcimg {
-  height: 150px;
-  width: auto;
+  position: relative;
+  width: 340px;
+  height: 340px;
+  margin: 24px auto;
+  /* 줄이고 다 보이기 */
+  /* object-fit: contain; */
+  /* 확대 자르기 */
+  object-fit: cover;
+  text-align: center;
 }
 
 .openArrow,
@@ -102,9 +121,9 @@
   transform: rotate(180deg);
 }
 
-input:focus {
+/* input:focus {
   color: black;
-}
+} */
 
 .toWrite {
   background-color: #4c966e;
@@ -121,8 +140,9 @@ input:focus {
   background-color: #fff;
   border: none;
   grid-column: 3/4;
-  /* text-align: right; */
+  text-align: right;
   height: 18px;
+  width: 137px;
   /* grid-row: 1/2; */
 }
 
@@ -143,6 +163,7 @@ input:focus {
   background-color: white;
   z-index: 50;
   border-radius: 5px;
+  text-align: left;
 }
 
 .editdelete {

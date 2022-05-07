@@ -1,9 +1,24 @@
 import React, { useRef } from "react";
 import styles from "../css/Modal.module.css";
 import { animated } from "react-spring";
+import axios from "axios";
 
 //삭제 모달창 입니다.
-const DeleteModal = ({ style, closeModal }) => {
+const DeleteModal = ({ style, closeModal, content }) => {
+  // 삭제하기 버튼 눌렀을 때
+  const clickDelete = () => {
+    const id = content.id;
+    // 데이터 삭제
+    axios
+      .delete(`http://localhost:3001/notice/${id}`)
+      .then((res) => {
+        window.location.reload();
+        console.log(res);
+        console.log("삭제 완료");
+      })
+      .catch((error) => console.log("Network Error : ", error));
+  };
+
   const modalRef = useRef();
 
   const outsideClose = (e) => {
@@ -36,7 +51,7 @@ const DeleteModal = ({ style, closeModal }) => {
             <hr />
             <button
               className={styles.modalButton3}
-              onClick={() => closeModal(false)}
+              onClick={() => clickDelete()}
               type="button"
               style={{ color: "#FD6060" }}
             >
