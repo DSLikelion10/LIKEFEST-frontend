@@ -34,6 +34,9 @@ const Event = () => {
     if (name === "userinput") {
       setUserinput(value);
     }
+      // 모달 닫을 때 쓰는 handle 함수에 추가해 주면 스크롤 방지 해제
+      // 따라서 사용자가 input 박스 클릭시 스크롤 가능
+      document.body.style.overflow = "unset";
   }, []);
 
   const [choose, setChoose] = useState(false);

@@ -3,7 +3,7 @@
 
 @media (min-width: 768px) {
   .wrap {
-    width: 412px;
+    width: 344px;
     margin: 0 auto;
     /*background-color: #f6f5f1;*/
   }
@@ -15,7 +15,8 @@
   width: 344px;
   height: 134px;
   margin: 0 auto;
-  padding: 33px;
+  padding-top: 33px;
+  padding-bottom: 33px;
 }
 
 .eventinput {
