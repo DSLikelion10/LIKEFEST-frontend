@@ -117,7 +117,6 @@ const NoticeItem = ({ content }) => {
   // 수정하기 버튼 눌렀을 때
   const clickEdit = () => {
     setShowEdit(false);
-    console.log("버튼 클릭시 :", content);
     console.log("이 컨텐트 뭔지 알아? :", content);
   };
 
@@ -130,9 +129,9 @@ const NoticeItem = ({ content }) => {
       axios
         .delete(`http://localhost:3001/notice/${id}`)
         .then((res) => {
+          window.location.reload();
           console.log(res);
           console.log("삭제 완료");
-          navigate("/adminntc");
         })
         .catch((error) =>
           // console.log(res);
