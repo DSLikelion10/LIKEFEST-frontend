@@ -84,21 +84,28 @@
 
 .imgContainer {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 340px;
+  height: 340px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
   text-align: center;
-  object-fit: contain;
+  /* 확대 자르기 */
+  /* object-fit: contain;  */
+  /* 줄이고 다 보이기 */
+  object-fit: cover;
+
   /* background-color: lightgray; */
 }
 
 .ntcimg {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 340px;
+  height: 340px;
   margin: 24px auto;
+  /* 줄이고 다 보이기 */
+  /* object-fit: contain; */
+  /* 확대 자르기 */
   object-fit: cover;
   text-align: center;
 }

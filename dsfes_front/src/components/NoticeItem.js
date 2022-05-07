@@ -1,16 +1,14 @@
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-
+import { useTransition } from "react-spring";
 import styles from "../css/Notice.module.css";
+import DeleteModal from "./DeleteModal";
 import icon_open from "../img/icon_open.png";
 import icon_close from "../img/icon_close.png";
 import button_edit from "../img/button_edit.png";
 import icon_delete from "../img/icon_delete.png";
 import icon_modify from "../img/icon_modify.png";
-import { useTransition } from "react-spring";
-import DeleteModal from "./DeleteModal";
-import axios from "axios";
 
 // 수정,삭제 버튼 TY
 function EditBtnF() {
@@ -58,7 +56,6 @@ function EditBtnF() {
 }
 
 const NoticeItem = ({ content }) => {
-  const navigate = useNavigate();
   // 이미지 추가 태영언니는 신입니다.
   const [imgurl, setImgurl] = useState("");
   useEffect(() => {
@@ -105,9 +102,10 @@ const NoticeItem = ({ content }) => {
   // 운영진 주소일때 보여질 컴포넌트들
   const location = useLocation();
 
-  // 더보기, 수정하기 삭제하기
+  // 글 더보기, 수정삭제
   const [showMore, setShowMore] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
+  const [toEdit, setToEdit] = useState(false);
 
   // 점 세개 눌렀을 때
   const clickShowEdit = () => {
@@ -117,7 +115,19 @@ const NoticeItem = ({ content }) => {
   // 수정하기 버튼 눌렀을 때
   const clickEdit = () => {
     setShowEdit(false);
-    console.log("이 컨텐트 뭔지 알아? :", content);
+    // const id = content.id;
+    const checkedit = window.confirm("수정 확인");
+    if (checkedit) {
+      // axios
+      //   .put(`localhost:3001/notice/update/${id}`)
+      //   .then((res) => {})
+      //   .catch((error) =>
+      //     // console.log(res);
+      //     console.log("Network Error : ", error)
+      //   );
+    } else {
+      alert("수정 취소");
+    }
   };
 
   // 삭제하기 버튼 눌렀을 때
@@ -146,24 +156,32 @@ const NoticeItem = ({ content }) => {
   const EditBtnF = () => {
     return (
       <div className={styles.btnContainer}>
-        <button className={styles.editdelete} onClick={clickEdit}>
-          수정하기
-          <img
-            className={styles.editdeleteicon}
-            src={icon_modify}
-            alt="editImg"
-          />
-        </button>
+        <div className="btnCon" onClick={clickEdit}>
+          <button
+            className={styles.editdelete}
+            onClick={() => {
+              setToEdit(true);
+            }}
+          >
+            수정하기
+            <img
+              className={styles.editdeleteicon}
+              src={icon_modify}
+              alt="editImg"
+            />
+          </button>
+        </div>
         <hr id={styles.edithr} />
-        <button className={styles.editdelete}>
-          삭제하기
-          <img
-            className={styles.editdeleteicon}
-            onClick={clickDelete}
-            src={icon_delete}
-            alt="deleteImg"
-          />
-        </button>
+        <div className="btnCon" onClick={clickDelete}>
+          <button className={styles.editdelete}>
+            삭제하기
+            <img
+              className={styles.editdeleteicon}
+              src={icon_delete}
+              alt="deleteImg"
+            />
+          </button>
+        </div>
       </div>
     );
   };
@@ -216,6 +234,7 @@ const NoticeItem = ({ content }) => {
           {truncate(content.noTitle, 24)}
         </div>
       )}
+
       {/* 글 내용 -> 클릭 시 글 전부 보여주기 */}
       <div className={styles.ntcContent}>
         {showMore ? (
