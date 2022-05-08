@@ -3,9 +3,8 @@
 
 @media (min-width: 768px) {
   .wrap {
-    width: 412px;
+    width: 344px;
     margin: 0 auto;
-
     /*background-color: #f6f5f1;*/
   }
 }
@@ -16,7 +15,8 @@
   width: 344px;
   height: 134px;
   margin: 0 auto;
-  padding: 20px;
+  padding-top: 33px;
+  padding-bottom: 33px;
 }
 
 .eventinput {
@@ -47,6 +47,7 @@
   left: 34px;
   top: 314px;
   margin-top: 78px;
+  padding: 0;
   font-family: "Pretendard-Bold";
   font-size: 16px;
   color: #ffffff;
@@ -56,96 +57,92 @@
   border-radius: 5px;
   border: none;
 }
-
+/* 참여방법부터 아래 박스들을 하나로 묶은 div 박스 */
+.bottombox{
+  width: 344px;
+  margin-bottom: 72px;
+  margin: 0 auto;
+  margin-bottom: 72px;
+}
 /* 참여 방법 text*/
 .jointext {
   display: inline-block;
-  margin: 36px 290px 10px 35px;
+  margin: 9px 270px 0px 0px;
   font-family: "Pretendard-Bold";
   font-size: 20px;
   line-height: 24px;
   color: #4c966e;
   font-style: normal;
 }
-
 /* 참여 방법을 감싸는 container 흰색 박스  */
-
 .container {
-  /* display: inline-block; */
   background-color: #ffffff;
   width: 344px;
   height: 259px;
-  /* margin: 26px 34px; */
-  margin: 17px auto;
-  padding: 1.8px 2.8px;
+  margin: 17px 0px 26px 0px;
+  padding: 1.8px 0;
   border-radius: 5px;
-  /* position:static; */
   text-align: center;
 }
-
-/* 참여 방법의 step 01,02 box */
+/* STEP 01, 02, 03, 04, 05 box */
 .stepbox {
   font-family: "Pretendard-Medium";
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
   color: #4c966e;
-  width: 62px;
-  height: 24px;
-  margin: 18px 218px 18px 28px;
-
-  padding: 3px 17px;
+  width: 98px;
+  height: 30px;
+  margin: 18px 218px 13px 28px;
   background-color: #ffffff;
   border: #4c966e;
   border-style: solid;
+  border-width: medium;
   border-radius: 5px;
 }
-
-/* 참여 방법의 step 03,04,05를 감싸는 제일 큰 흰색 박스  => text가 2줄임 */
+/* 참여 방법의 STEP 03, 04, 05를 감싸는 제일 큰 흰색 박스  => text가 2줄임 */
 .containerbig {
-  /* display: inline-block; */
   background-color: #ffffff;
   width: 344px;
   height: 292px;
   margin: 26px auto;
-  padding: 1.8px 2.8px;
+  padding: 1.8px 0px;
   border-radius: 5px;
-  /* position:static; */
   text-align: center;
 }
-
 /* 박스 안 이미지 */
 .stepimg {
   text-align: center;
   display: block;
-  /* padding: 61px 33px 55px 28px; */
   width: 283px;
   height: 143px;
   margin: 0px auto;
 }
-
+/* 박스 안 설명글 박스 STEP 01, 02 */
+.text{
+  width: 289px;
+  height: 24px;
+  margin: 13px 27px 18px 28px;
+}
+/* 박스 안 설명글 박스 STEP 03-05 */
+.textlast{
+  width: 283px;
+  height: 48px;
+  margin: 18px 33px 19px 28px;
+  /* padding: 11px 27px 18px 27px; */
+}
 /* step 1 박스 안 글 */
 .steptext_1 {
-  width: 289px;
-  height: 48px;
-  padding: 11px;
-  margin: 0 auto;
   font-family: "Pretendard-Medium";
   font-size: 16px;
   line-height: 24px;
   color: #0e1013;
-  vertical-align: top;
   text-align: left;
 }
 /* step 2,3,4,5 박스 안 글 */
 .steptext {
-  width: 283px;
-  height: 48px;
-  padding: 11px;
-  margin: 0 auto;
   font-family: "Pretendard-Medium";
   font-size: 16px;
   line-height: 24px;
   color: #0e1013;
-  vertical-align: top;
   text-align: left;
 }

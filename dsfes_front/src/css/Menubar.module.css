@@ -28,7 +28,7 @@
   /* background-color: #4E7565; */
 }
 .Header {
-  padding-top: 14px;
+  /* padding-top: 14px; */
   background-color: #ffffff;
   /* padding-bottom: 14px; */
   font-size: 24px;
@@ -57,7 +57,7 @@
 }
 
 .HeaderScroll {
-  padding-top: 14px;
+  /* padding-top: 14px; */
   font-size: 24px;
   line-height: 28.8px;
   position: fixed;
@@ -68,8 +68,8 @@
   z-index: 2;
 }
 .HeaderOpacity {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  /* padding-top: 14px; */
+  /* padding-bottom: 14px; */
   font-size: 24px;
   line-height: 28.8px;
   position: fixed;
@@ -154,14 +154,17 @@
   text-decoration: none;
 }
 
+.FesLogoLink{
+  display:flex;
+}
+
 .Content {
   /* 태영: 영역 구분위해 수정함 */
-  /* border: 1px solid lightgrey; */
   background-color: #f6f5f1;
-
+  /* background-color: lightblue; */
   /* padding-left: 34px;
   padding-right: 34px; */
-  padding-top: 28px;
+  /* padding-top:28px; */
 }
 
 .FooterMenu {

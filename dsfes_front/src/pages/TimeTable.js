@@ -34,7 +34,7 @@ const TimeTable = () => {
       <div>
         <div className={style.TimeDay}>{UI[NavActive]}</div>
       </div>
-
+      <div className={style.blankDiv} />
     </div>
   );
 };
