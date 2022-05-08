@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import HeaderTitle from "../components/HeaderTitle";
 import style from "../css/Main.module.css";
 import find_duksae from "../img/image_find_duksae.png";
@@ -6,9 +7,18 @@ import LikeLion_Logo from "../img/LikeLion_Logo.svg";
 import Gaehwa_Logo from "../img/Gaehwa_Logo.svg";
 import insta from "../img/insta.svg";
 import {Link} from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 //축제를 더 즐기는 법! 부터 Main.js 에 들어갑니다.
 const Main = () => {
+
+    useEffect(() => {
+      AOS.init(
+       {duration : 1000}
+      );
+    })
+
   return (
     <div>
       {/* 메인페이지에는 HeaderTitle이 필요없어서 삭제해도 되는데 일단 페이지 구분을 위해 남겨두긴 했습니다.
@@ -19,20 +29,23 @@ const Main = () => {
           <p>축제를 더 재밌게 즐기는 법!</p>
           <p>함께하는 <span>새로고침</span></p>
         </div>
-        <div className={style.LinkComponent}>
+        <div data-aos="fade-up" className={style.LinkComponent}>
         <Link className={style.link} to="/event">
           <img className={style.representativeImg} src={find_duksae}/>
-          <div className={style.representativeTitle}>
+          <div className={style.representativeTitle1}>
+            <div>
+            <div className={style.eventtag}>EVENT</div>
             <p>이벤트 참여해보세요!</p>
-            <p>새로워진 덕새를 찾아라</p>
+            </div>
+            <p className={style.newduk}>새로워진 덕새를 찾아라</p>
           </div>
         </Link>
 
         </div>
-        <div className={style.LinkComponent}>
+        <div data-aos="fade-up" className={style.LinkComponent}>
         <Link className={style.link} to="/board">
           <img className={style.representativeImg} src={gestbook}/>
-          <div className={style.representativeTitle}>
+          <div className={style.representativeTitle2}>
             <p>함께하여 더 즐거운 이야기들</p>
             <p>덕우들의 새로고침</p>
           </div>

@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
   .modalBackground {
-    width: 412px !important;
-    left: auto !important;
+    /* width: 412px !important;
+    left: auto !important; */
   }
 }
 
@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 64px;
+  top: 50px; /* 아이폰 사파리에서 위 여백 남는 현상 제거 */
   left: 0;
   padding-top: 164px;
   padding-bottom: 100vh;
@@ -36,6 +36,25 @@
   height: 349px;
   background-color: white;
   border-radius: 5px;
+  animation: 3s ease -2s infinite alternate none running shine;
+}
+/* 정답 모달 시 반짝이는 애니메이션 주기 */
+@keyframes shine {
+  70% {
+    filter: brightness(1) saturate(100%) drop-shadow(white 0px 0px 0px);
+  }
+  100% {
+    filter: brightness(1.5) saturate(140%) drop-shadow(white 0px 0px 12.9959px);
+  }
+}
+/* @keyframes 앞에도 벤더 프리픽스를 적용 */
+@-webkit-keyframes shine {
+  70% {
+  filter: brightness(1) saturate(100%) drop-shadow(white 0px 0px 0px);
+}
+100% {
+  filter: brightness(1.5) saturate(140%) drop-shadow(white 0px 0px 12.9959px);
+} 
 }
 
 .modalBody2 {
@@ -43,6 +62,65 @@
   height: 259px;
   background-color: white;
   border-radius: 5px;
+  animation: 2s linear 0s normal none running rotate;
+}
+/* 오답 모달 시 띠용 하는 애니메이션 주기 */
+@keyframes rotate {
+  /* 0% {
+    transform: rotate(0deg);
+  }
+  60% {
+      transform: rotate(-25deg);
+      opacity: 0.8;
+  }
+  63% {
+      transform: rotate(10deg);
+      opacity: 1;
+  } */
+  65% {
+      transform: rotate(-6deg);
+  }
+  67% {
+      transform: rotate(5deg);
+  }
+  69% {
+      transform: rotate(-3deg);
+  }
+  70% {
+      transform: rotate(2deg);
+  }
+  73% {
+      transform: rotate(0deg);
+  }
+}
+/* @keyframes 앞에도 벤더 프리픽스를 적용 */
+@-webkit-keyframes rotate {
+  /* 0% {
+    transform: rotate(0deg);
+  }
+  60% {
+      transform: rotate(-25deg);
+      opacity: 0.8;
+  }
+  63% {
+      transform: rotate(10deg);
+      opacity: 1;
+  } */
+  65% {
+      transform: rotate(-6deg);
+  } 
+  67% {
+      transform: rotate(5deg);
+  }
+  69% {
+      transform: rotate(-3deg);
+  } 
+  70% {
+      transform: rotate(2deg);
+  }
+  73% {
+      transform: rotate(0deg);
+  }
 }
 
 .modalBody3 {
@@ -140,21 +218,4 @@
   background-color: #c4c4c4;
   margin-left: 0;
   margin-right: 0;
-}
-
-.style{animation: 0.6s ease-in-out loadEffect2; }
-
-@keyframes loadEffect2 {
-    0%{
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    50%{
-        opacity: 0.5;
-        transform: translateX(30px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
 }
