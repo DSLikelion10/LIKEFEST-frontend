@@ -75,6 +75,14 @@
   font-family: "Pretendard-regular";
 }
 
+.ntcContentCut {
+  grid-column: 1/4;
+  text-align: left;
+  line-height: 24px;
+  font-size: 14px;
+  font-family: "Pretendard-regular";
+}
+
 .moreBtn {
   background-color: white;
   border-style: none;
@@ -84,8 +92,8 @@
 
 .imgContainer {
   position: relative;
-  width: 340px;
-  height: 340px;
+  width: 300px;
+  height: 300px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
@@ -100,8 +108,8 @@
 
 .ntcimg {
   position: relative;
-  width: 340px;
-  height: 340px;
+  width: 300px;
+  height: 300px;
   margin: 24px auto;
   /* 줄이고 다 보이기 */
   /* object-fit: contain; */
@@ -181,4 +189,9 @@
 
 #edithr {
   width: 104px;
+}
+
+.noCss {
+  margin-left: 13px;
+  padding: 0px;
 }
