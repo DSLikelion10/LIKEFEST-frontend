@@ -102,10 +102,12 @@ const NoticeWrite = () => {
     }
   };
 
+
+  //usememo 최적화 연산 함수
   const textColor1 = useMemo(() => {
     return tag1 ? "#4C966E" : "#c4c4c4";
   }, [tag1]);
-
+  //tag1가 변화하면 윗줄이 동작함 
   const textColor2 = useMemo(() => {
     return tag2 ? "#d0c7de" : "#c4c4c4";
   }, [tag2]);
@@ -122,15 +124,15 @@ const NoticeWrite = () => {
       setTitle(value);
     } else if (name === "content") {
       setContent(value);
-    } else if (name === "tag") {
-      //setTag(value);
-      //console.log(value);
-    } else if (name === "noImg") {
-      setImg(URL.createObjectURL(e.target.files[0]));
-      setimg(e.target.files[0]);
-    }
-    console.log(Title, Content, Tag, noImg);
-  };
+    }else if(name === 'tag'){
+      setTag(value);
+    }else if(name === 'noImg'){
+      setImg(URL.createObjectURL(e.target.files[0]));  
+      setimg(e.target.files[0]);  
+    
+    }    
+console.log(Title, Content, Tag, noImg);
+}
 
   // const tagChange = (e) => {
   //   const {
