@@ -66,7 +66,6 @@ const Event = () => {
           className={styles.eventinput}
           type="text"
           placeholder=" 정답을 입력해주세요"
-          // onkeyup="enterkey();" enter클릭시 버튼 눌리는 효과를 내고 싶다
         />
         <button
           className={styles.button}
