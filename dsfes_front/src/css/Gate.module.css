@@ -58,40 +58,58 @@
     width: 190px;
 }
 .keyword1{
+    display: block;
     top: 40px;
     left: 13.5px;
+    width: 190px;
 
 }
 .keyword2{
+    display: block;
     top: 88.62px;
     /* top: 38.62px; */
     right: 10.59px;
+    width: 190px;
 }
 .keyword3{
+    display: block;
     top: 153px;
     /* top: 97px; */
     left: 60px;
+    width: 190px;
 }
 .keyword4{
+    display: block;
     top: 220px;
     /* top: 160px; */
     right: 36px;
+    width: 190px;
 }
 .keyword5{
+    display: block;
     top: 255px;
     /* top: 191px; */
     left: 13px;
+    width: 190px;
 }
 
 .new{
     width: 200px;
-    margin: 120px auto;
+    margin: 140px auto;
     
 }
-/* .section1{
-    position: absolute;
-    width: 100%;
-    height: 697px;
-    margin: 0;
-    background: linear-gradient(180deg, #EAEADC 56.17%, rgba(234, 234, 220, 0) 102.13%);
-} */
+/*여기서부터는 스크롤 애니메이션 관련 css*/
+.sa {
+    opacity: 0;
+    transition: all .5s ease;
+  }
+
+  /* 아래에서 위로 페이드 인 */
+  .saup {
+    transform: translate(0, 100px);
+  }
+
+  .sa.show {
+    opacity: 1;
+    transform: none;
+  }
