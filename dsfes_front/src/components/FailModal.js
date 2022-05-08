@@ -5,8 +5,6 @@ import { animated } from "react-spring";
 
 const FailModal = ({ style, closeModal }) => {
   const modalRef = useRef();
-    //! 모달창 띄웠을 때 스크롤 방지
-    document.body.style.overflow = "hidden";
 
   const outsideClose = (e) => {
     if (modalRef.current === e.target) {
