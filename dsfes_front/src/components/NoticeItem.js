@@ -10,10 +10,6 @@ import icon_delete from "../img/icon_delete.png";
 import icon_modify from "../img/icon_modify.png";
 
 const NoticeItem = ({ content }) => {
-  // const idContent = { content };
-  // console.log("idContent", idContent);
-  // console.log("Content", content);
-
   // 이미지 추가 태영언니는 신입니다.
   const [imgurl, setImgurl] = useState("");
   useEffect(() => {
@@ -25,7 +21,6 @@ const NoticeItem = ({ content }) => {
     }
   }, []);
 
-  // console.log("id", content.id);
   // 해시태그 추가
   const myTag = [
     {
@@ -134,10 +129,7 @@ const NoticeItem = ({ content }) => {
   const TagId = content.noTag - 1;
 
   return (
-    <div
-      className={styles.ntcItem}
-      // onClick={() => setShowMore(!showMore)}
-    >
+    <div className={styles.ntcItem}>
       {/* 여닫는 버튼 */}
       <button className={styles.moreBtn} onClick={() => setShowMore(!showMore)}>
         {showMore ? (
@@ -184,9 +176,6 @@ const NoticeItem = ({ content }) => {
           `${truncate(content.noText, 50)}`
         )}
       </div>
-      {/* <div className={styles.update}>
-        <NoticeUpdate content={content} key={content.id} />
-      </div> */}
     </div>
   );
 };

@@ -196,13 +196,14 @@ const NoticeWrite = () => {
         )
         .then((res) => {
           console.log("Success");
+          console.log(res);
           setTitle(""); //text 초기화
           setContent("");
           setTag("");
           setimg("");
           setImg("");
           console.log(formData);
-          navigate("/notice");
+          navigate("/Notice");
         })
         .catch((error) => {
           console.log("Network Error : ", error);
