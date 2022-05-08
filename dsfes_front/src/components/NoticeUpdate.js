@@ -221,32 +221,14 @@ const NoticeUpdate = () => {
           </div>
           <br />
           <div>
-            <input
-              id="input-file"
-              type="file"
-              accept="image/*"
-              style={{ display: "none" }}
-              name="noImg"
-              onChange={handleChange}
-            ></input>
-            <label for="input-file">
-              <div className={styles.plusdiv}>
-                {noImg ? (
-                  <img
-                    src={noImg}
-                    alt="preview-img"
-                    className={styles.plusdiv}
-                  />
-                ) : (
-                  <img
-                    className={styles.plusdiv}
-                    id="input-file"
-                    alt="plus"
-                    src={eimgurl}
-                  ></img>
-                )}
-              </div>
-            </label>
+            <div className={styles.plusdiv}>
+              <img
+                className={styles.plusdiv}
+                id="input-file"
+                alt="plus"
+                src={eimgurl}
+              ></img>
+            </div>
           </div>
           <div className={styles.button}>
             <input
