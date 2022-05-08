@@ -8,6 +8,7 @@ import Board from "./pages/Board";
 import NoticeManage from "./pages/NoticeManage";
 import AdminNotice from "./pages/AdminNotice";
 import Update from "./pages/Update";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/manager" element={<NoticeManage />}></Route>
         <Route path="/adminntc" element={<AdminNotice />}></Route>
         <Route path="/update" element={<Update />}></Route>
+        <Route path={"*"} element={<NotFound />}></Route>
       </Route>
     </Routes>
   );

@@ -180,18 +180,6 @@ textarea:focus {
   height: 37.25px;
 }
 
-/* .hashtag1:focus{
-  background-color: #4c966e;
-}
-
-.hashtag2:focus{
-  background-color:  #d0c7de;
-}
-
-.hashtag3:focus {
-  background-color: #e7d0b6;
-} */
-
 .submitbtn:active {
   background-color: #d0c7de;
 }

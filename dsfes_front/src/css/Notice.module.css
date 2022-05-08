@@ -16,14 +16,13 @@
   margin-left: 34px;
 }
 
-.hashtagContainer {
+.tagCon {
   display: flex;
   justify-content: left;
   align-items: center;
 }
 
 /* 해시태그 CSS 모듈화 수정 필요 */
-
 .hashtag {
   display: flex;
   justify-content: center;
@@ -98,12 +97,6 @@
   margin-right: auto;
   margin-bottom: 24px;
   text-align: center;
-  /* 확대 자르기 */
-  /* object-fit: contain;  */
-  /* 줄이고 다 보이기 */
-  object-fit: cover;
-
-  /* background-color: lightgray; */
 }
 
 .ntcimg {
@@ -129,10 +122,6 @@
   transform: rotate(180deg);
 }
 
-/* input:focus {
-  color: black;
-} */
-
 .toWrite {
   background-color: #4c966e;
   font-family: "Pretendard-bold";
@@ -151,7 +140,6 @@
   text-align: right;
   height: 18px;
   width: 137px;
-  /* grid-row: 1/2; */
 }
 
 .button_edit {
@@ -174,14 +162,9 @@
   text-align: left;
 }
 
-.editdelete {
-  font-family: "Pretendard-Medium";
-  background-color: #fff;
-  border: none;
-  font-size: 16px;
-}
-
 .editdeleteicon {
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-left: 24px;
   width: 16px;
   height: 16px;
@@ -189,9 +172,25 @@
 
 #edithr {
   width: 104px;
+  border: solid 0.1px #848484;
 }
 
 .noCss {
-  margin-left: 13px;
+  margin-left: 11px;
   padding: 0px;
+}
+
+.deletebtn {
+  font-family: "Pretendard-Medium";
+  background-color: #fff;
+  border: none;
+  font-size: 16px;
+  color: #fd6060;
+}
+
+.editBtn {
+  font-family: "Pretendard-Medium";
+  background-color: #fff;
+  border: none;
+  font-size: 16px;
 }

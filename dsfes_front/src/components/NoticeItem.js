@@ -40,23 +40,22 @@ const NoticeItem = ({ content }) => {
     },
   ];
 
+  // 글 더보기, 수정삭제
+  const [showMore, setShowMore] = useState(false);
+  const [showEdit, setShowEdit] = useState(false);
   // 더보기했을때 보여질 전체 텍스트 (최적화 추후에 하기)
   function FullContent({ content }) {
-    return (
+    return showMore ? (
       <div>
         <div className={styles.ntcContentCut}>{content.noText}</div>
         <div className={styles.imgContainer}>
           <img className={styles.ntcimg} src={imgurl} alt="imgs" />
         </div>
       </div>
-    );
+    ) : null;
   }
   // 운영진 주소일때 보여질 컴포넌트들
   const location = useLocation();
-
-  // 글 더보기, 수정삭제
-  const [showMore, setShowMore] = useState(false);
-  const [showEdit, setShowEdit] = useState(false);
 
   // 점 세개 눌렀을 때
   const clickShowEdit = () => {
@@ -83,7 +82,7 @@ const NoticeItem = ({ content }) => {
             }}
             className={styles.noCss}
           >
-            <button className={styles.editdelete}>
+            <button className={styles.editBtn}>
               수정하기{" "}
               <img
                 className={styles.editdeleteicon}
@@ -94,7 +93,7 @@ const NoticeItem = ({ content }) => {
           </Link>
           <hr id={styles.edithr} />
           <button
-            className={styles.editdelete}
+            className={styles.deletebtn}
             onClick={() => {
               setOpenModal(true);
             }}
@@ -139,7 +138,7 @@ const NoticeItem = ({ content }) => {
         )}
       </button>
       {/* 해시태그 보여주기 */}
-      <div className={styles.hashtagContainer}>
+      <div className={styles.tagCon}>
         <div
           className={styles.hashtag}
           style={{ backgroundColor: myTag[TagId].bgColor }}
