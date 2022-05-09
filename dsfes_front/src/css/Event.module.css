@@ -31,6 +31,7 @@
   position: absolute;
   margin: 0 auto;
   padding: 0 15px;
+  font-size: 16px;
 }
 /* input 박스의 placeholder */
 .eventinput::placeholder {
