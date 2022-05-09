@@ -40,7 +40,7 @@ const Event = () => {
 
   // 총학에서 정답을 받으면 아래 answer에 대입할 것
   const checkAnswer = () => {
-    const answer = "멋쟁이 사자처럼";
+    const answer = "두려움 없는 여성들에게서 불꽃이 타오른다.";
 
     if (answer === userinput) {
       console.log("정답이지롱");

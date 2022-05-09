@@ -36,15 +36,15 @@
   height: 349px;
   background-color: white;
   border-radius: 5px;
-  animation: 3s ease -2s infinite alternate none running shine;
+  animation: 3s ease-out -2s infinite alternate none running shine;
 }
 /* 정답 모달 시 반짝이는 애니메이션 주기 */
 @keyframes shine {
   70% {
-    filter: brightness(1) saturate(100%) drop-shadow(white 0px 0px 0px);
+    filter:saturate(100%) drop-shadow(white 0px 0px 0px);
   }
   100% {
-    filter: brightness(1.5) saturate(140%) drop-shadow(white 0px 0px 12.9959px);
+    filter:saturate(140%) drop-shadow(white 0px 0px 12.9959px);
   }
 }
 /* @keyframes 앞에도 벤더 프리픽스를 적용 */
@@ -62,64 +62,30 @@
   height: 259px;
   background-color: white;
   border-radius: 5px;
-  animation: 2s linear 0s normal none running rotate;
+  animation: 2s linear 0s normal none running bell;
 }
-/* 오답 모달 시 띠용 하는 애니메이션 주기 */
-@keyframes rotate {
-  /* 0% {
+/* 오답 모달 시 흔들리는 애니메이션 주기 */
+@keyframes bell{
+  0%, 50%{
     transform: rotate(0deg);
+	}
+  5%, 15%, 25%, 35%, 45% {
+    transform: rotate(5deg);
   }
-  60% {
-      transform: rotate(-25deg);
-      opacity: 0.8;
-  }
-  63% {
-      transform: rotate(10deg);
-      opacity: 1;
-  } */
-  65% {
-      transform: rotate(-6deg);
-  }
-  67% {
-      transform: rotate(5deg);
-  }
-  69% {
-      transform: rotate(-3deg);
-  }
-  70% {
-      transform: rotate(2deg);
-  }
-  73% {
-      transform: rotate(0deg);
+  10%, 20%, 30%, 40% {
+    transform: rotate(-5deg);
   }
 }
 /* @keyframes 앞에도 벤더 프리픽스를 적용 */
-@-webkit-keyframes rotate {
-  /* 0% {
+@-webkit-keyframes bell {
+  0%, 50%{
     transform: rotate(0deg);
+	}
+  5%, 15%, 25%, 35%, 45% {
+    transform: rotate(5deg);
   }
-  60% {
-      transform: rotate(-25deg);
-      opacity: 0.8;
-  }
-  63% {
-      transform: rotate(10deg);
-      opacity: 1;
-  } */
-  65% {
-      transform: rotate(-6deg);
-  } 
-  67% {
-      transform: rotate(5deg);
-  }
-  69% {
-      transform: rotate(-3deg);
-  } 
-  70% {
-      transform: rotate(2deg);
-  }
-  73% {
-      transform: rotate(0deg);
+  10%, 20%, 30%, 40% {
+    transform: rotate(-5deg);
   }
 }
 
