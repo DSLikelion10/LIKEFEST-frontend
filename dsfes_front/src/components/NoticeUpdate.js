@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "../css/Notice.Write.module.css";
 import axios from "axios";
@@ -62,6 +62,7 @@ const NoticeUpdate = () => {
 
   //클릭했을 때 true면 false로 false면 true로 바꾸는 함수 - 단일코드
   const handleClick = (e) => {
+    // useEffect(() => {
     console.log(e.target.name);
     //e.target.name과 같은 state같을 찾는다.
     if (e.target.name === "tag1") {
@@ -101,6 +102,7 @@ const NoticeUpdate = () => {
         setTag(3);
       }
     }
+    // }, []);
   };
 
   const textColor1 = useMemo(() => {
@@ -116,16 +118,11 @@ const NoticeUpdate = () => {
   }, [tag3]);
 
   const handleChange = (e) => {
-    console.log(content);
-    content.noTitle = noTitle;
-    content.noText = noText;
-    content.noTag = noTag;
-    content.noImg = noImg;
     const {
       target: { name, value },
     } = e;
     if (name === "noTitle") {
-      setTitle(value);
+      setTitle((noTitle) => value);
     } else if (name === "noText") {
       setText(value);
     } else if (name === "noTag") {
@@ -135,6 +132,12 @@ const NoticeUpdate = () => {
       setimg(e.target.files);
     }
   };
+
+  content.noTitle = noTitle;
+  content.noText = noText;
+  content.noTag = noTag;
+  content.noImg = noImg;
+  console.log(content);
 
   const handleSubmit = (e) => {
     const id = location.state.content.id;
