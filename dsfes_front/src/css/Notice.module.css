@@ -67,6 +67,7 @@
 }
 
 .ntcContent {
+  white-space: pre-wrap;
   grid-column: 1/4;
   text-align: left;
   line-height: 24px;
