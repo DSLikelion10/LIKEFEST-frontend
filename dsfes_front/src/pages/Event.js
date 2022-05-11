@@ -11,6 +11,7 @@ import step2 from "../img/find_duksae/image_step2.png";
 import step3 from "../img/find_duksae/image_step3.png";
 import step4 from "../img/find_duksae/image_step4.png";
 import step5 from "../img/find_duksae/image_step5.png";
+import icon from "../img/find_duksae/tool_tip_icon.png";
 import FailModal from "../components/FailModal";
 import { useTransition } from "react-spring";
 
@@ -64,6 +65,14 @@ const Event = () => {
           type="text"
           placeholder=" 정답을 입력해주세요"
         />
+        {/* input창의 tooltip */}
+        <div className={styles.tooltip}>
+          <div className={styles.slideIn}>
+            <img className={styles.info} src={icon} alt="힌트" />
+            <p className={styles.hintcontent}><span>Hint</span> | OOO OO OOOOOO OOO OOOO.</p>
+          </div>
+        </div>
+
         <button
           className={styles.button}
           type="submit"
@@ -75,6 +84,7 @@ const Event = () => {
           확인하기
         </button>
       </div>
+        
 
       <div className={styles.bottombox}>
         {/* 참여 방법 */}
