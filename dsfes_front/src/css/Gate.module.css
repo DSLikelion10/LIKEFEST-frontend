@@ -6,7 +6,6 @@
 
     .poster{
         width: 427px;
-        /* overflow-x: hidden; */
     }
 
     .date {
@@ -38,7 +37,7 @@
 }
 
 .line{
-    width: 156px; /*136*/
+    width: 156px; 
     height: 0px;
     margin: 112px auto;
     border: 0.5px solid #689B80;
@@ -67,28 +66,24 @@
 .keyword2{
     display: block;
     top: 88.62px;
-    /* top: 38.62px; */
     right: 10.59px;
     width: 190px;
 }
 .keyword3{
     display: block;
     top: 153px;
-    /* top: 97px; */
     left: 60px;
     width: 190px;
 }
 .keyword4{
     display: block;
     top: 220px;
-    /* top: 160px; */
     right: 36px;
     width: 190px;
 }
 .keyword5{
     display: block;
     top: 255px;
-    /* top: 191px; */
     left: 13px;
     width: 190px;
 }
@@ -98,18 +93,3 @@
     margin: 140px auto;
     
 }
-/*여기서부터는 스크롤 애니메이션 관련 css*/
-.sa {
-    opacity: 0;
-    transition: all .5s ease;
-  }
-
-  /* 아래에서 위로 페이드 인 */
-  .saup {
-    transform: translate(0, 100px);
-  }
-
-  .sa.show {
-    opacity: 1;
-    transform: none;
-  }

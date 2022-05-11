@@ -14,6 +14,7 @@ const Gate = () => {
 
   useEffect(() => {
     AOS.init(
+      {duration : 1200}
     );
   })
 
