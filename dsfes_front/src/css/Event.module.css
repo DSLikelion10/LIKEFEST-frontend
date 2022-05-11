@@ -41,6 +41,125 @@
   padding-left: 10px;
   line-height: 24px;
 }
+/* tooltip */
+.info{
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  padding-right: 2px;
+  padding-top: 0px;
+  padding-left: 2px;
+}
+
+.tooltip{
+  color: #fff;
+  font-family: "Pretendard-Medium";
+	font-size: 16px;
+  line-height: 19.36px;
+  vertical-align: text-bottom;
+	background-color: #C3E196;
+	text-shadow: none;
+	visibility: hidden;
+	-webkit-border-radius: 7px; 
+	-moz-border-radius: 7px; 
+	-o-border-radius: 7px; 
+	border-radius: 7px;	
+	text-align: center;	
+	opacity: 0;
+	z-index: 999;
+	padding: 8px;	
+	position: absolute;
+	cursor: default;
+	-webkit-transition: all 240ms ease-in-out;
+	-moz-transition: all 240ms ease-in-out;
+	-ms-transition: all 240ms ease-in-out;
+	-o-transition: all 240ms ease-in-out;
+	transition: all 240ms ease-in-out;	
+}
+
+.tooltip,
+.tooltip.top{
+	top: auto;
+	bottom: 90%;
+}
+
+.tooltip.top:after,
+.tooltip:after{
+	position: absolute;
+	bottom: -12px;
+	left: 10%;
+	margin-left: -7px;
+	content: '';
+	height: 0px;
+	width: 0px;
+	border: 6px solid transparent;
+  border-top-color: #C3E196;
+}
+
+/* default heights, width and margin w/o Javscript */
+
+.tooltip,
+.tooltip.top{
+	width: 322px;
+	height: 30px;
+  vertical-align: middle;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* on hover of element containing tooltip default*/
+
+*:not(.on-focus):hover > .tooltip,
+.on-focus input:focus + .tooltip{
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: all 240ms ease-in-out;
+	-moz-transition: all 240ms ease-in-out;
+	-ms-transition: all 240ms ease-in-out;
+	-o-transition: all 240ms ease-in-out;
+	transition: all 240ms ease-in-out;		
+}
+
+/* tool tip slide out */
+
+*:not(.on-focus) > .tooltip.slideIn,
+.on-focus > .tooltip{
+	display: block;
+}
+
+.on-focus > .tooltip.slideIn{
+	z-index: -1;
+}
+
+.on-focus > input:focus + .tooltip.slideIn{
+	z-index: 1;
+}
+
+/* top slideIn */
+
+*:not(.on-focus) > .tooltip.slideIn,
+*:not(.on-focus) > .tooltip.slideIn.top,
+.on-focus > .tooltip.slideIn,
+.on-focus > .tooltip.slideIn.top{
+	bottom: 50%;
+}
+
+*:not(.on-focus):hover > .tooltip.slideIn,
+*:not(.on-focus):hover > .tooltip.slideIn.top,
+.on-focus > input:focus + .tooltip.slideIn,
+.on-focus > input:focus + .tooltip.slideIn.top{
+	bottom: 110%;
+}
+	
+.hintcontent{
+  padding-left: 3px;
+  padding-top: 2px;
+  font-family: "Pretendard-Medium";
+  font-size: 16px;
+  color: #ffffff;
+}
+
 /* 확인하기 버튼 */
 .button {
   width: 344px;
@@ -146,4 +265,9 @@
   line-height: 24px;
   color: #0e1013;
   text-align: left;
+}
+
+.slideIn{
+  display: flex;
+  flex-direction: row;
 }
