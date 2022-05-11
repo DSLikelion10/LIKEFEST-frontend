@@ -487,14 +487,8 @@ const NoticeWrite = () => {
     }else if(name === 'tag'){
       setTag(value);
     }else if(name === 'noImg'){
-      if(e.target.files[0]){
-        setImg(URL.createObjectURL(e.target.files[0]));  
-        setimg(e.target.files[0]);  
-      }
-      else{
-        
-        setimg(plus);
-      }
+      setImg(URL.createObjectURL(e.target.files[0]));  
+      setimg(e.target.files[0]);  
     }    
 console.log(Title, Content, Tag, noImg);
 }
@@ -544,11 +538,7 @@ console.log(Title, Content, Tag, noImg);
     formData.append("noTitle", Title);
     formData.append("noText", Content);
     formData.append("noTag", Tag);
-    if(noimg === null){
-      formData.append("noImg", plus);
-    }else{
     formData.append("noImg", noimg);
-    }
     if (Title !== null && Content !== null && Tag !== null) {
       const config = {
         Headers: {
