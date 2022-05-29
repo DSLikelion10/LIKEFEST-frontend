@@ -1,5 +1,8 @@
 # [2022 근화제 ‘새로고침’ 모바일 웹 서비스]
 
+![badge](https://img.shields.io/github/repo-size/DSLikelion10/LIKEFEST-frontend)
+![badge](https://img.shields.io/github/languages/top/DSLikelion10/LIKEFEST-frontend)
+
 **총학생회 ‘개화’ X 덕성여자대학교 멋쟁이 사자처럼 10기 운영진**
 
 **새로고침 모바일 웹 서비스 구경하기** 
