@@ -35,10 +35,10 @@
 
 | 강태영 | 권은빈| 김수정 |
 | :---: | :---: | :---: | 
-|<img width="100" alt="taeyoung" a href="https://github.com/Chanran33" src="https://user-images.githubusercontent.com/64454313/169698884-06c50e80-74fa-455a-8fae-de606622416d.png"> | <img width="100" alt="eunbean" a href="https://github.com/eunbeann" src="https://user-images.githubusercontent.com/64454313/169698892-ec68f463-17e4-404c-b2bb-ca3a1a072330.jpeg">| <img width="100" alt="soojeong" a hre"https://github.com/soosoo030" src="https://user-images.githubusercontent.com/64454313/169698898-662eadaa-30ec-4bbd-bed8-2e217e0ba74b.jpeg"> |
+|<img width="100" alt="taeyoung" a href="https://github.com/Chanran33" src="https://user-images.githubusercontent.com/64454313/169698884-06c50e80-74fa-455a-8fae-de606622416d.png"> | <img width="100" alt="eunbean" a href="https://github.com/eunbeann" src="https://user-images.githubusercontent.com/64454313/169698892-ec68f463-17e4-404c-b2bb-ca3a1a072330.jpeg">| <img width="100" alt="soojeong" a href="https://github.com/soosoo030" src="https://user-images.githubusercontent.com/64454313/169698898-662eadaa-30ec-4bbd-bed8-2e217e0ba74b.jpeg"> |
 | 익명게시판, 모달창 | 공지사항, 관리자용 공지사항  | 타임테이블,  메뉴바, 헤더, 푸터 |
 | 남서현 | 허은 | 유다영 |
-|<img width="100" alt="seohyun" src="https://user-images.githubusercontent.com/64454313/169698903-4c7f7911-d741-4a29-b75d-33986bc4807a.jpeg"> | <img width="100" alt="eun" a href="https://github.com/DAASHeo" src="https://user-images.githubusercontent.com/64454313/169698910-34c5c4d9-73f4-4cee-bd7d-9f027d83e2ed.jpeg"> | <img width="100" alt="dayoung" src="https://user-images.githubusercontent.com/64454313/169698921-60ab9615-d128-40ee-902d-aef78b8c29be.jpeg"> |
+|<img width="100" alt="seohyun" a href="https://github.com/namseohyeon" src="https://user-images.githubusercontent.com/64454313/169698903-4c7f7911-d741-4a29-b75d-33986bc4807a.jpeg"> | <img width="100" alt="eun" a href="https://github.com/DAASHeo" src="https://user-images.githubusercontent.com/64454313/169698910-34c5c4d9-73f4-4cee-bd7d-9f027d83e2ed.jpeg"> | <img width="100" alt="dayoung" a href="https://github.com/allzeroyou" src="https://user-images.githubusercontent.com/64454313/169698921-60ab9615-d128-40ee-902d-aef78b8c29be.jpeg"> |
 | 관리자용 공지사항 | 메인페이지 | 이벤트페이지, 모달창|
 
 ### back-end developer
