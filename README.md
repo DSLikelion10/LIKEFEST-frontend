@@ -2,12 +2,21 @@
 
 ![badge](https://img.shields.io/github/repo-size/DSLikelion10/LIKEFEST-frontend)
 ![badge](https://img.shields.io/github/languages/top/DSLikelion10/LIKEFEST-frontend)
+![GitHub contributors](https://img.shields.io/github/contributors/DSLikelion10/LIKEFEST-frontend)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/DSLikelion10/LIKEFEST-frontend) <br/>
+![GitHub watchers](https://img.shields.io/github/watchers/DSLikelion10/LIKEFEST-frontend?style=social)
+![GitHub Repo stars](https://img.shields.io/github/stars/DSLikelion10/LIKEFEST-frontend?style=social)
 
 **총학생회 ‘개화’ X 덕성여자대학교 멋쟁이 사자처럼 10기 운영진**
 
-**새로고침 모바일 웹 서비스 구경하기** 
-
-(미리보기 GIF)가 올라갈 예정
+**새로고침 모바일 웹 서비스 구경하기👍** <br/>
+<img src="https://user-images.githubusercontent.com/49816869/172616487-0d505973-8bdc-4d8c-8330-9a139d5d4533.gif" width="400px" height="400px"/>
+<img src="https://user-images.githubusercontent.com/49816869/172616514-bbb19af6-8f33-46dc-a28e-74cd8ded8551.gif" width="400px" height="400px"/>
+<br/>
+<img src="https://user-images.githubusercontent.com/49816869/172616529-71f9648c-6f35-429f-ab2f-6e101094ffaf.gif" width="400px" height="400px"/>
+<img src="https://user-images.githubusercontent.com/49816869/172616551-010eeee6-d0fb-460d-b9d0-c03fcccb3ae2.gif" width="400px" height="400px"/>
+<br/>
+<img src="https://user-images.githubusercontent.com/49816869/172618956-16a130d7-22c4-446e-9b23-0db76701b06c.gif" width="400px" height="400px"/>
 
 ## 프로젝트 정보
 
