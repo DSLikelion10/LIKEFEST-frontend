@@ -1,7 +1,7 @@
-import React from "react";
-import NoticeList from "../components/NoticeList";
-import styles from "../css/Notice.module.css";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import NoticeList from '../components/NoticeList';
+import styles from '../css/Notice.module.css';
+import { NavLink } from 'react-router-dom';
 
 function AdminNotice() {
   return (

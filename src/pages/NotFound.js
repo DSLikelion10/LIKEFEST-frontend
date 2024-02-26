@@ -1,23 +1,23 @@
-import React from "react";
+import React from 'react';
 
 const style1 = {
-  display: "inline-block",
-  fontFamily: "Pretendard-bold",
-  fontSize: "60px",
-  width: "100%",
-  height: "100%",
-  marginTop: "150px",
-  marginBottom: "10px",
+  display: 'inline-block',
+  fontFamily: 'Pretendard-bold',
+  fontSize: '60px',
+  width: '100%',
+  height: '100%',
+  marginTop: '150px',
+  marginBottom: '10px',
 };
 
 const style2 = {
-  display: "inline-block",
-  fontFamily: "Pretendard-regular",
-  fontSize: "30px",
-  width: "100%",
-  height: "100%",
+  display: 'inline-block',
+  fontFamily: 'Pretendard-regular',
+  fontSize: '30px',
+  width: '100%',
+  height: '100%',
   //   marginTop: "150px",
-  marginBottom: "150px",
+  marginBottom: '150px',
 };
 
 function NotFound() {

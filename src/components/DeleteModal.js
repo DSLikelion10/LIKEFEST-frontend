@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
-import styles from "../css/Modal.module.css";
-import { animated } from "react-spring";
-import axios from "axios";
+import React, { useRef } from 'react';
+import styles from '../css/Modal.module.css';
+import { animated } from 'react-spring';
+import axios from 'axios';
 
 //삭제 모달창 입니다.
 const DeleteModal = ({ style, closeModal, content }) => {
@@ -14,7 +14,7 @@ const DeleteModal = ({ style, closeModal, content }) => {
       .then((res) => {
         window.location.reload();
       })
-      .catch((error) => console.log("Network Error : ", error));
+      .catch((error) => console.log('Network Error : ', error));
   };
 
   const modalRef = useRef();
@@ -26,11 +26,7 @@ const DeleteModal = ({ style, closeModal, content }) => {
   };
   return (
     <animated.div style={style}>
-      <div
-        ref={modalRef}
-        onClick={outsideClose}
-        className={styles.modalBackground2}
-      >
+      <div ref={modalRef} onClick={outsideClose} className={styles.modalBackground2}>
         <div className={styles.modalBody3}>
           <div className={styles.deleteModalContent}>
             삭제된 글은 복구할 수 없습니다.
@@ -39,11 +35,7 @@ const DeleteModal = ({ style, closeModal, content }) => {
           </div>
           <hr />
           <div className={styles.deleteButtonBody}>
-            <button
-              className={styles.modalButton3}
-              onClick={() => closeModal(false)}
-              type="button"
-            >
+            <button className={styles.modalButton3} onClick={() => closeModal(false)} type="button">
               취소하기
             </button>
             <hr />
@@ -51,8 +43,7 @@ const DeleteModal = ({ style, closeModal, content }) => {
               className={styles.modalButton3}
               onClick={() => clickDelete()}
               type="button"
-              style={{ color: "#FD6060" }}
-            >
+              style={{ color: '#FD6060' }}>
               삭제하기
             </button>
           </div>

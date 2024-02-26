@@ -1,4 +1,4 @@
-import NoticeUpdate from "../components/NoticeUpdate";
+import NoticeUpdate from '../components/NoticeUpdate';
 
 function Update() {
   return (

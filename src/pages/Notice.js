@@ -1,5 +1,5 @@
-import NoticeList from "../components/NoticeList";
-import styles from "../css/Notice.module.css";
+import NoticeList from '../components/NoticeList';
+import styles from '../css/Notice.module.css';
 
 const Notice = () => {
   return (

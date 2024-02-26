@@ -3,17 +3,17 @@
 정답, 오답시 뜨는 모달창은 태영님께 많이 도움받았습니다.
 */
 
-import React, { useState, useCallback } from "react";
-import SuccessModal from "../components/SuccessModal";
-import styles from "../css/Event.module.css";
-import step1 from "../img/find_duksae/image_step1.png";
-import step2 from "../img/find_duksae/image_step2.png";
-import step3 from "../img/find_duksae/image_step3.png";
-import step4 from "../img/find_duksae/image_step4.png";
-import step5 from "../img/find_duksae/image_step5.png";
-import icon from "../img/find_duksae/tool_tip_icon.png";
-import FailModal from "../components/FailModal";
-import { useTransition } from "react-spring";
+import React, { useState, useCallback } from 'react';
+import SuccessModal from '../components/SuccessModal';
+import styles from '../css/Event.module.css';
+import step1 from '../img/find_duksae/image_step1.png';
+import step2 from '../img/find_duksae/image_step2.png';
+import step3 from '../img/find_duksae/image_step3.png';
+import step4 from '../img/find_duksae/image_step4.png';
+import step5 from '../img/find_duksae/image_step5.png';
+import icon from '../img/find_duksae/tool_tip_icon.png';
+import FailModal from '../components/FailModal';
+import { useTransition } from 'react-spring';
 
 // 정답, 오답시 모달창 띄우기
 const Event = () => {
@@ -25,14 +25,14 @@ const Event = () => {
     leave: { opacity: 0 },
   });
 
-  const [userinput, setUserinput] = useState("");
+  const [userinput, setUserinput] = useState('');
 
   const handleChange = useCallback((e) => {
     const {
       target: { name, value },
     } = e;
 
-    if (name === "userinput") {
+    if (name === 'userinput') {
       setUserinput(value);
     }
   }, []);
@@ -41,7 +41,7 @@ const Event = () => {
 
   // 총학에서 정답을 받으면 아래 answer에 대입할 것
   const checkAnswer = () => {
-    const answer = "두려움 없는 여성들에게서 불꽃이 타오른다.";
+    const answer = '두려움 없는 여성들에게서 불꽃이 타오른다.';
 
     if (answer === userinput) {
       setChoose(true);
@@ -79,8 +79,7 @@ const Event = () => {
           onClick={() => {
             setOpenModal(true);
             checkAnswer();
-          }}
-        >
+          }}>
           확인하기
         </button>
       </div>
@@ -97,9 +96,7 @@ const Event = () => {
           <img className={styles.stepimg} src={step1} alt="사진1" />
           {/* 설명글 */}
           <div className={styles.text}>
-            <p className={styles.steptext_1}>
-              학교 곳곳에 있는 새로워진 덕새를 찾아주세요.
-            </p>
+            <p className={styles.steptext_1}>학교 곳곳에 있는 새로워진 덕새를 찾아주세요.</p>
           </div>
         </div>
 
@@ -111,9 +108,7 @@ const Event = () => {
           <img className={styles.stepimg} src={step2} alt="사진2" />
           {/* 설명글 */}
           <div className={styles.text}>
-            <p className={styles.steptext}>
-              덕새 손에 있는 QR코드를 찍어 주세요.
-            </p>
+            <p className={styles.steptext}>덕새 손에 있는 QR코드를 찍어 주세요.</p>
           </div>
         </div>
 
@@ -125,9 +120,7 @@ const Event = () => {
           <img className={styles.stepimg} src={step3} alt="사진3" />
           {/* 설명글 */}
           <div className={styles.textlast}>
-            <p className={styles.steptext}>
-              5개의 QR코드 속 이미지를 조합하여 문장을 만들어 주세요.
-            </p>
+            <p className={styles.steptext}>5개의 QR코드 속 이미지를 조합하여 문장을 만들어 주세요.</p>
           </div>
         </div>
 
@@ -139,9 +132,7 @@ const Event = () => {
           <img className={styles.stepimg} src={step4} alt="사진4" />
           {/* 설명글 */}
           <div className={styles.textlast}>
-            <p className={styles.steptext}>
-              문장이 완성되었으면 입력칸에 문장을 입력해주세요.
-            </p>
+            <p className={styles.steptext}>문장이 완성되었으면 입력칸에 문장을 입력해주세요.</p>
           </div>
         </div>
 
@@ -153,9 +144,7 @@ const Event = () => {
           <img className={styles.stepimg} src={step5} alt="사진5" />
           {/* 설명글 */}
           <div className={styles.textlast}>
-            <p className={styles.steptext}>
-              정답인 경우, 팝업창을 캡처하여 중앙본부로 방문해 주세요!
-            </p>
+            <p className={styles.steptext}>정답인 경우, 팝업창을 캡처하여 중앙본부로 방문해 주세요!</p>
           </div>
         </div>
       </div>
@@ -166,13 +155,10 @@ const Event = () => {
         (style, item) =>
           item &&
           (choose ? (
-            <SuccessModal
-              style={style}
-              closeModal={() => setOpenModal(false)}
-            />
+            <SuccessModal style={style} closeModal={() => setOpenModal(false)} />
           ) : (
             <FailModal style={style} closeModal={() => setOpenModal(false)} />
-          ))
+          )),
       )}
     </div>
   );

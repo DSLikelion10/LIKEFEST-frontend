@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import style from "../css/Gate.module.css";
-import mainposter from "../img/main_poster.png";
-import newduksung from "../img/image_new_duksung.png";
-import follow from "../img/image_follow.png";
-import female from "../img/image_female.png";
-import focus from "../img/image_focus.png";
-import future from "../img/image_future.png";
-import forever from "../img/image_forever.png";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
+import style from '../css/Gate.module.css';
+import mainposter from '../img/main_poster.png';
+import newduksung from '../img/image_new_duksung.png';
+import follow from '../img/image_follow.png';
+import female from '../img/image_female.png';
+import focus from '../img/image_focus.png';
+import future from '../img/image_future.png';
+import forever from '../img/image_forever.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Gate = () => {
   useEffect(() => {
@@ -16,8 +16,8 @@ const Gate = () => {
   });
 
   const IMG_ARRAY = [
-    { alt: follow, offset: 150, margin: 100 },
-    { alt: female, offset: 200, margin: 200 },
+    { alt: follow, offset: '150', margin: '100' },
+    { alt: female, offset: '200', margin: '200' },
     { alt: focus, offset: 250, margin: 300 },
     { alt: future, offset: 280, margin: 400 },
     { alt: forever, offset: 300, margin: 500 },

@@ -1,5 +1,5 @@
-import React from "react";
-import BoardItem from "./BoardItem";
+import React from 'react';
+import BoardItem from './BoardItem';
 
 const BoardList = ({ texts }) => {
   return (

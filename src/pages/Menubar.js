@@ -1,12 +1,12 @@
-import React, { useCallback, useState, useEffect } from "react";
-import "../css/reset.css";
-import styles from "../css/Menubar.module.css";
-import googleADs from "../img/GoogleADs.png";
-import { Link, NavLink, Outlet } from "react-router-dom";
-import FesLogo from "../img/FesLogo.svg";
-import HeaderTitle from "../components/HeaderTitle";
-import { useLocation } from "react-router-dom";
-import Gate from "../components/Gate";
+import React, { useCallback, useState, useEffect } from 'react';
+import '../css/reset.css';
+import styles from '../css/Menubar.module.css';
+import googleADs from '../img/GoogleADs.png';
+import { Link, NavLink, Outlet } from 'react-router-dom';
+import FesLogo from '../img/FesLogo.svg';
+import HeaderTitle from '../components/HeaderTitle';
+import { useLocation } from 'react-router-dom';
+import Gate from '../components/Gate';
 // import megaphone from "../img/emoji_megaphone.png";
 
 const Menubar = () => {
@@ -25,7 +25,7 @@ const Menubar = () => {
         // setShow(false);
       }
     },
-    [menuActive]
+    [menuActive],
   );
   //페이지 이동 시, 메뉴 바 닫기
   const menuClose = useCallback((e) => {
@@ -33,7 +33,7 @@ const Menubar = () => {
   });
   // 스크롤 시, 메뉴 색 변경
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
         setShow(true);
       } else {
@@ -41,27 +41,27 @@ const Menubar = () => {
       }
     });
     return () => {
-      window.removeEventListener("scroll", () => {});
+      window.removeEventListener('scroll', () => {});
     };
   }, []);
 
   //태영: Home제외하고 나머지 Header영역 뜨게 하기
   const [home, setHome] = useState(true);
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState('');
   const location = useLocation();
 
   const links = {
-    "/Notice": ["총학생회에서", <br />, "알려드립니다 📢"],
-    "/TimeTable": ["TIME TABLE"],
-    "/Event": ["새로워진", <br />, "덕새를 찾아라"],
-    "/Board": ["덕우들의 새로고침", <br />, "어떠셨나요?"],
+    '/Notice': ['총학생회에서', <br />, '알려드립니다 📢'],
+    '/TimeTable': ['TIME TABLE'],
+    '/Event': ['새로워진', <br />, '덕새를 찾아라'],
+    '/Board': ['덕우들의 새로고침', <br />, '어떠셨나요?'],
     // 은빈 :  adminntc, update 추가
-    "/adminntc": ["총학생회용", <br />, "페이지 입니다. 📢"],
-    "/update": ["총학생회용", <br />, "수정 페이지 입니다. "],
+    '/adminntc': ['총학생회용', <br />, '페이지 입니다. 📢'],
+    '/update': ['총학생회용', <br />, '수정 페이지 입니다. '],
   };
 
   useEffect(() => {
-    if (location.pathname === "/") {
+    if (location.pathname === '/') {
       setHome(true);
     } else {
       setHome(false);
@@ -74,27 +74,14 @@ const Menubar = () => {
       <div className={styles.menubar}>
         {home ? null : <div className={styles.menuSpaceBox} />}
 
-        <div
-          className={
-            home
-              ? show
-                ? styles.HeaderScroll
-                : styles.HeaderOpacity
-              : styles.Header
-          }
-        >
+        <div className={home ? (show ? styles.HeaderScroll : styles.HeaderOpacity) : styles.Header}>
           <div className={styles.HeaderTop}>
             <Link className={styles.FesLogoLink} to="/" onClick={menuClose}>
               {home ? null : <img src={FesLogo} />}
             </Link>
             <div
-              className={
-                menuActive
-                  ? styles.hamburger + " " + styles.active
-                  : styles.hamburger
-              }
-              onClick={MenuStateHandle}
-            >
+              className={menuActive ? styles.hamburger + ' ' + styles.active : styles.hamburger}
+              onClick={MenuStateHandle}>
               <span className={styles.bar}></span>
               <span className={styles.bar}></span>
               <span className={styles.bar}></span>
@@ -104,47 +91,35 @@ const Menubar = () => {
             <ul className={menuActive ? styles.NavMenuActive : styles.NavMenu}>
               <NavLink
                 to="/Notice"
-                className={({ isActive }) =>
-                  isActive ? styles.navActive : styles.nav
-                }
-                onClick={menuClose}
-              >
+                className={({ isActive }) => (isActive ? styles.navActive : styles.nav)}
+                onClick={menuClose}>
                 <li className={styles.NavItem}>NOTICE</li>
               </NavLink>
               <NavLink
                 to="/TimeTable"
-                className={({ isActive }) =>
-                  isActive ? styles.navActive : styles.nav
-                }
-                onClick={menuClose}
-              >
+                className={({ isActive }) => (isActive ? styles.navActive : styles.nav)}
+                onClick={menuClose}>
                 <li className={styles.NavItem}>TIME TABLE</li>
               </NavLink>
               <NavLink
                 to="/Event"
-                className={({ isActive }) =>
-                  isActive ? styles.navActive : styles.nav
-                }
-                onClick={menuClose}
-              >
+                className={({ isActive }) => (isActive ? styles.navActive : styles.nav)}
+                onClick={menuClose}>
                 <li className={styles.NavItem}>EVENT</li>
               </NavLink>
               <NavLink
                 to="/Board"
-                className={({ isActive }) =>
-                  isActive ? styles.navActive : styles.nav
-                }
-                onClick={menuClose}
-              >
+                className={({ isActive }) => (isActive ? styles.navActive : styles.nav)}
+                onClick={menuClose}>
                 <li className={styles.NavItem}>GUEST BOOK</li>
               </NavLink>
             </ul>
           </div>
         </div>
 
-        {home === true ? "" : <HeaderTitle title={title} />}
+        {home === true ? '' : <HeaderTitle title={title} />}
 
-        {home === true ? <Gate /> : ""}
+        {home === true ? <Gate /> : ''}
 
         <div className={styles.Content}>
           <Outlet />

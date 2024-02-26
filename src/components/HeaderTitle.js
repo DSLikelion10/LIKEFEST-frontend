@@ -1,6 +1,6 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
-import s from "../css/HeaderTitle.module.css";
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import s from '../css/HeaderTitle.module.css';
 
 const HeaderTitle = (props) => {
   function TagList() {
@@ -16,7 +16,7 @@ const HeaderTitle = (props) => {
   return (
     <div className={s.header}>
       <p className={s.headerTitle}>{props.title}</p>
-      <div>{`${location.pathname}` == "/Notice" ? <TagList /> : null} </div>
+      <div>{`${location.pathname}` == '/Notice' ? <TagList /> : null} </div>
     </div>
   );
 };

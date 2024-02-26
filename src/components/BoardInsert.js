@@ -1,12 +1,12 @@
-import axios from "axios";
-import React, { useCallback, useState } from "react";
-import styles from "../css/Board.module.css";
-import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+import React, { useCallback, useState } from 'react';
+import styles from '../css/Board.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const BoardInsert = ({ texts, changeTexts }) => {
   const [insertBody, setInsertBody] = useState(styles.insertBody);
   const [insert, setInsert] = useState(styles.insert);
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const [isfocus, setFocus] = useState(false);
 
   //포커스 되었을 때
@@ -35,11 +35,11 @@ const BoardInsert = ({ texts, changeTexts }) => {
     (e) => {
       e.preventDefault();
       axios
-        .post("http://localhost:3001/board", {
+        .post('http://localhost:3001/board', {
           boText: text,
         })
         .then((res) => {
-          setText(""); //text 초기화
+          setText(''); //text 초기화
           setInsertBody(styles.insertBody);
           setInsert(styles.insert);
 
@@ -52,7 +52,7 @@ const BoardInsert = ({ texts, changeTexts }) => {
           changeTexts(NewText);
         });
     },
-    [changeTexts, text, texts]
+    [changeTexts, text, texts],
   );
 
   //상태관리
@@ -61,7 +61,7 @@ const BoardInsert = ({ texts, changeTexts }) => {
       target: { name, value },
     } = e;
 
-    if (name === "text") {
+    if (name === 'text') {
       setText(value);
     }
   }, []);
@@ -77,13 +77,8 @@ const BoardInsert = ({ texts, changeTexts }) => {
           name="text"
           wrap="hard"
           value={text}
-          onChange={handleChange}
-        ></textarea>
-        <button
-          className={styles.insertbt}
-          onMouseDown={handleMouseDown}
-          type="submit"
-        >
+          onChange={handleChange}></textarea>
+        <button className={styles.insertbt} onMouseDown={handleMouseDown} type="submit">
           글 남기기
         </button>
       </form>

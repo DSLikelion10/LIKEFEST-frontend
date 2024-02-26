@@ -1,7 +1,7 @@
-import React, { useState, useMemo, useEffect, useCallback } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import styles from "../css/Notice.Write.module.css";
-import axios from "axios";
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import styles from '../css/Notice.Write.module.css';
+import axios from 'axios';
 
 const NoticeUpdate = () => {
   const location = useLocation();
@@ -62,7 +62,7 @@ const NoticeUpdate = () => {
 
   //클릭했을 때 true면 false로 false면 true로 바꾸는 함수 - 단일코드
   const handleClick = (e) => {
-    if (e.target.name === "tag1") {
+    if (e.target.name === 'tag1') {
       if (tag1) {
         //tag1이 true일때
         setTag1(false);
@@ -74,7 +74,7 @@ const NoticeUpdate = () => {
         setTag3(false);
         setTag(1);
       }
-    } else if (e.target.name === "tag2") {
+    } else if (e.target.name === 'tag2') {
       if (tag2) {
         //tag1이 true일때
         setTag1(false);
@@ -86,7 +86,7 @@ const NoticeUpdate = () => {
         setTag3(false);
         setTag(2);
       }
-    } else if (e.target.name === "tag3") {
+    } else if (e.target.name === 'tag3') {
       if (tag3) {
         //tag1이 true일때
         setTag1(false);
@@ -103,28 +103,28 @@ const NoticeUpdate = () => {
   };
 
   const textColor1 = useMemo(() => {
-    return tag1 ? "#4C966E" : "#c4c4c4";
+    return tag1 ? '#4C966E' : '#c4c4c4';
   }, [tag1]);
 
   const textColor2 = useMemo(() => {
-    return tag2 ? "#d0c7de" : "#c4c4c4";
+    return tag2 ? '#d0c7de' : '#c4c4c4';
   }, [tag2]);
 
   const textColor3 = useMemo(() => {
-    return tag3 ? "#e7d0b6" : "#c4c4c4";
+    return tag3 ? '#e7d0b6' : '#c4c4c4';
   }, [tag3]);
 
   const handleChange = (e) => {
     const {
       target: { name, value },
     } = e;
-    if (name === "noTitle") {
+    if (name === 'noTitle') {
       setTitle((noTitle) => value);
-    } else if (name === "noText") {
+    } else if (name === 'noText') {
       setText(value);
-    } else if (name === "noTag") {
+    } else if (name === 'noTag') {
       setTag(value);
-    } else if (name === "noImg") {
+    } else if (name === 'noImg') {
       setImg(URL.createObjectURL(e.target.files[0]));
       setimg(e.target.files);
     }
@@ -142,11 +142,11 @@ const NoticeUpdate = () => {
       axios
         .put(`http://localhost:3001/notice/update/${id}`, content)
         .then((res) => {
-          navigate("/Notice");
+          navigate('/Notice');
         })
         .catch((error) => {});
     } else {
-      alert("모든 빈칸을 작성해주세요.");
+      alert('모든 빈칸을 작성해주세요.');
     }
   };
 
@@ -161,16 +161,14 @@ const NoticeUpdate = () => {
               className={styles.ntcTitle}
               value={noTitle}
               onChange={handleChange}
-              name="noTitle"
-            ></input>
+              name="noTitle"></input>
             <textarea
               name="noText"
               rows="9"
               className={styles.ntcContent}
               placeholder={content.noText}
               value={noText}
-              onChange={handleChange}
-            ></textarea>
+              onChange={handleChange}></textarea>
           </div>
           <div>
             <p className={styles.tagstyle}>태그</p>
@@ -181,8 +179,7 @@ const NoticeUpdate = () => {
                 style={{ backgroundColor: textColor1 }}
                 name="tag1"
                 value="1"
-                onClick={handleClick}
-              >
+                onClick={handleClick}>
                 NOTICE
               </button>
               <button
@@ -191,8 +188,7 @@ const NoticeUpdate = () => {
                 style={{ backgroundColor: textColor2 }}
                 name="tag2"
                 value="2"
-                onClick={handleClick}
-              >
+                onClick={handleClick}>
                 EVENT
               </button>
               <button
@@ -201,8 +197,7 @@ const NoticeUpdate = () => {
                 style={{ backgroundColor: textColor3 }}
                 name="tag3"
                 value="3"
-                onClick={handleClick}
-              >
+                onClick={handleClick}>
                 PROGRAM
               </button>
             </div>
@@ -216,20 +211,11 @@ const NoticeUpdate = () => {
           <br />
           <div>
             <div className={styles.plusdiv}>
-              <img
-                className={styles.plusdiv}
-                id="input-file"
-                alt="plus"
-                src={eimgurl}
-              ></img>
+              <img className={styles.plusdiv} id="input-file" alt="plus" src={eimgurl}></img>
             </div>
           </div>
           <div className={styles.button}>
-            <input
-              type="submit"
-              value="수정하기"
-              className={styles.submitbtn}
-            ></input>
+            <input type="submit" value="수정하기" className={styles.submitbtn}></input>
           </div>
         </form>
       </div>

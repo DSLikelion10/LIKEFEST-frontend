@@ -1,4 +1,4 @@
-import NoticeWrite from "../components/NoticeWrite";
+import NoticeWrite from '../components/NoticeWrite';
 
 const NoticeManage = () => {
   return (

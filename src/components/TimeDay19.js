@@ -1,5 +1,5 @@
-import TimeItem from "./TimeItem"
-import s from "../css/TimeDay.module.css";
+import TimeItem from './TimeItem';
+import s from '../css/TimeDay.module.css';
 
 const TimeDay19 = () => {
   return (
@@ -33,10 +33,38 @@ const TimeDay19 = () => {
       <div className={[s.cell, s.cell12].join(' ')}></div>
 
       {/* TimeItem */}
-      <TimeItem title={"주간수익사업"} time={"11:00~15:00"} location={"영근터"} color={"#4C966E"} height={"399px"} name={s.item6} />
-      <TimeItem title={"야간 수익 사업"} time={"17:00~22:00"} location={"영근터"} color={"#4C966E"} height={"499px"} name={s.item7} />
-      <TimeItem title={"운현 가요제"} time={"18:00~20:00"} location={"영근터"} color={"#E7D0B6"} height={"192px"} name={s.item8} />
-      <TimeItem title={"공연"} time={"20:00~21:00"} location={"영근터"} color={"#E7D0B6"} height={"99px"} name={s.item9} />
+      <TimeItem
+        title={'주간수익사업'}
+        time={'11:00~15:00'}
+        location={'영근터'}
+        color={'#4C966E'}
+        height={'399px'}
+        name={s.item6}
+      />
+      <TimeItem
+        title={'야간 수익 사업'}
+        time={'17:00~22:00'}
+        location={'영근터'}
+        color={'#4C966E'}
+        height={'499px'}
+        name={s.item7}
+      />
+      <TimeItem
+        title={'운현 가요제'}
+        time={'18:00~20:00'}
+        location={'영근터'}
+        color={'#E7D0B6'}
+        height={'192px'}
+        name={s.item8}
+      />
+      <TimeItem
+        title={'공연'}
+        time={'20:00~21:00'}
+        location={'영근터'}
+        color={'#E7D0B6'}
+        height={'99px'}
+        name={s.item9}
+      />
     </div>
   );
 };

@@ -1,5 +1,5 @@
-import icon_place from "../img/icon_place.png";
-import s from "../css/TimeItem.module.css";
+import icon_place from '../img/icon_place.png';
+import s from '../css/TimeItem.module.css';
 
 const TimeItem = (props) => {
   return (
@@ -13,18 +13,17 @@ const TimeItem = (props) => {
             <img className={s.iconPlace} src={icon_place} />
             <p className={s.location}>{props.location}</p>
           </div>
-          {
-            props.second ?
-              <div className={s.secondContent}>
-                <p className={s.title}>{props.title2}</p>
-                <div className={s.locationDiv}>
-                  <img className={s.iconPlace} src={icon_place} />
-                  <p className={s.location}>{props.location2}</p>
-                </div>
+          {props.second ? (
+            <div className={s.secondContent}>
+              <p className={s.title}>{props.title2}</p>
+              <div className={s.locationDiv}>
+                <img className={s.iconPlace} src={icon_place} />
+                <p className={s.location}>{props.location2}</p>
               </div>
-              :
-              <div />
-          }
+            </div>
+          ) : (
+            <div />
+          )}
         </div>
       </div>
     </div>
