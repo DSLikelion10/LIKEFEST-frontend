@@ -39,7 +39,6 @@ const BoardInsert = ({ texts, changeTexts }) => {
           boText: text,
         })
         .then((res) => {
-          console.log("Success");
           setText(""); //text 초기화
           setInsertBody(styles.insertBody);
           setInsert(styles.insert);
@@ -51,9 +50,6 @@ const BoardInsert = ({ texts, changeTexts }) => {
           };
 
           changeTexts(NewText);
-        })
-        .catch((error) => {
-          console.log("Network Error : ", error);
         });
     },
     [changeTexts, text, texts]

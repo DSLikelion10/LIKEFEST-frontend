@@ -13,52 +13,13 @@ const NoticeWrite = () => {
   let [tag1, setTag1] = useState(false);
   let [tag2, setTag2] = useState(false);
   let [tag3, setTag3] = useState(false);
-  // const [textColor1, setTextColor1] = useState("#c4c4c4");
-  // const [textColor2, setTextColor2] = useState("#c4c4c4");
-  // const [textColor3, setTextColor3] = useState("#c4c4c4");
 
   const formData = new FormData();
   const navigate = useNavigate();
-
-  // const handleChange = (e) => {
-  //   const {
-  //     target: { name, value },
-  //   } = e;
-  //   if (name === 'title') {
-  //     setTitle(value);
-  //   }else if (name === 'content'){
-  //     setContent(value);
-  //   }else if(name === 'tag'){
-  //     setTag(value);
-  //   }else{
-  //     setImg(e.target.files[0]);
-  //   }
-  //   console.log(Title, Content, Tag, noImg);
-
-  // };
-
-  //클릭했을 때 true면 false로 false면 true로 바꾸는 함수 - 중복코드
-  // const handleClick = (e) => {
-  //   //console.log(e.target.name);
-  //   //e.target.name과 같은 state같을 찾는다.
-  //   if (e.target.name === "tag1") {
-  //     tag1 ? setTag1(false) : setTag1(true);
-  //     // console.log(tag1);
-  //   } else if (e.target.name === "tag2") {
-  //     tag2 ? setTag2(false) : setTag2(true);
-  //     //console.log(tag2);
-  //   } else if (e.target.name === "tag3") {
-  //     tag3 ? setTag3(false) : setTag3(true);
-  //     //console.log(tag3);
-  //   }
-  // };
-
   //클릭했을 때 true면 false로 false면 true로 바꾸는 함수 - 단일코드
   const handleClick = (e) => {
-    //console.log(e.target.name);
     //e.target.name과 같은 state같을 찾는다.
     if (e.target.name === "tag1") {
-      // tag1 ? setTag1(false) : setTag1(true);
       if (tag1) {
         //tag1이 true일때
         setTag1(false);
@@ -70,8 +31,6 @@ const NoticeWrite = () => {
         setTag3(false);
         setTag(1);
       }
-
-      // console.log(tag1);
     } else if (e.target.name === "tag2") {
       if (tag2) {
         //tag1이 true일때
@@ -84,8 +43,6 @@ const NoticeWrite = () => {
         setTag3(false);
         setTag(2);
       }
-
-      //console.log(tag2);
     } else if (e.target.name === "tag3") {
       if (tag3) {
         //tag1이 true일때
@@ -98,16 +55,14 @@ const NoticeWrite = () => {
         setTag3(true);
         setTag(3);
       }
-      //console.log(tag3);
     }
   };
-
 
   //usememo 최적화 연산 함수
   const textColor1 = useMemo(() => {
     return tag1 ? "#4C966E" : "#c4c4c4";
   }, [tag1]);
-  //tag1가 변화하면 윗줄이 동작함 
+  //tag1가 변화하면 윗줄이 동작함
   const textColor2 = useMemo(() => {
     return tag2 ? "#d0c7de" : "#c4c4c4";
   }, [tag2]);
@@ -125,57 +80,16 @@ const NoticeWrite = () => {
       setTitle(value);
     } else if (name === "content") {
       setContent(value);
-    }else if(name === 'tag'){
+    } else if (name === "tag") {
       setTag(value);
-    }else if(name === 'noImg'){
-      setImg(URL.createObjectURL(e.target.files[0]));  
-      setimg(e.target.files[0]);  
-    }    
-console.log(Title, Content, Tag, noImg);
-}
-
-  // const tagChange = (e) => {
-  //   const {
-  //     target: { name, value },
-  //   } = e;
-  //   if (name === "tag1") {
-  //     //setTag1(!tag1);
-  //     tag1 = true;
-  //     tag2 = false;
-  //     tag3 = false;
-  //     console.log(tag1, tag2, tag3);
-  //     setTextColor1(tag1 === true ? "#4C966E" : "#c4c4c4");
-  //     setTextColor2(tag2 === true ? " #d0c7de" : "#c4c4c4");
-  //     setTextColor3(tag3 === true ? " #e7d0b6" : "#c4c4c4");
-  //   } else if (name === "tag2") {
-  //     //setTag2(!tag2);
-  //     tag1 = false;
-  //     tag2 = true;
-  //     tag3 = false;
-  //     console.log(tag1, tag2, tag3);
-  //     setTextColor1(tag1 === true ? "#4C966E" : "#c4c4c4");
-  //     setTextColor2(tag2 === true ? " #d0c7de" : "#c4c4c4");
-  //     setTextColor3(tag3 === true ? " #e7d0b6" : "#c4c4c4");
-  //   } else if (name === "tag3") {
-  //     //setTag3(!tag3);
-  //     tag1 = false;
-  //     tag2 = false;
-  //     tag3 = true;
-  //     console.log(tag1, tag2, tag3);
-  //     setTextColor1(tag1 === true ? "#4C966E" : "#c4c4c4");
-  //     setTextColor2(tag2 === true ? " #d0c7de" : "#c4c4c4");
-  //     setTextColor3(tag3 === true ? " #e7d0b6" : "#c4c4c4");
-  //   }
-  //   // setTag([
-  //   //   ...Tag,value
-  //   // ]);
-  //   setTag(value);
-  //   console.log(Tag);
-  // };
+    } else if (name === "noImg") {
+      setImg(URL.createObjectURL(e.target.files[0]));
+      setimg(e.target.files[0]);
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("버튼 눌리는 중");
     formData.append("noTitle", Title);
     formData.append("noText", Content);
     formData.append("noTag", Tag);
@@ -188,23 +102,13 @@ console.log(Title, Content, Tag, noImg);
       };
 
       axios
-        .post(
-          "http://localhost:3001/notice",
-          // noTitle:formData.get('title'),
-          // noText:formData.get('content'),
-          // noTag:formData.get('tag')
-          formData,
-          config
-        )
+        .post("http://localhost:3001/notice", formData, config)
         .then((res) => {
-          console.log("Success");
-          console.log(res);
           setTitle(""); //text 초기화
           setContent("");
           setTag("");
           setimg("");
           setImg("");
-          console.log(formData);
           navigate("/Notice");
         })
         .catch((error) => {
@@ -243,7 +147,6 @@ console.log(Title, Content, Tag, noImg);
             <button
               type="button"
               className={styles.hashtag1}
-              //className={tag1?styles.hashtag1.backgroundColor}
               style={{ backgroundColor: textColor1 }}
               name="tag1"
               value="1"
@@ -253,7 +156,6 @@ console.log(Title, Content, Tag, noImg);
             </button>
             <button
               type="button"
-              //style={{backgroundColor:'#D0C7DE'}}
               className={styles.hashtag2}
               style={{ backgroundColor: textColor2 }}
               name="tag2"
@@ -264,7 +166,6 @@ console.log(Title, Content, Tag, noImg);
             </button>
             <button
               type="button"
-              //style={{backgroundColor:"#E7D0B6", width:"74px"}}
               className={styles.hashtag3}
               style={{ backgroundColor: textColor3 }}
               name="tag3"
@@ -303,7 +204,6 @@ console.log(Title, Content, Tag, noImg);
                   src={plus}
                 ></img>
               )}
-              {/* <img className={styles.plusimg} id="input-file" alt='plus' src={plus}></img> */}
             </div>
           </label>
         </div>

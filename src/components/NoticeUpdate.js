@@ -62,9 +62,6 @@ const NoticeUpdate = () => {
 
   //클릭했을 때 true면 false로 false면 true로 바꾸는 함수 - 단일코드
   const handleClick = (e) => {
-    // useEffect(() => {
-    console.log(e.target.name);
-    //e.target.name과 같은 state같을 찾는다.
     if (e.target.name === "tag1") {
       if (tag1) {
         //tag1이 true일때
@@ -137,23 +134,17 @@ const NoticeUpdate = () => {
   content.noText = noText;
   content.noTag = noTag;
   content.noImg = noImg;
-  console.log(content);
 
   const handleSubmit = (e) => {
     const id = location.state.content.id;
     e.preventDefault();
-    console.log("버튼 눌리는 중");
     if (noTitle !== null && noText !== null && noTag !== null) {
       axios
         .put(`http://localhost:3001/notice/update/${id}`, content)
         .then((res) => {
-          console.log(content);
-          console.log("수정 완료");
           navigate("/Notice");
         })
-        .catch((error) => {
-          console.log("Network Error : ", error);
-        });
+        .catch((error) => {});
     } else {
       alert("모든 빈칸을 작성해주세요.");
     }

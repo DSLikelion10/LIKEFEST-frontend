@@ -2,7 +2,6 @@ import React from "react";
 import BoardItem from "./BoardItem";
 
 const BoardList = ({ texts }) => {
-  console.log(texts);
   return (
     <div>
       {texts

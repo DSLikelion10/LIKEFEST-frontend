@@ -44,10 +44,8 @@ const Event = () => {
     const answer = "두려움 없는 여성들에게서 불꽃이 타오른다.";
 
     if (answer === userinput) {
-      console.log("정답이지롱");
       setChoose(true);
     } else {
-      console.log("오답이지롱");
       //setChoose(false);
       setChoose(false);
     }
@@ -69,7 +67,9 @@ const Event = () => {
         <div className={styles.tooltip}>
           <div className={styles.slideIn}>
             <img className={styles.info} src={icon} alt="힌트" />
-            <p className={styles.hintcontent}><span>Hint</span> | OOO OO OOOOOO OOO OOOO.</p>
+            <p className={styles.hintcontent}>
+              <span>Hint</span> | OOO OO OOOOOO OOO OOOO.
+            </p>
           </div>
         </div>
 
@@ -84,7 +84,6 @@ const Event = () => {
           확인하기
         </button>
       </div>
-        
 
       <div className={styles.bottombox}>
         {/* 참여 방법 */}
@@ -102,7 +101,6 @@ const Event = () => {
               학교 곳곳에 있는 새로워진 덕새를 찾아주세요.
             </p>
           </div>
-
         </div>
 
         {/* 참여 방법 step 2 */}
@@ -113,7 +111,9 @@ const Event = () => {
           <img className={styles.stepimg} src={step2} alt="사진2" />
           {/* 설명글 */}
           <div className={styles.text}>
-          <p className={styles.steptext}>덕새 손에 있는 QR코드를 찍어 주세요.</p>
+            <p className={styles.steptext}>
+              덕새 손에 있는 QR코드를 찍어 주세요.
+            </p>
           </div>
         </div>
 
@@ -125,9 +125,9 @@ const Event = () => {
           <img className={styles.stepimg} src={step3} alt="사진3" />
           {/* 설명글 */}
           <div className={styles.textlast}>
-          <p className={styles.steptext}>
-            5개의 QR코드 속 이미지를 조합하여 문장을 만들어 주세요.
-          </p>
+            <p className={styles.steptext}>
+              5개의 QR코드 속 이미지를 조합하여 문장을 만들어 주세요.
+            </p>
           </div>
         </div>
 
@@ -139,9 +139,9 @@ const Event = () => {
           <img className={styles.stepimg} src={step4} alt="사진4" />
           {/* 설명글 */}
           <div className={styles.textlast}>
-          <p className={styles.steptext}>
-            문장이 완성되었으면 입력칸에 문장을 입력해주세요.
-          </p>
+            <p className={styles.steptext}>
+              문장이 완성되었으면 입력칸에 문장을 입력해주세요.
+            </p>
           </div>
         </div>
 
@@ -153,29 +153,27 @@ const Event = () => {
           <img className={styles.stepimg} src={step5} alt="사진5" />
           {/* 설명글 */}
           <div className={styles.textlast}>
-          <p className={styles.steptext}>
-            정답인 경우, 팝업창을 캡처하여 중앙본부로 방문해 주세요!
-          </p>
+            <p className={styles.steptext}>
+              정답인 경우, 팝업창을 캡처하여 중앙본부로 방문해 주세요!
+            </p>
           </div>
         </div>
       </div>
-   
 
+      {/* 삼항 연산자로 만든 다음, false에서 정답과 비교해서 유동적으로 만든 후 맞으면 success 모달이 뜨게끔, 틀리면 false 모달이 뜨게끔 */}
 
-        {/* 삼항 연산자로 만든 다음, false에서 정답과 비교해서 유동적으로 만든 후 맞으면 success 모달이 뜨게끔, 틀리면 false 모달이 뜨게끔 */}
-
-        {transitions(
-          (style, item) =>
-            item &&
-            (choose ? (
-              <SuccessModal
-                style={style}
-                closeModal={() => setOpenModal(false)}
-              />
-            ) : (
-              <FailModal style={style} closeModal={() => setOpenModal(false)} />
-            ))
-        )}
+      {transitions(
+        (style, item) =>
+          item &&
+          (choose ? (
+            <SuccessModal
+              style={style}
+              closeModal={() => setOpenModal(false)}
+            />
+          ) : (
+            <FailModal style={style} closeModal={() => setOpenModal(false)} />
+          ))
+      )}
     </div>
   );
 };

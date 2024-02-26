@@ -13,8 +13,6 @@ const DeleteModal = ({ style, closeModal, content }) => {
       .delete(`http://localhost:3001/notice/${id}`)
       .then((res) => {
         window.location.reload();
-        console.log(res);
-        console.log("삭제 완료");
       })
       .catch((error) => console.log("Network Error : ", error));
   };

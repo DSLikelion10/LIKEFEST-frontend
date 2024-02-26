@@ -20,10 +20,8 @@ const Menubar = () => {
   useEffect(
     (e) => {
       if (menuActive) {
-        console.log("열렸습니다.");
         // setShow(true);
       } else {
-        console.log("닫혔습니다.");
         // setShow(false);
       }
     },
