@@ -11,25 +11,35 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Gate = () => {
-
   useEffect(() => {
-    AOS.init(
-      {duration : 1200}
-    );
-  })
+    AOS.init({ duration: 1200 });
+  });
+
+  const IMG_ARRAY = [
+    { alt: follow, offset: 150, margin: 100 },
+    { alt: female, offset: 200, margin: 200 },
+    { alt: focus, offset: 250, margin: 300 },
+    { alt: future, offset: 280, margin: 400 },
+    { alt: forever, offset: 300, margin: 500 },
+  ];
 
   return (
     <div className={style.gradient}>
       <img className={style.poster} src={mainposter} alt="포스터" />
       <div className={style.date}>2022. 05.18 - 05.20</div>
-      <div className={style.line}></div> 
-        <div className={style.keywordDiv}>
-          <img data-aos="fade-up" data-aos-offset="150" className={style.keyword1} src={follow} alt="follow" data-sa-margin="100"/>
-          <img data-aos="fade-up" data-aos-offset="200" className={style.keyword2} src={female} alt="female" data-sa-margin="200"/>
-          <img data-aos="fade-up" data-aos-offset="250" className={style.keyword3} src={focus} alt="focus" data-sa-margin="300"/>
-          <img data-aos="fade-up" data-aos-offset="280" className={style.keyword4} src={future} alt="future" data-sa-margin="400"/>
-          <img data-aos="fade-up" data-aos-offset="300" className={style.keyword5} src={forever} alt="forever" data-sa-margin="500"/>
-        </div>
+      <div className={style.line}></div>
+      <div className={style.keywordDiv}>
+        {IMG_ARRAY.map((data) => {
+          <img
+            data-aos="fade-up"
+            data-aos-offset={data.offset}
+            className={style.keyword2}
+            src={data.alt}
+            alt={data.alt}
+            data-sa-margin={data.margin}
+          />;
+        })}
+      </div>
       <img className={style.new} src={newduksung} alt="forever" />
     </div>
   );
