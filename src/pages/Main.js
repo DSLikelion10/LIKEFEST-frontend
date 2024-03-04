@@ -52,7 +52,7 @@ const Main = () => {
 
         <div className={style.BottomSection}>
           <div>
-            <img className={style.Council_Logo} src={Gaehwa_Logo} />
+            <img className={style.Council_Logo} src={Gaehwa_Logo} alt="개화로고" />
             <p>
               덕성여자대학교
               <br />
@@ -60,7 +60,7 @@ const Main = () => {
             </p>
           </div>
           <div>
-            <img className={style.LikeLion_Logo} src={LikeLion_Logo} />
+            <img className={style.LikeLion_Logo} src={LikeLion_Logo} alt="멋사 로고" />
             <p>
               멋쟁이사자처럼
               <br />
@@ -70,7 +70,7 @@ const Main = () => {
           <div>
             <p>정지영</p>
             <p className={style.instagram}>
-              <img src={insta} />
+              <img src={insta} alt="인스타그램 로고" />
               youngrong.wrk
             </p>
           </div>

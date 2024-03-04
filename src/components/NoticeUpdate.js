@@ -14,7 +14,7 @@ const NoticeUpdate = () => {
   const [noTag, setTag] = useState(content.noTag);
   //하나용이었지만 내가(태영) 중복으로 바꿔버린
   const [noImg, setImg] = useState(null);
-  const [noimg, setimg] = useState(eimgurl);
+  // const [noimg, setimg] = useState(eimgurl);
   let [tag1, setTag1] = useState(false);
   let [tag2, setTag2] = useState(false);
   let [tag3, setTag3] = useState(false);
@@ -58,7 +58,7 @@ const NoticeUpdate = () => {
         setTag(3);
       }
     }
-  }, []);
+  }, [Etag, tag1, tag2, tag3]);
 
   //클릭했을 때 true면 false로 false면 true로 바꾸는 함수 - 단일코드
   const handleClick = (e) => {
@@ -99,7 +99,6 @@ const NoticeUpdate = () => {
         setTag(3);
       }
     }
-    // }, []);
   };
 
   const textColor1 = useMemo(() => {
@@ -126,7 +125,7 @@ const NoticeUpdate = () => {
       setTag(value);
     } else if (name === 'noImg') {
       setImg(URL.createObjectURL(e.target.files[0]));
-      setimg(e.target.files);
+      // setimg(e.target.files);
     }
   };
 
