@@ -4,7 +4,7 @@ import correct from '../img/correct.png';
 import { animated } from 'react-spring';
 
 const SuccessModal = ({ style, closeModal }) => {
-  const modalRef = useRef();
+  const modalRef = useRef(null);
 
   const outsideClose = (e) => {
     if (modalRef.current === e.target) {

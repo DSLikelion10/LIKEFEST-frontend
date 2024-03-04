@@ -19,7 +19,7 @@ const NoticeItem = ({ content }) => {
       img_url.push(String.fromCharCode(hope[i]));
       setImgurl('http://localhost:3001/' + img_url.join(''));
     }
-  }, []);
+  }, [content.noImg.data]);
 
   // 해시태그 추가
   const myTag = [

@@ -17,7 +17,7 @@ const DeleteModal = ({ style, closeModal, content }) => {
       .catch((error) => console.log('Network Error : ', error));
   };
 
-  const modalRef = useRef();
+  const modalRef = useRef(null);
 
   const outsideClose = (e) => {
     if (modalRef.current === e.target) {

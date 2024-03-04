@@ -1,4 +1,4 @@
-import react, { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import style from '../css/TimeTable.module.css';
 import TimeDay18 from '../components/TimeDay18';
 import TimeDay19 from '../components/TimeDay19';
@@ -8,7 +8,7 @@ const TimeTable = () => {
   const [NavActive, setNavActive] = useState('18');
   const NavClickHandle = useCallback((e, num) => {
     setNavActive(num);
-  });
+  }, []);
   useEffect(() => {}, [NavActive]);
 
   const UI = {
