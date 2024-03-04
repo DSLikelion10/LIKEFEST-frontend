@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import HeaderTitle from '../components/HeaderTitle';
 import style from '../css/Main.module.css';
 import find_duksae from '../img/image_find_duksae.png';
 import gestbook from '../img/image_gestbook.png';
@@ -30,7 +29,7 @@ const Main = () => {
           </div>
           <div data-aos="fade-up" className={style.LinkComponent}>
             <Link className={style.link} to="/event">
-              <img className={style.representativeImg} src={find_duksae} />
+              <img className={style.representativeImg} src={find_duksae} alt="덕새 아이콘" />
               <div className={style.representativeTitle1}>
                 <div>
                   <div className={style.eventtag}>EVENT</div>
@@ -42,7 +41,7 @@ const Main = () => {
           </div>
           <div data-aos="fade-up" className={style.LinkComponent}>
             <Link className={style.link} to="/board">
-              <img className={style.representativeImg} src={gestbook} />
+              <img className={style.representativeImg} src={gestbook} alt="덕새 이미지" />
               <div className={style.representativeTitle2}>
                 <p>함께하여 더 즐거운 이야기들</p>
                 <p>덕우들의 새로고침</p>

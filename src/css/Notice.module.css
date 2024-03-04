@@ -27,7 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Pretendard-bold";
+  font-family: 'Pretendard-bold';
   color: #fff;
   font-size: 12px;
   background-color: #4c966e;
@@ -41,7 +41,7 @@
 }
 
 .ntcTitle {
-  font-family: "Pretendard-bold";
+  font-family: 'Pretendard-bold';
   line-height: 24px;
   grid-row: 2/3;
   grid-column: 1/4;
@@ -54,7 +54,7 @@
 }
 
 .ntcTitleCut {
-  font-family: "Pretendard-bold";
+  font-family: 'Pretendard-bold';
   line-height: 24px;
   grid-row: 2/3;
   grid-column: 1/4;
@@ -72,7 +72,7 @@
   text-align: left;
   line-height: 24px;
   font-size: 14px;
-  font-family: "Pretendard-regular";
+  font-family: 'Pretendard-regular';
 }
 
 .ntcContentCut {
@@ -80,7 +80,7 @@
   text-align: left;
   line-height: 24px;
   font-size: 14px;
-  font-family: "Pretendard-regular";
+  font-family: 'Pretendard-regular';
 }
 
 .moreBtn {
@@ -125,7 +125,7 @@
 
 .toWrite {
   background-color: #4c966e;
-  font-family: "Pretendard-bold";
+  font-family: 'Pretendard-bold';
   color: #fff;
   border-style: none;
   padding: 18px 38%;
@@ -182,7 +182,7 @@
 }
 
 .deletebtn {
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   background-color: #fff;
   border: none;
   font-size: 16px;
@@ -190,7 +190,7 @@
 }
 
 .editBtn {
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   background-color: #fff;
   border: none;
   font-size: 16px;

@@ -1,15 +1,13 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 #root {
   display: flex;
@@ -17,7 +15,7 @@ code {
   align-items: center;
 }
 @font-face {
-  font-family: "Pretendard-Black";
+  font-family: 'Pretendard-Black';
   font-display: fallback;
 
   /* 
@@ -26,14 +24,13 @@ code {
      Modern Browsers => woff
 */
 
-  src: url("./font/Pretendard-Black.otf") format("opentype"),
-    url("./font/Pretendard-Black.woff") format("woff");
+  src: url('./font/Pretendard-Black.otf') format('opentype'), url('./font/Pretendard-Black.woff') format('woff');
   /*사용할 폰트 기본 스타일 */
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: "Pretendard-Bold";
+  font-family: 'Pretendard-Bold';
   font-display: fallback;
 
   /* 
@@ -43,9 +40,8 @@ code {
      IE6-IE8 => eot
 */
 
-  src: url("./font/Pretendard-Bold.otf") format("opentype"),
-    url("./font/Pretendard-Bold.woff") format("woff"),
-    url("./font/Pretendard-Bold.eot?iefix") format("embedded-opentype");
+  src: url('./font/Pretendard-Bold.otf') format('opentype'), url('./font/Pretendard-Bold.woff') format('woff'),
+    url('./font/Pretendard-Bold.eot?iefix') format('embedded-opentype');
 
   /*사용할 폰트 기본 스타일 */
   font-weight: 700;
@@ -53,7 +49,7 @@ code {
 }
 
 @font-face {
-  font-family: "Pretendard-Regular";
+  font-family: 'Pretendard-Regular';
   font-display: fallback;
 
   /* 
@@ -63,9 +59,8 @@ code {
      IE6-IE8 => eot
 */
 
-  src: url("./font/Pretendard-Regular.otf") format("opentype"),
-    url("./font/Pretendard-Regular.woff") format("woff"),
-    url("./font/Pretendard-Regular.eot?iefix") format("embedded-opentype");
+  src: url('./font/Pretendard-Regular.otf') format('opentype'), url('./font/Pretendard-Regular.woff') format('woff'),
+    url('./font/Pretendard-Regular.eot?iefix') format('embedded-opentype');
 
   /*사용할 폰트 기본 스타일 */
   font-weight: 400;
@@ -73,7 +68,7 @@ code {
 }
 
 @font-face {
-  font-family: "Pretendard-ExtraBold";
+  font-family: 'Pretendard-ExtraBold';
   font-display: fallback;
 
   /* 
@@ -83,9 +78,8 @@ code {
      IE6-IE8 => eot
 */
 
-  src: url("./font/Pretendard-ExtraBold.otf") format("opentype"),
-    url("./font/Pretendard-ExtraBold.woff") format("woff"),
-    url("./font/Pretendard-ExtraBold.eot?iefix") format("embedded-opentype");
+  src: url('./font/Pretendard-ExtraBold.otf') format('opentype'), url('./font/Pretendard-ExtraBold.woff') format('woff'),
+    url('./font/Pretendard-ExtraBold.eot?iefix') format('embedded-opentype');
 
   /*사용할 폰트 기본 스타일 */
   font-weight: 800;
@@ -93,7 +87,7 @@ code {
 }
 
 @font-face {
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   font-display: fallback;
 
   /* 
@@ -103,17 +97,16 @@ code {
      IE6-IE8 => eot
 */
 
-  src: url("./font/Pretendard-Medium.otf") format("opentype"),
-    url("./font/Pretendard-Medium.woff") format("woff"),
-    url("./font/Pretendard-Medium.eot?iefix") format("embedded-opentype");
+  src: url('./font/Pretendard-Medium.otf') format('opentype'), url('./font/Pretendard-Medium.woff') format('woff'),
+    url('./font/Pretendard-Medium.eot?iefix') format('embedded-opentype');
 
   /*사용할 폰트 기본 스타일 */
   font-weight: 500;
   font-style: normal;
 }
 
-@font-face{
-  font-family: "GmarketSansMedium";
-  font-display:fallback;
-  src:url("./font/GmarketSansMedium.otf") format("opentype");
+@font-face {
+  font-family: 'GmarketSansMedium';
+  font-display: fallback;
+  src: url('./font/GmarketSansMedium.otf') format('opentype');
 }

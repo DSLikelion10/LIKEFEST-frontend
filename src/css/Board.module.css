@@ -5,7 +5,7 @@
 }
 
 .boardbody {
-  margin-top:28px;
+  margin-top: 28px;
   margin-left: 34px;
   margin-right: 34px;
 }
@@ -34,7 +34,7 @@
 .insert {
   margin: 17px 23px 0px 23px;
   height: 81px;
-  font-family: "Pretendard-Regular";
+  font-family: 'Pretendard-Regular';
   border: none;
   resize: none;
 }
@@ -42,7 +42,7 @@
 .insert2 {
   margin: 17px 23px 0px 23px;
   height: 233px;
-  font-family: "Pretendard-Regular";
+  font-family: 'Pretendard-Regular';
   border: none;
   resize: none;
 }
@@ -88,17 +88,16 @@ textarea:focus:-ms-input-placeholder {
   color: white;
   border: none;
   cursor: pointer;
-  font-family: "Pretendard-Bold";
+  font-family: 'Pretendard-Bold';
   font-size: 16px;
 }
 
 .boarditem {
   color: white;
   padding: 17px 23px;
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   border-radius: 5px;
   margin-bottom: 19px;
   white-space: pre-wrap;
   text-align: left;
 }
-

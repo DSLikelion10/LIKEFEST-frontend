@@ -35,14 +35,14 @@
 }
 /* input 박스의 placeholder */
 .eventinput::placeholder {
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   font-size: 16px;
   color: #848484;
   padding-left: 10px;
   line-height: 24px;
 }
 /* tooltip */
-.info{
+.info {
   width: 18px;
   height: 18px;
   margin-top: 2px;
@@ -51,57 +51,57 @@
   padding-left: 2px;
 }
 
-.tooltip{
+.tooltip {
   color: #fff;
-  font-family: "Pretendard-Medium";
-	font-size: 16px;
+  font-family: 'Pretendard-Medium';
+  font-size: 16px;
   line-height: 19.36px;
   vertical-align: text-bottom;
-	background-color: #C3E196;
-	text-shadow: none;
-	visibility: hidden;
-	-webkit-border-radius: 7px; 
-	-moz-border-radius: 7px; 
-	-o-border-radius: 7px; 
-	border-radius: 7px;	
-	text-align: center;	
-	opacity: 0;
-	z-index: 999;
-	padding: 8px;	
-	position: absolute;
-	cursor: default;
-	-webkit-transition: all 240ms ease-in-out;
-	-moz-transition: all 240ms ease-in-out;
-	-ms-transition: all 240ms ease-in-out;
-	-o-transition: all 240ms ease-in-out;
-	transition: all 240ms ease-in-out;	
+  background-color: #c3e196;
+  text-shadow: none;
+  visibility: hidden;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  text-align: center;
+  opacity: 0;
+  z-index: 999;
+  padding: 8px;
+  position: absolute;
+  cursor: default;
+  -webkit-transition: all 240ms ease-in-out;
+  -moz-transition: all 240ms ease-in-out;
+  -ms-transition: all 240ms ease-in-out;
+  -o-transition: all 240ms ease-in-out;
+  transition: all 240ms ease-in-out;
 }
 
 .tooltip,
-.tooltip.top{
-	top: auto;
-	bottom: 90%;
+.tooltip.top {
+  top: auto;
+  bottom: 90%;
 }
 
 .tooltip.top:after,
-.tooltip:after{
-	position: absolute;
-	bottom: -12px;
-	left: 10%;
-	margin-left: -7px;
-	content: '';
-	height: 0px;
-	width: 0px;
-	border: 6px solid transparent;
-  border-top-color: #C3E196;
+.tooltip:after {
+  position: absolute;
+  bottom: -12px;
+  left: 10%;
+  margin-left: -7px;
+  content: '';
+  height: 0px;
+  width: 0px;
+  border: 6px solid transparent;
+  border-top-color: #c3e196;
 }
 
 /* default heights, width and margin w/o Javscript */
 
 .tooltip,
-.tooltip.top{
-	width: 322px;
-	height: 30px;
+.tooltip.top {
+  width: 322px;
+  height: 30px;
   vertical-align: middle;
   padding: 5px 10px;
   display: flex;
@@ -111,29 +111,29 @@
 /* on hover of element containing tooltip default*/
 
 *:not(.on-focus):hover > .tooltip,
-.on-focus input:focus + .tooltip{
-	visibility: visible;
-	opacity: 1;
-	-webkit-transition: all 240ms ease-in-out;
-	-moz-transition: all 240ms ease-in-out;
-	-ms-transition: all 240ms ease-in-out;
-	-o-transition: all 240ms ease-in-out;
-	transition: all 240ms ease-in-out;		
+.on-focus input:focus + .tooltip {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 240ms ease-in-out;
+  -moz-transition: all 240ms ease-in-out;
+  -ms-transition: all 240ms ease-in-out;
+  -o-transition: all 240ms ease-in-out;
+  transition: all 240ms ease-in-out;
 }
 
 /* tool tip slide out */
 
 *:not(.on-focus) > .tooltip.slideIn,
-.on-focus > .tooltip{
-	display: block;
+.on-focus > .tooltip {
+  display: block;
 }
 
-.on-focus > .tooltip.slideIn{
-	z-index: -1;
+.on-focus > .tooltip.slideIn {
+  z-index: -1;
 }
 
-.on-focus > input:focus + .tooltip.slideIn{
-	z-index: 1;
+.on-focus > input:focus + .tooltip.slideIn {
+  z-index: 1;
 }
 
 /* top slideIn */
@@ -141,21 +141,21 @@
 *:not(.on-focus) > .tooltip.slideIn,
 *:not(.on-focus) > .tooltip.slideIn.top,
 .on-focus > .tooltip.slideIn,
-.on-focus > .tooltip.slideIn.top{
-	bottom: 50%;
+.on-focus > .tooltip.slideIn.top {
+  bottom: 50%;
 }
 
 *:not(.on-focus):hover > .tooltip.slideIn,
 *:not(.on-focus):hover > .tooltip.slideIn.top,
 .on-focus > input:focus + .tooltip.slideIn,
-.on-focus > input:focus + .tooltip.slideIn.top{
-	bottom: 110%;
+.on-focus > input:focus + .tooltip.slideIn.top {
+  bottom: 110%;
 }
-	
-.hintcontent{
+
+.hintcontent {
   padding-left: 3px;
   padding-top: 2px;
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   font-size: 16px;
   color: #ffffff;
 }
@@ -168,7 +168,7 @@
   top: 314px;
   margin-top: 78px;
   padding: 0;
-  font-family: "Pretendard-Bold";
+  font-family: 'Pretendard-Bold';
   font-size: 16px;
   color: #ffffff;
   line-height: 19.2px;
@@ -178,7 +178,7 @@
   border: none;
 }
 /* 참여방법부터 아래 박스들을 하나로 묶은 div 박스 */
-.bottombox{
+.bottombox {
   width: 344px;
   margin-bottom: 72px;
   margin: 0 auto;
@@ -188,7 +188,7 @@
 .jointext {
   display: inline-block;
   margin: 9px 270px 0px 0px;
-  font-family: "Pretendard-Bold";
+  font-family: 'Pretendard-Bold';
   font-size: 20px;
   line-height: 24px;
   color: #4c966e;
@@ -206,7 +206,7 @@
 }
 /* STEP 01, 02, 03, 04, 05 box */
 .stepbox {
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   font-size: 16px;
   line-height: 30px;
   color: #4c966e;
@@ -238,13 +238,13 @@
   margin: 0px auto;
 }
 /* 박스 안 설명글 박스 STEP 01, 02 */
-.text{
+.text {
   width: 289px;
   height: 24px;
   margin: 13px 27px 18px 28px;
 }
 /* 박스 안 설명글 박스 STEP 03-05 */
-.textlast{
+.textlast {
   width: 283px;
   height: 48px;
   margin: 18px 33px 19px 28px;
@@ -252,7 +252,7 @@
 }
 /* step 1 박스 안 글 */
 .steptext_1 {
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   font-size: 16px;
   line-height: 24px;
   color: #0e1013;
@@ -260,14 +260,14 @@
 }
 /* step 2,3,4,5 박스 안 글 */
 .steptext {
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   font-size: 16px;
   line-height: 24px;
   color: #0e1013;
   text-align: left;
 }
 
-.slideIn{
+.slideIn {
   display: flex;
   flex-direction: row;
 }

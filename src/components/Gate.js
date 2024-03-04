@@ -29,16 +29,17 @@ const Gate = () => {
       <div className={style.date}>2022. 05.18 - 05.20</div>
       <div className={style.line}></div>
       <div className={style.keywordDiv}>
-        {IMG_ARRAY.map((data) => {
+        {IMG_ARRAY.map((data, index) => (
           <img
+            key={index}
             data-aos="fade-up"
             data-aos-offset={data.offset}
             className={style.keyword2}
             src={data.alt}
             alt={data.alt}
             data-sa-margin={data.margin}
-          />;
-        })}
+          />
+        ))}
       </div>
       <img className={style.new} src={newduksung} alt="forever" />
     </div>

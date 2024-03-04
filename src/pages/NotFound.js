@@ -16,7 +16,6 @@ const style2 = {
   fontSize: '30px',
   width: '100%',
   height: '100%',
-  //   marginTop: "150px",
   marginBottom: '150px',
 };
 

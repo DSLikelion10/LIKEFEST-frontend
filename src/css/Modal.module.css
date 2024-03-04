@@ -41,20 +41,20 @@
 /* 정답 모달 시 반짝이는 애니메이션 주기 */
 @keyframes shine {
   70% {
-    filter:saturate(100%) drop-shadow(white 0px 0px 0px);
+    filter: saturate(100%) drop-shadow(white 0px 0px 0px);
   }
   100% {
-    filter:saturate(140%) drop-shadow(white 0px 0px 12.9959px);
+    filter: saturate(140%) drop-shadow(white 0px 0px 12.9959px);
   }
 }
 /* @keyframes 앞에도 벤더 프리픽스를 적용 */
 @-webkit-keyframes shine {
   70% {
-  filter: brightness(1) saturate(100%) drop-shadow(white 0px 0px 0px);
-}
-100% {
-  filter: brightness(1.5) saturate(140%) drop-shadow(white 0px 0px 12.9959px);
-} 
+    filter: brightness(1) saturate(100%) drop-shadow(white 0px 0px 0px);
+  }
+  100% {
+    filter: brightness(1.5) saturate(140%) drop-shadow(white 0px 0px 12.9959px);
+  }
 }
 
 .modalBody2 {
@@ -65,26 +65,42 @@
   animation: 2s linear 0s normal none running bell;
 }
 /* 오답 모달 시 흔들리는 애니메이션 주기 */
-@keyframes bell{
-  0%, 50%{
+@keyframes bell {
+  0%,
+  50% {
     transform: rotate(0deg);
-	}
-  5%, 15%, 25%, 35%, 45% {
+  }
+  5%,
+  15%,
+  25%,
+  35%,
+  45% {
     transform: rotate(5deg);
   }
-  10%, 20%, 30%, 40% {
+  10%,
+  20%,
+  30%,
+  40% {
     transform: rotate(-5deg);
   }
 }
 /* @keyframes 앞에도 벤더 프리픽스를 적용 */
 @-webkit-keyframes bell {
-  0%, 50%{
+  0%,
+  50% {
     transform: rotate(0deg);
-	}
-  5%, 15%, 25%, 35%, 45% {
+  }
+  5%,
+  15%,
+  25%,
+  35%,
+  45% {
     transform: rotate(5deg);
   }
-  10%, 20%, 30%, 40% {
+  10%,
+  20%,
+  30%,
+  40% {
     transform: rotate(-5deg);
   }
 }
@@ -107,19 +123,19 @@
 }
 
 .modalCotent {
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   color: #848484;
   line-height: 16.8px;
   margin-bottom: 46px;
 }
 
 .modalCotent span {
-  font-family: "Pretendard-Bold";
+  font-family: 'Pretendard-Bold';
   color: #848484;
 }
 
 .deleteModalContent {
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   text-align: center;
   line-height: 24px;
   margin-top: 48px;
@@ -154,7 +170,7 @@
   border: 0;
   background: none;
   color: #848484;
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   cursor: pointer;
   margin-bottom: 22px;
 }
@@ -164,7 +180,7 @@
   border: 0;
   background: none;
   color: #848484;
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
   cursor: pointer;
   margin-bottom: 22px;
 }

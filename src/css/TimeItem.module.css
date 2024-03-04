@@ -1,44 +1,49 @@
-.body{
+.body {
   background: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   display: flex;
-  width:140px;
+  width: 140px;
   animation: fadeinup 2s;
 }
-@keyframes fadeinup{
-  from{opacity:0; transform:translate3d(0,20%,0);}
-  to{opacity:1 ; transform:translate3d(0,0,0);}
+@keyframes fadeinup {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
-.LeftIndex{
-  background: #E7D0B6;
+.LeftIndex {
+  background: #e7d0b6;
   border-radius: 5px 0px 0px 5px;
-  width:11px;
-  
+  width: 11px;
 }
-.rightContent{
+.rightContent {
   font-family: 'Pretendard-Medium';
-  font-size:12px;
+  font-size: 12px;
   line-height: 14.4px;
-  padding-left:19px;
-  padding-top:18px;
+  padding-left: 19px;
+  padding-top: 18px;
   text-align: left;
 }
-.title{
+.title {
   font-family: 'Pretendard-Bold';
   font-size: 14px;
-  line-height: 17px; 
-  margin-bottom:7px;
+  line-height: 17px;
+  margin-bottom: 7px;
 }
-.locationDiv{
+.locationDiv {
   display: flex;
   align-items: center;
 }
-.iconPlace{
-  width:8px;
+.iconPlace {
+  width: 8px;
   height: 10px;
-  padding-right:8px;
+  padding-right: 8px;
 }
 
-.secondContent{
-  margin-top:16px;
+.secondContent {
+  margin-top: 16px;
 }

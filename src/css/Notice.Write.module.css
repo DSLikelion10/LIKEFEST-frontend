@@ -40,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Pretendard-bold";
+  font-family: 'Pretendard-bold';
   color: #fff;
   font-size: 12px;
   line-height: 14px;
@@ -60,7 +60,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Pretendard-bold";
+  font-family: 'Pretendard-bold';
   color: #fff;
   font-size: 12px;
   line-height: 14px;
@@ -80,7 +80,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Pretendard-bold";
+  font-family: 'Pretendard-bold';
   color: #fff;
   font-size: 12px;
   line-height: 14px;
@@ -101,7 +101,7 @@
   margin-top: 19px;
   margin-left: 23px;
   margin-right: 23px;
-  font-family: "Pretendard-bold";
+  font-family: 'Pretendard-bold';
   color: black;
   border: none;
   font-weight: 700;
@@ -118,7 +118,7 @@
   text-align: left;
   line-height: 24px;
   font-size: 16px;
-  font-family: "Pretendard-regular";
+  font-family: 'Pretendard-regular';
   border: none;
   margin-top: 12px;
 }
@@ -149,7 +149,7 @@ textarea:focus {
 }
 
 .tagstyle {
-  font-family: "Pretendard-Regular";
+  font-family: 'Pretendard-Regular';
   font-size: 16px;
   text-align: left;
   font-weight: 400;

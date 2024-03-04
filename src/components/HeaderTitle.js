@@ -16,7 +16,7 @@ const HeaderTitle = (props) => {
   return (
     <div className={s.header}>
       <p className={s.headerTitle}>{props.title}</p>
-      <div>{`${location.pathname}` == '/Notice' ? <TagList /> : null} </div>
+      <div>{`${location.pathname}` === '/Notice' ? <TagList /> : null} </div>
     </div>
   );
 };

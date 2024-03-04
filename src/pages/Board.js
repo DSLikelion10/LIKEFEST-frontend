@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import BoardInsert from '../components/BoardInsert';
 import BoardList from '../components/BoardList';
 import styles from '../css/Board.module.css';
-import HeaderTitle from '../components/HeaderTitle';
 import axios from 'axios';
 
 const Board = () => {

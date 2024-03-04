@@ -116,7 +116,7 @@
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 34px;
-  font-family: "Pretendard-Black";
+  font-family: 'Pretendard-Black';
   font-weight: 900;
   font-size: 20px;
   line-height: 24px;
@@ -177,20 +177,20 @@
 }
 .F_Head {
   margin-bottom: 22px;
-  font-family: "Pretendard-Bold";
+  font-family: 'Pretendard-Bold';
   font-weight: 700;
   font-size: 14px;
 }
 .FooterContent1,
 .FooterContent2 {
   display: flex;
-  font-family: "Pretendard-Medium";
+  font-family: 'Pretendard-Medium';
 }
 .F_Header {
   width: 53px;
   margin-bottom: 0px;
   font-weight: 700;
-  font-family: "Pretendard-Bold";
+  font-family: 'Pretendard-Bold';
   font-style: normal;
   font-size: 14px;
   line-height: 17px;
@@ -198,7 +198,7 @@
 .name {
   color: #acc7b8;
   margin-bottom: 5px;
-  font-family: "Pretendard-Regular";
+  font-family: 'Pretendard-Regular';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

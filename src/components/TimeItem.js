@@ -10,14 +10,14 @@ const TimeItem = (props) => {
           <p className={s.time}>{props.time}</p>
           <p className={s.title}>{props.title}</p>
           <div className={s.locationDiv}>
-            <img className={s.iconPlace} src={icon_place} />
+            <img className={s.iconPlace} src={icon_place} alt="위치 아이콘" />
             <p className={s.location}>{props.location}</p>
           </div>
           {props.second ? (
             <div className={s.secondContent}>
               <p className={s.title}>{props.title2}</p>
               <div className={s.locationDiv}>
-                <img className={s.iconPlace} src={icon_place} />
+                <img className={s.iconPlace} src={icon_place} alt="위치 아이콘" />
                 <p className={s.location}>{props.location2}</p>
               </div>
             </div>

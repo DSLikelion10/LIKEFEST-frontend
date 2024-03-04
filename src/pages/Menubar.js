@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useCallback, useState, useEffect } from 'react';
 import '../css/reset.css';
 import styles from '../css/Menubar.module.css';
@@ -55,7 +56,6 @@ const Menubar = () => {
     '/TimeTable': ['TIME TABLE'],
     '/Event': ['새로워진', <br />, '덕새를 찾아라'],
     '/Board': ['덕우들의 새로고침', <br />, '어떠셨나요?'],
-    // 은빈 :  adminntc, update 추가
     '/adminntc': ['총학생회용', <br />, '페이지 입니다. 📢'],
     '/update': ['총학생회용', <br />, '수정 페이지 입니다. '],
   };
@@ -77,7 +77,7 @@ const Menubar = () => {
         <div className={home ? (show ? styles.HeaderScroll : styles.HeaderOpacity) : styles.Header}>
           <div className={styles.HeaderTop}>
             <Link className={styles.FesLogoLink} to="/" onClick={menuClose}>
-              {home ? null : <img src={FesLogo} />}
+              {home ? null : <img src={FesLogo} alt="축제 로고" />}
             </Link>
             <div
               className={menuActive ? styles.hamburger + ' ' + styles.active : styles.hamburger}
@@ -146,7 +146,7 @@ const Menubar = () => {
           </div>
         </div>
         <div className={styles.AdBanner}>
-          <img src={googleADs} />
+          <img src={googleADs} alt="광고배너" />
         </div>
       </div>
     </div>
